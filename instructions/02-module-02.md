@@ -1,22 +1,11 @@
 # Explore Automated Machine Learning in Azure ML
 
-> **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 In this exercise, you will use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
 
 ## Create an Azure Machine Learning workspace  
 
-1. If you are not logged in already, click on Azure portal shortcut of Microsoft Edge browser that is available on the desktop and log in with below Azure credentials.
-
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
- 
-   >**Note**
-   > On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
-
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
-    - **Subscription**: *Your Azure subscription*
+    - **Subscription**: *Use the existing Azure subscription*
     - **Resource group**: *Select AI-900-Module-02-<inject key="DeploymentID" enableCopy="false"/>*
     - **Workspace name**: Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: *Select the same region where your resource group was created*
