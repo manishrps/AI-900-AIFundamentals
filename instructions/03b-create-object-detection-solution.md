@@ -47,6 +47,8 @@ To train an object detection model, you need to create a Custom Vision project b
     - **Project Types**: Object Detection
     - **Domains**: General \[A1]
    >**Note**: Under **Resource** dropdown if you don't find the resource that you created previously in the azure portal, kindly refresh the page and reperform the task.
+    - Click on **Create Project**
+    
 3. Wait for the project to be created and opened in the browser.
 
 ## Add and tag images
@@ -87,6 +89,9 @@ Now that you've tagged the images in your project, you're ready to train a model
 
 1. In the Custom Vision project, click **Train** to train an object detection model using the tagged images. Select the **Quick Training** option.
 
+    ![Screenshot of tagged images in a project.](media/train-3b.png)
+  
+
     > **Tip**: Training may take several minutes. While you're waiting, check out [Video analytics for smart cities](https://www.microsoft.com/research/video/video-analytics-for-smart-cities/), which describes a real project to use computer vision in a road safety improvement initiative.
 
 2. When training is complete, review the *Precision*, *Recall*, and *mAP* performance metrics - these measure the prediction goodness of the object detection model, and should all be reasonably high.
@@ -97,6 +102,8 @@ Now that you've tagged the images in your project, you're ready to train a model
 
 4. At the top right of the page, click **Quick Test**, and then in the **Image URL** box, enter `https://aka.ms/pedestrian-cyclist` and view the results.
 
+      ![Screenshot of performance metrics for a trained model.](media/quicktest-3b.png)
+      
     In the pane on the right, under **Pedictions**, each detected object is listed with its tag and probability. Select each object to see it highlighted in the image.
 
     The predicted objects may not all be correct - after all, cyclists and pedestrians share many common features. The predictions that the model is most confident about have the highest probability values. Use the **Threshold Value** slider to eliminate objects with a low probability. You should be able to find a point at which only correct predictions are included (probably at around 85-90%).
