@@ -20,7 +20,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 1. Close any messages that are displayed.
 
-1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
+1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and **select the one you created for this exercise**.
 
 > **Note**
 > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
@@ -29,7 +29,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
-1. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
+1. On the **Compute** page, select the **Compute clusters** tab and to add a new compute cluster, click on **+ New** with the following settings. You'll use this to train a machine learning model:
     - **Location**: *Select the same as your workspace. If that location is not listed, choose the one closest to you*.
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
@@ -37,7 +37,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
-    - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="true"/>**
+    - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
@@ -55,7 +55,7 @@ The compute cluster will take some time to be created. You can move onto the nex
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Data** page (under **Assets**). The Data page contains specific data files or tables that you plan to work with in Azure ML. You can create datasets from this page as well.
 
-1. On the **Data** page, under the **Data assets** tab, select **Create**. Then configure a data asset with the following settings:
+1. On the **Data** page, under the **Data assets** tab, select **+ Create**. Then configure a data asset with the following settings:
     * **Data type**:
         * **Name**: bike-rentals
         * **Description**: Bicycle rental data
@@ -97,7 +97,7 @@ Follow the next steps to run a job that uses automated machine learning to train
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Automated ML** page (under **Authoring**).
 
-1. Click on **+ Automated ML job**. Create an Automated ML job with the following settings:
+1. Click on **+ New Automated ML job**. Create an Automated ML job with the following settings:
 
     - **Select data asset**:
         - **Dataset**: bike-rentals
@@ -106,6 +106,7 @@ Follow the next steps to run a job that uses automated machine learning to train
     - **Configure job**:
         - **New experiment name**: mslearn-bike-rental
         - **Target column**: rentals (*this is the label that the model is trained to predict)*
+        - **Select compute type**: *Compute cluster*
         - **Select Azure ML compute cluster**: *the compute cluster that you created previously*.
     - Click on **Next**.
     
@@ -177,11 +178,12 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     ![Screenshot of the best model summary with a box around the algorithm name on the details tab.](media/use-automated-machine-learning/ai-900-algorithm.png)
 
-1. On the **Models** tab, select the **Deploy** button and use the **web service** option to deploy the model with the following settings:
+1. On the **Model** tab, select the **Deploy** button and use the **web service** option to deploy the model with the following settings:
     - **Name**: predict-rentals
     - **Description**: Predict cycle rentals
     - **Compute type**: Azure Container Instance
     - **Enable authentication**: Selected
+    
 Click on **Deploy**.
 
 1. Wait for the deployment to start - this may take a few seconds. Then, in the **Model summary** section, observe the **Deploy status** for the **predict-rentals** service, which should be **Running**. Wait for this status to change to **Succeeded**, which may take some time. You may need to select **Refresh** periodically.
