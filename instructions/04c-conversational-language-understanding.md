@@ -29,7 +29,7 @@ To implement natural language understanding with Conversational Language Underst
     - **Azure directory**: The Azure directory containing your subscription.
     - **Azure subscription**: Select exsiting subscription.
     - **Language resource**: **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**.
-
+    
     >**Tip**
     >If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     >1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
@@ -96,7 +96,7 @@ An **intent** is an action you want to perform - for example, you might want to 
 
 1. In the pane on the left, click **Schema definition** and verify that your **switch_on** intent is listed. Then click **Add** and add a new intent with the name **switch_off** (in lower-case).
 
-    ![Return to the Build Schema screen and add a switch_off intent.](media/add-switch-of-4c.png) 
+   ![Return to the Build Schema screen and add a switch_off intent.](media/add-switch-off-4c.png) 
 
 1. Click on the **switch_off** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_off**. Next to the **switch_off** intent, add the utterance ***turn the light off***.
 
@@ -123,7 +123,7 @@ An **intent** is an action you want to perform - for example, you might want to 
 Now you're ready to use the intents and entities you have defined to train the conversational language model for your app.
 
 1. On the left hand side of Language Studio, select **Training jobs**, then select **Start a training job**. Use the following settings: 
-    - **Train a new model**: *Selected and choose a model name*
+    - **Train a new model**: **ai900train-<inject key="DeploymentID" enableCopy="false" />**
     - **Training mode**: Standard training (free)
     - **Data Splitting**: select Automatically split the testing set from the training data, keep default percentages
     - Click **Train** at the bottom of the page.
@@ -137,10 +137,11 @@ To use your trained model in a client application, you must deploy it as an endp
 1. On the left-hand side of Language Studio, click **Deploying a model**.
 
 1. Select your model name and click **Add deployment**. Use these settings:
-    - **Create or select an existing deployment name**: Select create a new deployment name. Add a unique name.
+    - **Create or select an existing deployment name**: **ai900deploy-<inject key="DeploymentID" enableCopy="false" />**
     - **Assign trained model to your deployment name**: Select the name of the trained model.
     - Click **Deploy**
 
+    
     >**Tip**
     >Write down your *deployment name*, you will use it later. 
 
