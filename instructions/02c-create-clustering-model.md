@@ -1,8 +1,5 @@
 # Explore clustering with Azure Machine Learning Designer
 
-> **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 ## Create an Azure Machine Learning workspace in the azure portal.
 
 1. Select **+ Create a resource**, search for Machine Learning, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
@@ -41,8 +38,8 @@
     - **Enable SSH access**: *do not select*
     - Select **Create**
 
-> **Note**
-> Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
+       > **Note**
+       > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
@@ -97,8 +94,8 @@ In Azure Machine Learning, data for model training and other operations is usual
 
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents measurements of the culmen (bill) length and depth, flipper length, and body mass for multiple observations of penguins. There are three species of penguin represented in the dataset: *Adelie*, *Gentoo*, and *Chinstrap*.
 
-> **Note**
-> The penguins dataset used in the this exercise is a subset of data collected and made available by [Dr. Kristen
+     > **Note**
+     > The penguins dataset used in the this exercise is a subset of data collected and made available by [Dr. Kristen
 Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php)
 and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
 member of the [Long Term Ecological Research
@@ -345,8 +342,8 @@ After creating and running a pipeline to train the clustering model, you can cre
 
 Your inference pipeline assigns penguin observations to clusters based on their features. Now you're ready to publish the pipeline so that client applications can use it.
 
->**Note**
->In this exercise, you'll deploy the web service to to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
+   >**Note**
+   >In this exercise, you'll deploy the web service to to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
 ## Deploy a service
 
@@ -369,8 +366,8 @@ Your inference pipeline assigns penguin observations to clusters based on their 
 
 1. To view the deployment status, expand the left pane by selecting the menu icon at the top left of the screen. View the **Endpoints** page (under **Assets**) and select **predict-penguin-clusters**. When the deployment has finished, the **Deployment state** will change to **Healthy**.
 
-  >**Note:** 
-  >It will take 15-20 mins
+   >**Note:** 
+   >It will take 15-20 mins
  
 
 ## Test the service
@@ -397,8 +394,8 @@ Your inference pipeline assigns penguin observations to clusters based on their 
     }
     ```
 
-    > **Note**
-    > The JSON above defines features for a penguin, and uses the **predict-penguin-clusters** service you created to predict a cluster assignment.
+     > **Note**
+     > The JSON above defines features for a penguin, and uses the **predict-penguin-clusters** service you created to predict a cluster assignment.
 
 1. Select **Test**. On the right hand of the screen, you should see the output **'Assignments'**. Notice how the assigned cluster is the one with the shortest distance to cluster center.
 

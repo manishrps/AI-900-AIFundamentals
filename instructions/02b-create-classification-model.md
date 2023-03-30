@@ -5,14 +5,6 @@
 
 ## Create an Azure Machine Learning workspace  
 
-1. If you are not logged in already, click on Azure portal shortcut of Microsoft Edge browser that is available on the desktop and log in with below Azure credentials.
-
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
- 
-   >**Note**
-   > On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
-
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *select AI-900-Module-02b-<inject key="DeploymentID" enableCopy="false"/>*
@@ -112,7 +104,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
 ### Load data to canvas
 
-1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline.
+1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline(Under **pipline Drafts**).
 
 1. Then in the project, next to the pipeline name on the left, select the arrows icon to expand the panel if it is not already expanded. The panel should open by default to the **Asset library** pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, **Data** and **Component**.
 

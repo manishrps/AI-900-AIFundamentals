@@ -20,11 +20,11 @@ If you haven't already done so, create a **Cognitive Services** resource in your
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
     
-    ![](media/read-text-computer-vision/lab3d-1.png)
+      ![](media/read-text-computer-vision/lab3d-1.png)
     
-    ![](media/read-text-computer-vision/lab3d-2.png)
+      ![](media/read-text-computer-vision/lab3d-2.png)
     
-    ![](media/read-text-computer-vision/lab3d-3.png)
+      ![](media/read-text-computer-vision/lab3d-3.png)
     
 1. Click on **Review + Create** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
 
@@ -39,7 +39,7 @@ To test the capabilities of the Translation service, we'll use a simple command-
 
 1. In the Azure portal, select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. This opens a Cloud Shell pane at the bottom of the portal.
 
-    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/translate-text-and-speech/powershell-portal-guide-1.png)
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/powershell-portal-guide-1.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
 
@@ -49,11 +49,11 @@ To test the capabilities of the Translation service, we'll use a simple command-
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu. 
 
-    ![How to find the left hand drop down menu to switch to PowerShell](media/translate-text-and-speech/powershell-portal-guide-3.png) 
+    ![How to find the left hand drop down menu to switch to PowerShell](media/powershell-portal-guide-3.png) 
 
 1. Wait for PowerShell to start. You should see the following screen in the Azure portal:  
 
-    ![Wait for PowerShell to start.](media/translate-text-and-speech/powershell-prompt.png)
+    ![Wait for PowerShell to start.](media/powershell-prompt.png)
 
 ## Configure and run a client application
 
@@ -73,15 +73,15 @@ Now that you have a custom model, you can run a simple client application that u
 
     Notice how this opens up an editor like the one in the image below: 
 
-    ![The code editor.](media/translate-text-and-speech/powershell-portal-guide-4.png)
+    ![The code editor.](media/powershell-portal-guide-4.png)
 
 1. In the **Files** pane on the left, expand **ai-900** and select **translator.ps1**. This file contains some code that uses the Translator service:
 
-    ![The editor containing code to use the Translator service](media/translate-text-and-speech/translate-code.png)
+    ![The editor containing code to use the Translator service](media/translate-code-4b.png)
 
 1. Don't worry too much about the details of the code, the important thing is that it needs the region/location and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_LOCATION** placeholder values respectively.
 
-    ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/analyze-text-language-service/lab4b-1.png)
+     ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/lab4b-1.png)
 
     After pasting the key and location values, the first lines of code should look similar to this:
 

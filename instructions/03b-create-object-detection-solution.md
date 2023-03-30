@@ -1,8 +1,5 @@
 # Explore object detection
 
-> **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 *Object detection* is a form of computer vision in which a machine learning model is trained to classify individual instances of objects in an image, and indicate a *bounding box* that marks its location. You can think of this as a progression from *image classification* (in which the model answers the question "what is this an image of?") to building solutions where we can ask the model "what objects are in this image, and where are they?".
 
 For example, a road safety initiative might identify pedestrians and cyclists as being the most vulnerable road users at traffic intersections. By using cameras to monitor intersections, images of road users could be analyzed to detect pedestrians and cyclists in order to monitor their numbers or even change the behavior of traffic signals.
@@ -26,7 +23,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
     - **Subscription**: Use existing subscription.
     - **Resource group**:Select **AI-900-Module-03b-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: Select the same region where your resource group was created.
-    - **Name**: Enter **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Name**: Enter **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected.
 
@@ -47,6 +44,8 @@ To train an object detection model, you need to create a Custom Vision project b
     - **Project Types**: Object Detection
     - **Domains**: General \[A1]
    >**Note**: Under **Resource** dropdown if you don't find the resource that you created previously in the azure portal, kindly refresh the page and reperform the task.
+    - Click on **Create Project**
+    
 3. Wait for the project to be created and opened in the browser.
 
 ## Add and tag images
@@ -65,7 +64,7 @@ To train an object detection model, you need to upload images that contain the c
 
     When the object is tightly selected within the rectangular region, enter the appropriate tag for the object (*Cyclist* or *Pedestrian*) and use the **Tag region** (**+**) button to add the tag to the project.
 
-    ![Screenshot of an image with a tagged region in the Image Detaol dialog box.](media/tag-image-3b.png)
+     ![Screenshot of an image with a tagged region in the Image Detaol dialog box.](media/tag-image-3b.png)
 
 1. Use the **Next** (**(>)** link on the right to go to the next image, and tag its objects. Then just keep working through the entire image collection, tagging each cyclist and pedestrian.
 
@@ -75,11 +74,11 @@ To train an object detection model, you need to upload images that contain the c
     - After a tag has been entered once, you can select it from the list when tagging new objects.
     - You can go back and forward through the images to adjust tags.
 
-    ![Screenshot of an image with a tagged region in the Image Detaol dialog box.](media/multiple-objects-3b.png)
+      ![Screenshot of an image with a tagged region in the Image Detaol dialog box.](media/multiple-objects-3b.png)
 
 1. When you have finished tagging the last image, close the **Image Detail** editor and on the **Training Images** page, under **Tags**, select **Tagged** to see all of your tagged images:
 
-    ![Screenshot of tagged images in a project.](media/tagged-images-3b.png)
+      ![Screenshot of tagged images in a project.](media/tagged-images-3b.png)
 
 ## Train and test a model
 
@@ -87,21 +86,26 @@ Now that you've tagged the images in your project, you're ready to train a model
 
 1. In the Custom Vision project, click **Train** to train an object detection model using the tagged images. Select the **Quick Training** option.
 
+     ![Screenshot of tagged images in a project.](media/train-3b.png)
+  
+
     > **Tip**: Training may take several minutes. While you're waiting, check out [Video analytics for smart cities](https://www.microsoft.com/research/video/video-analytics-for-smart-cities/), which describes a real project to use computer vision in a road safety improvement initiative.
 
 2. When training is complete, review the *Precision*, *Recall*, and *mAP* performance metrics - these measure the prediction goodness of the object detection model, and should all be reasonably high.
 
 3. Adjust the **Probability Threshold** on the left, increasing it from 50% to 90% and observe the affect on the performance metrics. This setting determines the probability value that each tag evaluation must meet or exceed to be counted as a prediction.
 
-    ![Screenshot of performance metrics for a trained model.](media/performance-metrics-3b.png)
+      ![Screenshot of performance metrics for a trained model.](media/performance-metrics-3b.png)
 
 4. At the top right of the page, click **Quick Test**, and then in the **Image URL** box, enter `https://aka.ms/pedestrian-cyclist` and view the results.
 
+      ![Screenshot of performance metrics for a trained model.](media/quicktest-3b.png)
+      
     In the pane on the right, under **Pedictions**, each detected object is listed with its tag and probability. Select each object to see it highlighted in the image.
 
     The predicted objects may not all be correct - after all, cyclists and pedestrians share many common features. The predictions that the model is most confident about have the highest probability values. Use the **Threshold Value** slider to eliminate objects with a low probability. You should be able to find a point at which only correct predictions are included (probably at around 85-90%).
 
-    ![Screenshot of performance metrics for a trained model.](media/test-detection-3b.png)
+      ![Screenshot of performance metrics for a trained model.](media/test-detection-3b.png)
 
 5. Then close the **Quick Test** window.
 
@@ -115,7 +119,7 @@ Now you're ready to publish your trained model and use it from a client applicat
 
 1. After publishing, click the *Prediction URL* (&#127760;) icon to see information required to use the published model.
 
-    ![Screenshot of the prediction URL.](media/prediction-url-3b.png)
+      ![Screenshot of the prediction URL.](media/prediction-url-3b.png)
 
 Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
 
@@ -131,7 +135,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     When the cloud shell is ready, it should look similar to this:
     
-     ![Create storage by clicking confirm.](media/cloudshell-storage.png)
+       ![Create storage by clicking confirm.](media/cloudshell-storage.png)
 
     > **Tip**: Ensure that the type of shell indicated on the top left of the Cloud Shell pane is *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
@@ -153,7 +157,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     Notice how this opens an editor like the one in the image below:
 
-     ![Screenshot of the code editor in the cloud shell.](media/code-editor-3b.png)
+      ![Screenshot of the code editor in the cloud shell.](media/code-editor-3b.png)
 
      > **Tip**: You can use the separator bar between the cloud shell command line and the code editor to resize the panes.
 
@@ -184,7 +188,7 @@ Now you can use the sample client application to detect cyclists and pedestrians
 
     This code uses your model to detect objects in the following image:
 
-    ![Photograph of a pedestrian and a cyclist.](media/create-object-detection-solution/road-safety-1.jpg)
+     ![Photograph of a pedestrian and a cyclist.](media/create-object-detection-solution/road-safety-1.jpg)
 
 1. Review the prediction, which lists any objects detected with a probability of 90% or more, along with the coordinates of a bounding box around their location.
 

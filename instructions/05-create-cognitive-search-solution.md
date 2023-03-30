@@ -1,8 +1,5 @@
 # Explore knowledge mining
 
-> **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 Let's imagine you work for Fourth Coffee, a national coffee chain. You're asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure Cognitive Search index using data extracted from customer reviews.  
 
 In this lab you'll:
@@ -22,30 +19,19 @@ The solution you'll create for Fourth Coffee requires the following resources in
 - A **Cognitive Services** resource, which provides AI services for skills that your search solution can use to enrich the data in the data source with AI-generated insights.
 
     > **Note**
-    > Your Azure Cognitive Search and Cognitive Services resources must be in the same location!
+    > Your **Azure Cognitive Search** and **Cognitive Services resources** must be in the **same location!**
 
 - A **Storage account** with blob containers, which will store raw documents and other collections of tables, objects, or files.
 
 ### Create an **Azure Cognitive Search** resource
-
-1. In the lab virtual machine, Start the Microsoft Edge browser.
-
-1. In the Edge browser, navigate to the Azure portal at https://portal.azure.com.
-
-1. In the **Sign in** dialog box, copy and paste in the **Username** <inject key="AzureUserName" enableCopy="true"/> and then select Next.
-
-1. In the **Enter password** dialog box, copy and paste the **Password** <inject key="AzurePassword" enableCopy="true"/>  provided in the **environment details page** and then select **Sign in**.
-
-    >**Note**
-    > On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
    
 1. Click the **+ Create a resource** button, search for **Azure Cognitive Search**, and create a **Azure Cognitive Search** resource with the following settings:
 
 
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**..
-    - **Service name**: **ai900cognitivesearch**
-    - **Location**: Select the same region where your resource group was created ( i.e. Easus2)
+    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**
+    - **Service name**: **ai900cognitivesearch-<inject key="DeploymentID" enableCopy="false" />**
+    - **Location**: Select the same region where your resource group was created.
     - **Pricing tier**: Basic
 
 1. Select **Review + create**, and after you see the response **Validation Success**, select **Create**.
@@ -58,9 +44,9 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. Return to the home page of the Azure portal, and then select the **+ Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**..
-    - **Region**: Select the same region where your resource group was created ( i.e. Easus2)
-    - **Name**: .
+    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**.
+    - **Region**: Select the same region where your resource group was created.
+    - **Name**: **ai900cognitive-<inject key="DeploymentID" enableCopy="false" />**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
 
@@ -75,7 +61,7 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 1. Search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: Use existing subscription.
     - **Resource group**:  Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Storage account name**: **ai900blob-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Storage account name**: **ai900blob<inject key="DeploymentID" enableCopy="false"/>**
     - **Location**: Select the same region where your resource group was created.
     - **Performance**: Standard
     - **Redundancy**: Locally redundant storage (LRS)
@@ -95,14 +81,14 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
     - **Public access level**: Container (anonymous read access for containers and blobs)
     - **Advanced**: *no changes*.
 
-1. In a new browser tab, download the zipped documents from https://aka.ms/km-documents, and then extract the files to the *reviews* folder.
+1. In a new browser tab, download the zipped documents from https://aka.ms/km-documents, and then **extract** the files to the *reviews* folder.
 
 1. In the Azure portal, select your *coffee-reviews* container. In the container, select **Upload**.
 
     ![Screenshot that shows the storage container.](media/storage-blob-3-05.png)
 
-1. In the **Upload blob** pane, select **Select a file**.
-
+1. In the **Upload blob** pane, select **Browse for files**.
+  
 1. In the Explorer window, select **all** the files in the *reviews* folder, select **Open**, and then select **Upload**.
 
     ![Screenshot that shows the files uploaded to the Azure container.](media/6a-azure-container-upload-files-05.png)
