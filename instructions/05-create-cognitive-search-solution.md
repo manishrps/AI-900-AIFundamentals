@@ -29,8 +29,8 @@ The solution you'll create for Fourth Coffee requires the following resources in
 
 
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**
-    - **Service name**: **ai900cognitivesearch-<inject key="DeploymentID" enableCopy="false" />**
+    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Service name**: **ai900cognitivesearch-<inject key="DeploymentID" enableCopy="false"/>**
     - **Location**: Select the same region where your resource group was created.
     - **Pricing tier**: Basic
 
@@ -44,9 +44,9 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. Return to the home page of the Azure portal, and then select the **+ Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false" />**.
+    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Region**: Select the same region where your resource group was created.
-    - **Name**: **ai900cognitive-<inject key="DeploymentID" enableCopy="false" />**
+    - **Name**: **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
 
