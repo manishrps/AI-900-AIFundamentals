@@ -93,7 +93,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
    ![](media/create-a-bot/ai900_4d-05.png)
 
-1. Click **Submit**. Then at the top of the page click **Save changes**. You may need to change the size of your window to see the button.
+1. Click **Done**. Then at the top of the page click **Save** to save your changes. You may need to change the size of your window to see the button.
 
 ## Train and test the knowledge base
 
