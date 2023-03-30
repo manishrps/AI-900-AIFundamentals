@@ -1,9 +1,12 @@
 # Explore classification with Azure Machine Learning Designer
 
+> **Note**
+> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
+
 ## Create an Azure Machine Learning workspace  
- 
+
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
-    - **Subscription**: *Select Your Azure subscription*
+    - **Subscription**: *Your Azure subscription*
     - **Resource group**: *select AI-900-Module-02b-<inject key="DeploymentID" enableCopy="false"/>*
     - **Workspace name**: *Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>***
     - **Region**:  *Select the same region where your resource group was created*
@@ -101,7 +104,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
 ### Load data to canvas
 
-1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline.
+1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline(Under **pipline Drafts**).
 
 1. Then in the project, next to the pipeline name on the left, select the arrows icon to expand the panel if it is not already expanded. The panel should open by default to the **Asset library** pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, **Data** and **Component**.
 
@@ -351,7 +354,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
 1. In the new window, select **Deploy**.
 
-    ![Screenshot of the deploy button for your Predict Auto Price inference pipeline.](media/deploy-2b.png)
+    ![Screenshot of the deploy button for your Predict Auto Price inference pipeline.](media/create-classification-model/deploy-screenshot1.png)
 
 1. At the top right, select **Deploy**, and deploy a **new real-time endpoint**, using the following settings:
     -  **Name**: predict-diabetes
