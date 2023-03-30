@@ -50,19 +50,15 @@ The Language service's custom question answering feature enables you to quickly 
 
 1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
 
-1 If On the **Select the project you want to work with** page is empty then click on **Create new project**
+1. If On the **Select the project you want to work with** page is empty then click on **Create new project**. Execute the following steps, else proceed to the next step.
 
-1. On **Connect to Azure search** page click on **Connect to Azure search.**
+    1. On **Connect to Azure search** page click on **Connect to Azure search**.
+    1. On **Azure Search** page  select drop down of select Azure Search resources and click on **Add Azure Search resources** 
+    1. On **Creat Azure Search** page enter **Azure Search Service Name** enter the laungae service you have created earlier you have created **Azure search region:** east us2. **Azure search pricing tier:** Free F (3 Indexes) - (If this tier is not available, select Standard S (50 Indexes)) and click on **Create**.
+    1. At the top of the page, click **Language Studio** to return to the Language Studio home page.
+    1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
 
-1. On **Azure Search** page  select drop down of select Azure Search resources and click on **Add Azure Search resources** 
-
-1. On **Creat Azure Search** page enter **Azure Search Service Name** enter the laungae service you have created earlier you have created **Azure search region:** east us2. **Azure search pricing tier:** Free F (3 Indexes) - (If this tier is not available, select Standard S (50 Indexes)) and click on **Create**.
-
-4. At the top of the page, click **Language Studio** to return to the Language Studio home page.
-
-1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
-
-1. On the **Choose language setting for resource *your resource*** page, select **I want to select the language when I create a project in this resource** and click **Next**.
+1. On the **Choose language setting for resource ai900language-<inject key="DeploymentID" enableCopy="false" />** page, select **I want to select the language when I create a project in this resource** and click **Next**.
 
 1. On the **Enter basic information** page, enter the following details and click **Next**:
     - **Language resource**: choose your language resource.  
