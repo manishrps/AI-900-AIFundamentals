@@ -1,8 +1,5 @@
 # Explore object detection
 
-> **Note**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 *Object detection* is a form of computer vision in which a machine learning model is trained to classify individual instances of objects in an image, and indicate a *bounding box* that marks its location. You can think of this as a progression from *image classification* (in which the model answers the question "what is this an image of?") to building solutions where we can ask the model "what objects are in this image, and where are they?".
 
 For example, a road safety initiative might identify pedestrians and cyclists as being the most vulnerable road users at traffic intersections. By using cameras to monitor intersections, images of road users could be analyzed to detect pedestrians and cyclists in order to monitor their numbers or even change the behavior of traffic signals.
@@ -26,7 +23,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
     - **Subscription**: Use existing subscription.
     - **Resource group**:Select **AI-900-Module-03b-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: Select the same region where your resource group was created.
-    - **Name**: Enter **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Name**: Enter **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected.
 
