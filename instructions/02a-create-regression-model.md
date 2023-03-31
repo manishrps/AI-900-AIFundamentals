@@ -18,7 +18,7 @@ In this exercise, you will train a regression model that predicts the price of a
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
-1. In Azure Machine Learning studio, you should see your newly created workspace **workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
+1. In Azure Machine Learning studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
 
 ## Create compute
 
@@ -33,7 +33,7 @@ In this exercise, you will train a regression model that predicts the price of a
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
 
-    - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="true"/>**
+    - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
@@ -95,7 +95,7 @@ You typically apply data transformations to prepare the data for modeling. In th
 
     ![Screenshot of all columns other than normalized_losses.](media/select-columns-2a.png)
 
-1. Click on the **Save** button.
+1. Click on the **Save** button then **close** Select Columns in Dataset pane.
 
 In the rest of this exercise, you go through steps to create a pipeline that looks like this:
 
@@ -243,6 +243,8 @@ One way to evaluate a regression model is to compare the predicted labels to the
     - **Relative Squared Error (RSE)**
     - **Relative Absolute Error (RAE)**
     - **Coefficient of Determination (R<sup>2</sup>)**
+    
+     >**Note:** If you can't see all regression performance metrics it is because screen is 100% zoom in if have to zoom out the screen until you see all regression performance metrics .
 1. Close the *Evaluation_results* pane.
 
 When you've identified a model with evaluation metrics that meet your needs, you can prepare to use that model with new data.
@@ -299,13 +301,13 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
     return scored_results
 ```
 
-1. Connect the output from the **Score Model** module to the **Dataset1** (left-most) input of the **Execute Python Script**, and connect the output of the **Execute Python Script** module to the **Web Service Output**.
+1. Connect the output from the **Score Model** module to the **Dataset1** (left-most) input of the **Execute Python Script**, and connect the left output(Result Dataset) of the **Execute Python Script** module to the (outpout data) of the **Web Service Output**.
 
 1. Verify that your pipeline looks similar to the following image:
 
     ![Screenshot of the automobile inference pipeline.](media/inference-pipeline-lab-2a.png)
 
-1. Submit the pipeline as a new experiment named **mslearn-auto-inference** on your compute cluster. The experiment may take a while to run.
+1. Submit the pipeline as a new experiment named **mslearn-auto-inference** on your compute cluster. The experiment may take a while to run (Make sure you have selected cumpute cluster).
 
 1. When the pipeline has completed, select **Job detail**. In the new tab, right click on the **Execute Python Script** module. Select **Preview data** and then **Result dataset** to see the predicted prices for the three cars in the input data.
 
@@ -337,7 +339,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
     -  **Description**: Auto price regression
     - **Compute type**: Azure Container Instance
 
-1.Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left of the designer interface.
+1.Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left Notifications of the Microsoft Azure Machine Learning Studio.
 
 ## Test the service
 
