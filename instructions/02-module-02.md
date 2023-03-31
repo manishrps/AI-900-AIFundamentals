@@ -22,8 +22,8 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and **select the one you created for this exercise**.
 
-> **Note**
-> This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
+    > **Note**
+    > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
 
 ## Create compute
 
@@ -44,8 +44,8 @@ In this exercise, you will use a dataset of historical bicycle rental details to
     - **Enable SSH access**: keep it as default
     - Select **Create**
 
-> **Note**
-> Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
+       > **Note**
+       > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
@@ -130,7 +130,7 @@ Follow the next steps to run a job that uses automated machine learning to train
   
       ![Screenshot of additional configurations with a box around the allowed models.](media/use-automated-machine-learning/ai-900-add-cong01.png)
       
-    - Now click on ** View featurization settings:**
+    - Now click on **View featurization settings:**
         - **Enable featurization**: Selected — *automatically preprocess the features before training.*
     - Click on **Save**.
 
@@ -152,7 +152,7 @@ Follow the next steps to run a job that uses automated machine learning to train
 1. On the **Overview** tab of the automated machine learning job, note the best model summary.
     ![Screenshot of the best model summary of the automated machine learning job with a box around the algorithm name.](media/use-automated-machine-learning/ai-900-overview.png)
 
-    >[!NOTE]
+    >**NOTE:**
     > You may see a message under the status "Warning: User specified exit score reached...". This is an expected message. Please continue to the next step.  
 1. Select the text under **Algorithm name** for the best model to view its details.
 
@@ -166,7 +166,7 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     Review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
 
-1. Select the **Explanations** tab. Select an Explanation ID and then select **Aggregate feature importance**. This chart shows how much each feature in the dataset influences the label prediction, like this:
+1. Select the **Explanations(preview)** tab. Select an Explanation ID and then select **Aggregate feature importance**. This chart shows how much each feature in the dataset influences the label prediction, like this:
 
     ![Screenshot of the feature importance chart on the Explanations tab.](media/use-automated-machine-learning/feature-importance1.png)
 
@@ -190,7 +190,7 @@ Click on **Deploy**.
 
 1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints**.
 
-    ![Screenshot of location of Endpoints on the left hand menu.](media/use-automated-machine-learning/endpoints1.png)
+    ![Screenshot of location of Endpoints on the left hand menu.](media/endpoints1-02.png)
 
 ## Test the deployed service
 
