@@ -130,7 +130,7 @@ Follow the next steps to run a job that uses automated machine learning to train
   
       ![Screenshot of additional configurations with a box around the allowed models.](media/use-automated-machine-learning/ai-900-add-cong01.png)
       
-    - Now click on ** View featurization settings:**
+    - Now click on **View featurization settings:**
         - **Enable featurization**: Selected — *automatically preprocess the features before training.*
     - Click on **Save**.
 
@@ -166,7 +166,7 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     Review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
 
-1. Select the **Explanations** tab. Select an Explanation ID and then select **Aggregate feature importance**. This chart shows how much each feature in the dataset influences the label prediction, like this:
+1. Select the **Explanations(preview)** tab. Select an Explanation ID and then select **Aggregate feature importance**. This chart shows how much each feature in the dataset influences the label prediction, like this:
 
     ![Screenshot of the feature importance chart on the Explanations tab.](media/use-automated-machine-learning/feature-importance1.png)
 
@@ -190,7 +190,7 @@ Click on **Deploy**.
 
 1. In Azure Machine Learning studio, on the left hand menu, select **Endpoints**.
 
-    ![Screenshot of location of Endpoints on the left hand menu.](media/use-automated-machine-learning/endpoints1.png)
+    ![Screenshot of location of Endpoints on the left hand menu.](media/endpoints1-02.png)
 
 ## Test the deployed service
 
