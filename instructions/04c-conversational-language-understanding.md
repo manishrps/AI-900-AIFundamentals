@@ -4,7 +4,7 @@ Increasingly, we expect computers to be able to use AI in order to understand sp
 
 To test the capabilities of the Conversational Language Understanding service, we'll use a command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a *Language service* resource
+## Exercise 1: Create a *Language service* resource
 
 You can use the Conversational Language Understanding service by creating a **Language service** resource.
 
@@ -19,7 +19,7 @@ You can use the Conversational Language Understanding service by creating a **La
 
 1. Review and create the resource, and wait for deployment to complete.
 
-### Create a Conversational Language Understanding App
+### Task 1: Create a Conversational Language Understanding App
 
 To implement natural language understanding with Conversational Language Understanding, you create an app; and then add entities, intents, and utterances to define the commands you want the app to execute.
 
@@ -52,7 +52,7 @@ To implement natural language understanding with Conversational Language Underst
 
 1. On the *Review and finish* page, click **Create**.
 
-### Create intents, utterances, and entities
+### Task 2: Create intents, utterances, and entities
 
 An **intent** is an action you want to perform - for example, you might want to switch on a light, or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
@@ -118,7 +118,7 @@ An **intent** is an action you want to perform - for example, you might want to 
     | switch_off   | Switch off the fan | Device - *select fan* |
     | switch_off   | Turn the light off | Device - *select light* |
 
-### Train the model
+### Task 3: Train the model
 
 Now you're ready to use the intents and entities you have defined to train the conversational language model for your app.
 
@@ -130,7 +130,7 @@ Now you're ready to use the intents and entities you have defined to train the c
 
 1. Wait for training to complete. 
 
-### Deploy and test the model
+### Task 4: Deploy and test the model
 
 To use your trained model in a client application, you must deploy it as an endpoint to which the client applications can send new utterances; from which intents and entities will be predicted.
 
@@ -160,7 +160,7 @@ To use your trained model in a client application, you must deploy it as an endp
     - *put the light on*
     - *put the fan off*
 
-## Run Cloud Shell
+## Exercise 2: Run Cloud Shell
 
 Now let's try out your deployed model. To do so, we'll use a command-line application that runs in the Cloud Shell on Azure. 
 
@@ -184,7 +184,7 @@ Now let's try out your deployed model. To do so, we'll use a command-line applic
 
     ![Wait for PowerShell to start.](media/powershell-prompt-4c.png) 
 
-## Configure and run a client application
+## Exercise 3: Configure and run a client application
 
 Now let's open and edit a pre-written script, which will run the client application.
 
