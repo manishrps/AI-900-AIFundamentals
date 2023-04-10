@@ -4,7 +4,7 @@ Computer vision solutions often require an artificial intelligence (AI) solution
 
 To test the capabilities of the Face service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a *Cognitive Services* resource
+## Task 1 : Create a *Cognitive Services* resource
 
 You can use the Face service by creating either a **Face** resource or a **Cognitive Services** resource.
 
@@ -24,7 +24,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications thus, copy the same over to a notepad.
 
-## Run Cloud Shell
+## Task 2: Run Cloud Shell
 
 To test the capabilities of the Face service, we'll use a simple command-line application that runs in the Cloud Shell on Azure. 
 
@@ -46,7 +46,7 @@ To test the capabilities of the Face service, we'll use a simple command-line ap
 
     ![Wait for PowerShell to start.](media/create-face-solutions/ai900_03c-4.png)
 
-## Configure and run a client application
+## Task 3: Configure and run a client application
 
 Now that you have a custom model, you can run a simple client application that uses the Face service.
 
