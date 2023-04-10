@@ -8,7 +8,7 @@ The **Custom Vision** cognitive service in Microsoft Azure provides a cloud-base
 
 To test the capabilities of the Custom Vision service to detect objects in images, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or mobile apps.
 
-## Create a *Cognitive Services* resource
+## Task 1: Create a *Cognitive Services* resource
 
 You can use the Custom Vision service by creating either a **Custom Vision** resource or a **Cognitive Services** resource.
 
@@ -31,7 +31,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
 
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
-## Create a Custom Vision project
+## Task 2: Create a Custom Vision project
 
 To train an object detection model, you need to create a Custom Vision project based on your training resource. To do this, you'll use the Custom Vision portal.
 
@@ -48,7 +48,7 @@ To train an object detection model, you need to create a Custom Vision project b
     
 3. Wait for the project to be created and opened in the browser.
 
-## Add and tag images
+## Task 3: Add and tag images
 
 To train an object detection model, you need to upload images that contain the classes you want the model to identify, and tag them to indicate bounding boxes for each object instance.
 
@@ -80,7 +80,7 @@ To train an object detection model, you need to upload images that contain the c
 
       ![Screenshot of tagged images in a project.](media/tagged-images-3b.png)
 
-## Train and test a model
+## Task 4: Train and test a model
 
 Now that you've tagged the images in your project, you're ready to train a model.
 
@@ -109,7 +109,7 @@ Now that you've tagged the images in your project, you're ready to train a model
 
 5. Then close the **Quick Test** window.
 
-## Publish the object detection model
+## Task 5: Publish the object detection model
 
 Now you're ready to publish your trained model and use it from a client application.
 
@@ -123,7 +123,7 @@ Now you're ready to publish your trained model and use it from a client applicat
 
 Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
 
-## Prepare a client application
+## Task 6: Prepare a client application
 
 To test the capabilities of the Custom Vision service, we'll use a simple command-line application that runs in the cloud shell on Azure.
 
@@ -176,7 +176,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 5. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
-## Test the client application
+## Task 7: Test the client application
 
 Now you can use the sample client application to detect cyclists and pedestrians in images.
 
