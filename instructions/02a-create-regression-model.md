@@ -24,7 +24,7 @@ In this exercise, you will train a regression model that predicts the price of a
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
-1. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster with the following settings to train a machine learning model:
+1. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster by selecting **+ New**, and with the following settings to train a machine learning model:
     - **Location**: Select the same region where your resource group was created.
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
@@ -37,7 +37,7 @@ In this exercise, you will train a regression model that predicts the price of a
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
-    - **Enable SSH access**: Clear
+    - **Enable SSH access**: Leave as default
     - Select **Create**
 
 > **Note**

@@ -16,7 +16,7 @@
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
-1. In Azure Machine Learning studio, you should see your newly created workspace **workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
+1. In Azure Machine Learning studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
 
 ## Task 2: Create compute
 
@@ -177,6 +177,9 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
 1. Select **Submit**, and run the pipeline as a new experiment click on **Create New** and named it as **mslearn-penguin-training** on your compute cluster. Click on **Submit**
 
+     > **Note**
+     > if the pripeline failed, then re-submit again.
+
 1. Wait for the run to finish. This may take 5 minutes or more.
 
     ![Screenshot of designer asset library with the completed job and job details button below.](media/completed-job-2c.png)
@@ -260,7 +263,7 @@ Now you're ready to run the training pipeline and train the model.
 
 1. When the experiment run has finished, select **Job detail**. In the new tab, right click on the **Assign Data to Clusters** module, select **Preview data**, then select **Results dataset** to view the results.
 
-1. Scroll down, and note the **Assignments** column, which contains the cluster (0, 1, or 2) to which each row is assigned. There are also new columns indicating the distance from the point representing this row to the centers of each of the clusters - the cluster to which the point is closest is the one to which it is assigned.
+1. Scroll right, and note the **Assignments** column, which contains the cluster (0, 1, or 2) to which each row is assigned. There are also new columns indicating the distance from the point representing this row to the centers of each of the clusters - the cluster to which the point is closest is the one to which it is assigned.
 
 1. Close the **Assign Data to Clusters** visualization. Return to the pipeline tab.
 
