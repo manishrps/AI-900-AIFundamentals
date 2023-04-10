@@ -2,7 +2,7 @@
 
 In this exercise, you will use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
 
-## Create an Azure Machine Learning workspace  
+## Task 1: Create an Azure Machine Learning workspace  
 
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: *Use the existing Azure subscription*
@@ -25,7 +25,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
     > **Note**
     > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
 
-## Create compute
+## Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
@@ -49,7 +49,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
-## Create a dataset
+## Task 3: Create a dataset
 
 1. View the comma-separated data at [https://aka.ms/bike-rentals](https://aka.ms/bike-rentals?azure-portal=true) in your web browser.
 
@@ -147,7 +147,7 @@ Follow the next steps to run a job that uses automated machine learning to train
 
 1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
 
-## Review the best model
+## Task 4: Review the best model
 
 1. On the **Overview** tab of the automated machine learning job, note the best model summary.
     ![Screenshot of the best model summary of the automated machine learning job with a box around the algorithm name.](media/use-automated-machine-learning/ai-900-overview.png)
@@ -170,7 +170,7 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     ![Screenshot of the feature importance chart on the Explanations tab.](media/use-automated-machine-learning/feature-importance1.png)
 
-## Deploy a predictive service
+## Task 5: Deploy a predictive service
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), on the **Automated ML** page, select your automated machine learning job.
 
@@ -192,13 +192,15 @@ Click on **Deploy**.
 
     ![Screenshot of location of Endpoints on the left hand menu.](media/endpoints1-02.png)
 
-## Test the deployed service
+## Task 6: Test the deployed service
 
 Now you can test your deployed service.
 
 1. On the **Endpoints** page, open the **predict-rentals** real-time endpoint.
 
     ![Screenshot of location of Endpoints on the left hand menu.](media/use-automated-machine-learning/endpoints-2.png)
+
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another 10 minutes for the endpoint state to change the deplooyment state to **Healthy**, or else perform the steps from Task 5.
 
 1. When the **predict-rentals** endpoint opens, view the **Test** tab.
 
