@@ -3,13 +3,13 @@
 > **Note**
 > To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
 
-The *Computer Vision* cognitive service uses pre-trained machine learning models to analyze images and extract information about them.
+The ***Computer Vision*** cognitive service uses pre-trained machine learning models to analyze images and extract information about them.
 
 For example, suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using the Computer Vision service, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
 In this lab, you'll use a simple command-line application to see the Computer Vision service in action. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Create a *Cognitive Services* resource
+## Task 1: Create a *Cognitive Services* resource
 
 You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
 
@@ -27,7 +27,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
 1. View the **Keys and Endpoint** page from the left pane under Resource Management for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
-## Run Cloud Shell
+## Task 2: Run Cloud Shell
 
 To test the capabilities of the Computer Vision service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
 
@@ -49,7 +49,7 @@ To test the capabilities of the Computer Vision service, we'll use a simple comm
 
     ![Wait for PowerShell to start.](media/analyze-images-computer-vision-service/powershell-prompt(1).png)
 
-## Configure and run a client application
+## Task 3: Configure and run a client application
 
 Now that you have a Cloud Shell environment, you can run a simple application that uses the Computer Vision service to analyze an image.
 
@@ -130,6 +130,6 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
 1. Review the results of the image analysis for the third image.
 
-## Learn more
+### Learn more
 
 This simple app shows only some of the capabilities of the Computer Vision service. To learn more about what you can do with this service, see the [Computer Vision page](https://azure.microsoft.com/services/cognitive-services/computer-vision/).
