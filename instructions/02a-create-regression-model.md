@@ -339,7 +339,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
     -  **Description**: Auto price regression
     - **Compute type**: Azure Container Instance
 
-1.Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left Notifications of the Microsoft Azure Machine Learning Studio.
+Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left Notifications of the Microsoft Azure Machine Learning Studio.
 
 ## Task 13: Test the service
 
