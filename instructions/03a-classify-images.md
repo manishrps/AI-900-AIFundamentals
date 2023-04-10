@@ -10,7 +10,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
 
-## Create a *Cognitive Services* resource
+## Task 1: Create a *Cognitive Services* resource
 
 You can use the Custom Vision service by creating either a **Custom Vision** resource or a **Cognitive Services** resource.
 
@@ -40,7 +40,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
 
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
-## Create a Custom Vision project
+## Task 2: Create a Custom Vision project
 
 To train an object detection model, you need to create a Custom Vision project based on your training resource. To do this, you'll use the Custom Vision portal.
 
@@ -79,7 +79,7 @@ To train an object detection model, you need to create a Custom Vision project b
 
 1. When the model iteration has been trained, review the *Precision*, *Recall*, and *AP* performance metrics - these measure the prediction accuracy of the classification model, and should all be high.
 
-## Test the model
+## Task 3: Test the model
 
 Before publishing this iteration of the model for applications to use, you should test it.
 
@@ -93,7 +93,7 @@ Before publishing this iteration of the model for applications to use, you shoul
 
 1. Close the **Quick Test** window.
 
-## Publish the image classification model
+## Task 4: Publish the image classification model
 
 Now you're ready to publish your trained model and use it from a client application.
 
@@ -107,7 +107,7 @@ Now you're ready to publish your trained model and use it from a client applicat
 
 Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
 
-## Prepare a client application
+## Task 5: Prepare a client application
 
 To test the capabilities of the Custom Vision service, we'll use a simple command-line application that runs in the cloud shell on Azure.
 
@@ -164,7 +164,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 5. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
-## Test the client application
+## Task 6: Test the client application
 
 Now you can use the sample client application to classify images based on the animal they contain.
 
