@@ -9,7 +9,7 @@ To test the capabilities of the Anomaly Detection service, we'll use a simple co
 > **Note**
 > The goal of this exercise is to get a general sense of how cognitive services are provisioned and used. Anomaly Detector is used as an example, but you are not expected to gain a comprehensive knowledge of anomaly detection in this exercise!
 
-## Create an Anomaly Detector resource
+## Task 1: Create an Anomaly Detector resource
 
 Let's start by creating an **Anomaly Detector** resource in your Azure subscription:
 
@@ -27,7 +27,7 @@ Let's start by creating an **Anomaly Detector** resource in your Azure subscript
       >**Note** 
       >You will need the endpoint and keys to connect from client applications.
 
-## Run Cloud Shell
+## Task 2: Run Cloud Shell
 
 To test the capabilities of the Anomaly Detector service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
 
@@ -49,7 +49,7 @@ To test the capabilities of the Anomaly Detector service, we'll use a simple com
 
      ![Wait for PowerShell to start.](media/powershell-prompt.png)
 
-## Configure and run a client application
+## Task 3: Configure and run a client application
 
 Now that you have a Cloud Shell environment, you can run a simple application that uses the Anomaly Detector service to analyze data.
 
