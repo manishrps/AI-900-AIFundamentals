@@ -202,6 +202,10 @@ Now you can test your deployed service.
 
 > **Note**: The realtime endpoint may be in unhealthy state, wait for another 10 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 5.
 
+### Learn more
+
+**Azure Machine Learning Endpoints** provide an improved, simpler deployment experience. To learn more about what you can do with this service, see the [Understanding_Service_State](https://learn.microsoft.com/en-us/azure/machine-learning/v1/how-to-deploy-and-where?tabs=azcli&view=azureml-api-1#understanding-service-state).
+
 1. When the **predict-rentals** endpoint opens, view the **Test** tab.
 
 1. In the **Input data to test real-time endpoint** pane, replace the template JSON with the following input data:
