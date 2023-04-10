@@ -101,7 +101,7 @@ and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
 member of the [Long Term Ecological Research
 Network](https://lternet.edu/).
 
-### Task 5: Load data to canvas
+## Task 5: Load data to canvas
 
 1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Train Penguin Clustering** which is under Pipelines drafts.
 
