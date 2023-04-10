@@ -3,7 +3,7 @@
 > **Note**
 > To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
 
-## Create an Azure Machine Learning workspace  
+## Task 1: Create an Azure Machine Learning workspace  
 
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: *Your Azure subscription*
@@ -24,7 +24,7 @@
 > **Note**
 > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
 
-## Create compute
+## Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
@@ -48,7 +48,7 @@
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
-## Create a pipeline in Designer
+## Task 3: Create a pipeline in Designer
 
 To get started with Azure Machine Learning designer, first you must create a pipeline and add the dataset you want to work with.
 
@@ -64,7 +64,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
     ![Screenshot of the Machine Learning Studio Settings pane.](media/create-classification-model/ai-900-settings1.png)
 
-## Create a dataset
+## Task 4: Create a dataset
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Data** page (under **Assets**). The Data page contains specific data files or tables that you plan to work with in Azure ML. You can create datasets from this page as well.
 
@@ -102,7 +102,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes.
 
-### Load data to canvas
+### Task 5: Load data to canvas
 
 1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline(Under **pipline Drafts**).
 
@@ -126,7 +126,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
     ![Screenshot of the diabetes-data dataset on the designer canvas.](media/create-classification-model/diabetes-data.png)
 
-## Add transformations
+## Task 6: Add transformations
 
 Before you can train a model, you typically need to apply some pre-processing transformations to the data.
 
@@ -155,7 +155,7 @@ Before you can train a model, you typically need to apply some pre-processing tr
 
 The data transformation is normalizing the numeric columns to put them on the same scale, which should help prevent columns with large values from dominating model training. You'd usually apply a whole bunch of pre-processing transformations like this to prepare your data for training, but we'll keep things simple in this exercise.
 
-## Run the pipeline
+## Task 7: Run the pipeline
 
 To apply your data transformations, you need to run the pipeline as an experiment.
 
@@ -170,7 +170,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
 >**Note**
 > if the the error occurs and stat that the data type is already in the collection, so submit the pipeline again and re-run it.
 
-## View the transformed data
+## Task 8: View the transformed data
 
 1. When the run has completed, the dataset is now prepared for model training. Click on **Job detail**. You will be taken to a new tab.
 
@@ -182,7 +182,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
 After you've used data transformations to prepare the data, you can use it to train a machine learning model.
 
-## Add training modules
+## Task 9: Add training modules
 
 It's common practice to train the model using a subset of the data, while holding back some data with which to test the trained model. This enables you to compare the labels that the model predicts with the actual known labels in the original dataset.
 
@@ -218,7 +218,7 @@ Follow the steps below, using the image above for reference as you add and confi
 
 1. In the **Asset library**, search for and place a **Score Model** module to the canvas, below the **Train Model** module. Then connect the output of the **Train Model** module to the **Trained model** (left) input of the **Score Model** module; and connect the **Results dataset2** (right) output of the **Split Data** module to the **Dataset** (right) input of the **Score Model** module.
 
-## Run the training pipeline
+## Task 10: Run the training pipeline
 
 Now you're ready to run the training pipeline and train the model.
 
@@ -238,7 +238,7 @@ The model is predicting values for the **Diabetic** label, but how reliable are 
 
 The validation data you held back and used to score the model includes the known values for the label. So to validate the model, you can compare the true values for the label to the label values that were predicted when you scored the validation dataset. Based on this comparison, you can calculate various metrics that describe how well the model performs.
 
-## Add an Evaluate Model module
+## Task 11: Add an Evaluate Model module
 
 1. Open the **Diabetes Training** pipeline you created.
 
@@ -272,7 +272,7 @@ The validation data you held back and used to score the model includes the known
 
 The performance of this model isn't all that great, partly because we performed only minimal feature engineering and pre-processing. You could try a different classification algorithm, such as **Two-Class Decision Forest**, and compare the results. You can connect the outputs of the **Split Data** module to multiple **Train Model** and **Score Model** modules, and you can connect a second **Score Model** module to the **Evaluate Model** module to see a side-by-side comparison. The point of the exercise is simply to introduce you to classification and the Azure Machine Learning designer interface, not to train a perfect model!
 
-## Create an inference pipeline
+## Task 12: Create an inference pipeline
 
 1. In Azure Machine Learning studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-diabetes-training**, then select the **Diabetes Training** pipeline.
 
@@ -344,7 +344,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 > **Note**
 > In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
-## Deploy a service
+## Task 13: Deploy a service
 
 1. View the **Predict Diabetes** inference pipeline you created in the previous unit.
 
@@ -363,7 +363,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
 1. Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left of the designer interface.
 
-## Test the service
+## Task 14: Test the service
 
 1. On the **Endpoints** page, open the **predict-diabetes** real-time endpoint.
 
