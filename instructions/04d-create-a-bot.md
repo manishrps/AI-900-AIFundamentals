@@ -2,7 +2,7 @@
 
 For customer support scenarios, it's common to create a bot that can interpret and answer frequently asked questions through a website chat window, email, or voice interface. Underlying the bot interface is a knowledge base of questions and appropriate answers that the bot can search for suitable responses.
 
-## Create a custom question answering knowledge base
+## Task 1 : Create a custom question answering knowledge base
 
 The Language service's custom question answering feature enables you to quickly create a knowledge base, either by entering question and answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
@@ -77,7 +77,7 @@ The Language service's custom question answering feature enables you to quickly 
     - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/qna/margies_faq.docx`
     - **Classify file structure**: *Auto-detect* 
 
-## Edit the knowledge base
+## Task 2 : Edit the knowledge base
 
 Your knowledge base is based on the details in the FAQ document and some pre-defined responses. You can add custom question-and-answer pairs to supplement these.
 
@@ -95,7 +95,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
 1. Click **Done**. Then at the top of the page click **Save** to save your changes. You may need to change the size of your window to see the button.
 
-## Train and test the knowledge base
+## Task 3 : Train and test the knowledge base
 
 Now that you have a knowledge base, you can test it.
 
@@ -112,7 +112,7 @@ Now that you have a knowledge base, you can test it.
 
 1. When you're done testing the knowledge base, click **Test** to close the test pane.
 
-## Create a bot for the knowledge base
+## Task 4 : Create a bot for the knowledge base
 
 The knowledge base provides a back-end service that client applications can use to answer questions through some sort of user interface. Commonly, these client applications are bots. To make the knowledge base available to a bot, you must publish it as a service that can be accessed over HTTP. You can then use the Azure Bot Service to create and host a bot that uses the knowledge base to answer user questions.
 
