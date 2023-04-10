@@ -1,6 +1,6 @@
 # Explore clustering with Azure Machine Learning Designer
 
-## Create an Azure Machine Learning workspace in the azure portal.
+## Task 1: Create an Azure Machine Learning workspace in the azure portal.
 
 1. Select **+ Create a resource**, search for Machine Learning, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: Use existing Azure subscription.
@@ -18,7 +18,7 @@
 
 1. In Azure Machine Learning studio, you should see your newly created workspace **workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
 
-## Create compute
+## Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
@@ -43,7 +43,7 @@
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
-## Create a pipeline in designer
+## Task 3: Create a pipeline in designer
 
 To get started with Azure Machine Learning designer, first you must create a pipeline.
 
@@ -59,7 +59,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
     ![Screenshot of the Machine Learning Studio Settings pane.](media/create-pipeline-help-2c.png)
 
-## Create a dataset
+## Task 4: Create a dataset
 
 In Azure Machine Learning, data for model training and other operations is usually encapsulated in an object called a *dataset*. In this module, you'll use a dataset that includes observations of three species of penguin.
 
@@ -101,7 +101,7 @@ and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
 member of the [Long Term Ecological Research
 Network](https://lternet.edu/).
 
-### Load data to canvas
+### Task 5: Load data to canvas
 
 1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Train Penguin Clustering** which is under Pipelines drafts.
 
@@ -132,7 +132,7 @@ Network](https://lternet.edu/).
 
 1. Close the dataset visualization so you can see the dataset on the pipeline canvas.
 
-## Apply transformations
+## Task 6: Apply transformations
 
 1. In the **Asset library** pane on the left, click on **Component**, which contain a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
 
@@ -171,7 +171,7 @@ Network](https://lternet.edu/).
 
 1. Save and Close the **Normalize Data** module settings to return to the designer canvas.
 
-## Run the pipeline
+## Task 7: Run the pipeline
 
 To apply your data transformations, you need to run the pipeline as an experiment.
 
@@ -183,7 +183,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
     Notice that the left hand panel is now on the **Submitted jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
-## View the transformed data
+## Task 8: View the transformed data
 
 1. When the run has completed, the dataset is now prepared for model training. Click on **Job detail**. You will be taken to another tab which will show the modules like this:
 
@@ -202,7 +202,7 @@ Now that you have selected and prepared the features you want to use from the da
 
 After you've used data transformations to prepare the data, you can use it to train a machine learning model.
 
-## Add training modules
+## Task 9: Add training modules
 
 Work through the following steps to extend the **Train Penguin Clustering** pipeline as shown here:
 
@@ -246,7 +246,7 @@ Follow the steps below, using the image above for reference as you add and confi
 
 1. In the **Asset library**, search for and place an **Assign Data to Clusters** module to the canvas, below the **Train Clustering Model** module. Then connect the **Trained model** (left) output of the **Train Clustering Model** module to the **Trained model** (left) input of the **Assign Data to Clusters** module; and connect the **Results dataset2** (right) output of the **Split Data** module to the **Dataset** (right) input of the **Assign Data to Clusters** module.
 
-## Run the training pipeline
+## Task 10: Run the training pipeline
 
 Now you're ready to run the training pipeline and train the model.
 
@@ -268,7 +268,7 @@ The model is predicting clusters for the penguin observations, but how reliable 
 
 Evaluating a clustering model is made difficult by the fact that there are no previously known *true* values for the cluster assignments. A successful clustering model is one that achieves a good level of separation between the items in each cluster, so we need metrics to help us measure that separation.
 
-## Add an Evaluate Model module
+## Task 11: Add an Evaluate Model module
 
 1. Open the **Train Penguin Clustering** pipeline you created in the previous unit if it's not already open.
 
@@ -294,7 +294,7 @@ Now that you have a working clustering model, you can use it to assign new data 
 
 After creating and running a pipeline to train the clustering model, you can create an *inference pipeline*. The inference pipeline uses the model to assign new data observations to clusters. This model will form the basis for a predictive service that you can publish for applications to use.
 
-## Create an inference pipeline
+## Task 12: Create an inference pipeline
 
 1. In Azure Machine Learning studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-penguin-training**, then select the **Train Penguin Clustering** pipeline. 
 
@@ -345,7 +345,7 @@ Your inference pipeline assigns penguin observations to clusters based on their 
    >**Note**
    >In this exercise, you'll deploy the web service to to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
-## Deploy a service
+## Task 13: Deploy a service
 
 1. View the **Predict Penguin Clusters** inference pipeline you created in the previous unit.
 
@@ -370,7 +370,7 @@ Your inference pipeline assigns penguin observations to clusters based on their 
    >It will take 15-20 mins
  
 
-## Test the service
+## Task 14: Test the service
 
 1. On the **Endpoints** page, open the **predict-penguin-clusters** real-time endpoint, and select the **Test** tab.
 
