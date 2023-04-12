@@ -40,7 +40,7 @@ In this exercise, you will train a regression model that predicts the price of a
     - **Enable SSH access**: Leave as default
     - Select **Create**
 
-> **Note**
+> **Note :**
 > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
@@ -87,29 +87,29 @@ You typically apply data transformations to prepare the data for modeling. In th
 
 1. In the **Asset library** pane on the left, click on **Component**, which contain a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
 
-1. Search for a **Select Columns in Dataset** module and place it to the canvas, below the **Automobile price data (Raw)** module. Then connect the output at the bottom of the **Automobile price data (Raw)** module to the input at the top of the **Select Columns in Dataset** module, like this:
+2. Search for a **Select Columns in Dataset** module and place it to the canvas, below the **Automobile price data (Raw)** module. Then connect the output at the bottom of the **Automobile price data (Raw)** module to the input at the top of the **Select Columns in Dataset** module, like this:
 
     ![Screenshot of the Automobile price data dataset connected to the Select Columns in Dataset module.](media/dataset-select-columns-2a.png)
 
-1. Double click on the **Select Columns in Dataset** module to access a settings pane on the right. Select **Edit column**. Then in the **Select columns** window, select **By name** and **Add all** to add all the columns. Then remove **normalized-losses**, so your final column selection looks like this:
+3. Double click on the **Select Columns in Dataset** module to access a settings pane on the right. Select **Edit column**. Then in the **Select columns** window, select **By name** and **Add all** to add all the columns. Then remove **normalized-losses**, so your final column selection looks like this:
 
     ![Screenshot of all columns other than normalized_losses.](media/select-columns-2a.png)
 
-1. Click on the **Save** button then **close** Select Columns in Dataset pane.
+4. Click on the **Save** button then **close** Select Columns in Dataset pane.
 
 In the rest of this exercise, you go through steps to create a pipeline that looks like this:
 
-![Screenshot of the Automobile price data dataset with Normalize Data module.](media/data-transforms-2a.png)
+   ![Screenshot of the Automobile price data dataset with Normalize Data module.](media/data-transforms-2a.png)
 
 Follow the remaining steps, use the image for reference as you add and configure the required modules.
 
-1. In the **Asset library**, search for a **Clean Missing Data** module and place it under the **Select Columns in Dataset** module on the canvas. Then connect the output from the **Select Columns in Dataset** module to the input of the **Clean Missing Data** module.
+5. In the **Asset library**, search for a **Clean Missing Data** module and place it under the **Select Columns in Dataset** module on the canvas. Then connect the output from the **Select Columns in Dataset** module to the input of the **Clean Missing Data** module.
 
-1. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower** like this:
+6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower** like this:
 
     ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
 
-1. With the **Clean Missing Data** module still selected, in the pane on the right, set the following configuration settings:
+7. With the **Clean Missing Data** module still selected, in the pane on the right, set the following configuration settings:
     - **Minimum missing value ratio**: 0.0
     - **Maximum missing value ratio**: 1.0
     - **Cleaning mode**: Remove entire row
@@ -117,9 +117,9 @@ Follow the remaining steps, use the image for reference as you add and configure
     >**Tip**
     >If you view the statistics for the **bore**, **stroke**, and **horsepower** columns, you'll see a number of missing values. These columns have fewer missing values than **normalized-losses**, so they might still be useful in predicting **price** once you exclude the rows where the values are missing from training.
 
-1. In the **Asset library**, search for a **Normalize Data** module and place it on the canvas, below the **Clean Missing Data** module. Then connect the left-most output from the **Clean Missing Data** module to the input of the **Normalize Data** module.
+8. In the **Asset library**, search for a **Normalize Data** module and place it on the canvas, below the **Clean Missing Data** module. Then connect the left-most output from the **Clean Missing Data** module to the input of the **Normalize Data** module.
 
-1. Double click on the **Normalize Data** module to view its parameters pane. You will need to specify the transformation method and the columns to be transformed. Set the transformation method to **MinMax**. Apply a rule by selecting **Edit column** to include the following **Column names**:
+9. Double click on the **Normalize Data** module to view its parameters pane. You will need to specify the transformation method and the columns to be transformed. Set the transformation method to **MinMax**. Apply a rule by selecting **Edit column** to include the following **Column names**:
     - **symboling**
     - **wheel-base**
     - **length**
@@ -137,7 +137,7 @@ Follow the remaining steps, use the image for reference as you add and configure
 
     ![Screenshot showing how all numeric columns other than price are selected.](media/normalize-rules-2a.png)
 
-    >**Tip**
+    >**Tip :**
     >If you compare the values in the **stroke**, **peak-rpm**, and **city-mpg** columns, they are all measured in different scales, and it is possible that the larger values for **peak-rpm** might bias the training algorithm and create an over-dependency on this column compared to columns with lower values, such as **stroke**. Typically, data scientists mitigate this possible bias by *normalizing* the numeric columns so they're on the similar scales.
 
 ## Task 6: Run the pipeline
