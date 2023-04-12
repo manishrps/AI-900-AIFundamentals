@@ -14,9 +14,9 @@ To test the capabilities of the Anomaly Detection service, we'll use a simple co
 Let's start by creating an **Anomaly Detector** resource in your Azure subscription:
 
 1. Click the **&#65291;Create a resource** button, search for Anomaly Detector, and create an **Anomaly Detector** resource with the following settings:
-    - **Subscription**: Use existing subscription.
-    - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**: Select the same region where your resource group was created.
+    - **Subscription**: Use existing subscription
+    - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Region**: Select the same region where your resource group was created
     - **Name**: enter **myanomalydetector-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Free F0
 
@@ -94,8 +94,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
       ![Picture1](media/Ai-900-mod1-img8.png)
       
-      >**Note** 
-      > If you will be not able to find this option, you can use also Shortcut Keys **ctrl + S** to save and **ctrl + Q** to close editor.
+      >**Note**: If you will be not able to find this option, you can use also Shortcut Keys **ctrl + S** to save and **ctrl + Q** to close editor.
       
     Remember, anomaly detection is an artificial intelligence technique used to determine whether values in a series are within expected parameters. The sample client application will use your Anomaly Detector service to analyze a file containing a series of date/times and numeric values. The application should return results indicating at each time point, whether the numeric value is within expected parameters.
 
