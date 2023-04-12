@@ -11,7 +11,7 @@
 ## Login to Azure Portal
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
    
-   ![Create storage by clicking confirm.](media/GettingStarted/ai-900-gettingstarted-03.png)   
+   ![Create storage by clicking confirm.](media/GettingStarted/ai-900-gettingstarted-05.png)   
  
    >**Note**: On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select the  **Continue without this data**  button. Then, proceed to select  **Confirm and start browsing**  on the next page
 
