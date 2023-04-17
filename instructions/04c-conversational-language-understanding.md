@@ -4,13 +4,13 @@ Increasingly, we expect computers to be able to use AI in order to understand sp
 
 To test the capabilities of the Conversational Language Understanding service, we'll use a command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Exercise 1: Create a *Language service* resource
+## Exercise 1: Create a *Language service* resouendeavoursrce
 
 You can use the Conversational Language Understanding service by creating a **Language service** resource.
 
 1. Click the **&#65291;Create a resource** button, search for *Language service*, and create a **Language service** resource with the following settings:
     - Select additional features: *Keep the default features and click Continue to create your resource*  
-    - **Subscription**: Use exsiting subscription*.
+    - **Subscription**: Use exsiting subscription.
     - **Resource group**: Select **AI-900-Module-04c-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Region**: Select the same region where your resource group was created.
     - **Name**: enter **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**
