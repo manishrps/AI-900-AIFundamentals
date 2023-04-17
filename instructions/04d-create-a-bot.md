@@ -103,7 +103,7 @@ Now that you have a knowledge base, you can test it.
 
 1. In the test pane, at the bottom enter the message **I want to book a flight**. An appropriate response from the FAQ should be returned.
 
-    > **Note**
+    > **Note :**
     > The response includes a *short answer* as well as a more verbose *answer passage* - the answer passage shows the full text in the FAQ document for the closest matched question, while the short answer is intelligently extracted from the passage. You can control whether the short answer is from the response by using the **Display short answer** checkbox at the top of the test pane.
 
 1. Try another question, such as *How can I cancel a reservation?*
@@ -143,7 +143,7 @@ The knowledge base provides a back-end service that client applications can use 
     - **App Settings**
         - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* 
         
-        > **Note**
+        > **Note :**
         > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created your Language resource in. Select your Language resource and navigate to its left-hand menu. Then select *Keys and Endpoint*. Copy one of the keys. 
 
     -  
@@ -164,6 +164,14 @@ The knowledge base provides a back-end service that client applications can use 
 
 Experiment with the bot. You'll probably find that it can answer questions from the FAQ quite accurately, but it will have limited ability to interpret questions that it has not been trained with. You can always use the Language Studio to edit the knowledge base to improve it, and republish it.
 
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
+1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 ## Learn more
 
 - To learn more about the Question Answering service, view [the documentation](https://docs.microsoft.com/azure/cognitive-services/language-service/question-answering/overview).
