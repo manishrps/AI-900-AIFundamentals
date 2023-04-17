@@ -112,7 +112,6 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
     - **Blob folder**: *Leave this blank*.
     - **Description**: Reviews for Fourth Coffee shops.
 
-
 1. Select **Next: Add cognitive skills (Optional)**.
 
 1. In the **Attach Cognitive Services** section, select your Cognitive Services resource.  
