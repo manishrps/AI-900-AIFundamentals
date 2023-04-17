@@ -398,7 +398,7 @@ Let's review what you have done. You cleaned and transformed a dataset of automo
 
 You also tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+> **Note**: **Congratulations!** You have successfully completed this exercise. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
 1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
