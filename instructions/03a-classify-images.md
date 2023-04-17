@@ -14,7 +14,7 @@ To complete this lab, you will need an [Azure subscription](https://azure.micros
 
 You can use the Custom Vision service by creating either a **Custom Vision** resource or a **Cognitive Services** resource.
 
->**Note**
+>**Note :**
 >Not every resource is available in every region. Whether you create a Custom Vision or Cognitive Services resource, only resources created in [certain regions](https://azure.microsoft.com/global-infrastructure/services/?products=cognitive-services) can be used to access Custom Vision services. For simplicity, a region is pre-selected for you in the configuration instructions below.
 
 Create a **Cognitive Services** resource in your Azure subscription.
@@ -25,7 +25,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
     * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
     * Azure Password: <inject key="AzureAdUserPassword"></inject>
  
-   >**Note**
+   >**Note :**
    > On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
 
 1. In the Azure Portal, select the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
