@@ -99,7 +99,7 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![An image of a person with their face outlined](media/create-face-solutions/ai900_03c-8.jpg)
 
-    >**Note**
+    >**Note :**
     >Face service capabilities that return personally identifiable features are restricted. See https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/ for details.
 
 1. Now let's try another image:
@@ -125,6 +125,15 @@ Now that you have a custom model, you can run a simple client application that u
     ```
 
 1. Review the results of the face analysis for the third image.
+
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
+1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ## Learn more
 
