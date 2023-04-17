@@ -1,6 +1,6 @@
 # Explore Computer Vision
 
-> **Note**
+> **Note :**
 > To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
 
 The ***Computer Vision*** cognitive service uses pre-trained machine learning models to analyze images and extract information about them.
