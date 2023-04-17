@@ -30,7 +30,7 @@ To implement natural language understanding with Conversational Language Underst
     - **Azure subscription**: Select exsiting subscription.
     - **Language resource**: **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**.
     
-    >**Tip**
+    >**Tip :**
     >If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     >1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
     >1. On the **Settings** page, view the **Resources** tab.
@@ -47,7 +47,7 @@ To implement natural language understanding with Conversational Language Underst
 
     ![Enter details for the project.](media/create-project-4c.png)
 
-    >**Tip**
+    >**Tip :**
     >Write down your *project name*, you will use it later.
 
 1. On the *Review and finish* page, click **Create**.
@@ -142,7 +142,7 @@ To use your trained model in a client application, you must deploy it as an endp
     - Click **Deploy**
 
     
-    >**Tip**
+    >**Tip :**
     >Write down your *deployment name*, you will use it later. 
 
 1. When the model is deployed, click **Testing deployments** on the left-hand side of the page, and then select your deployed model under **Deployment name**.
