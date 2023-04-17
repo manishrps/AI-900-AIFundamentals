@@ -12,7 +12,7 @@ To test the capabilities of the Custom Vision service to detect objects in image
 
 You can use the Custom Vision service by creating either a **Custom Vision** resource or a **Cognitive Services** resource.
 
-> **Note**
+> **Note :**
 > Not every resource is available in every region. Whether you create a Custom Vision or Cognitive Services resource, only resources created in [certain regions](https://azure.microsoft.com/global-infrastructure/services/?products=cognitive-services) can be used to access Custom Vision services. For simplicity, a region is pre-selected for you in the configuration instructions below.
 
 Create a **Cognitive Services** resource in your Azure subscription.
@@ -203,6 +203,15 @@ Now you can use the sample client application to detect cyclists and pedestrians
     ![Photograph of a group of pedestrians.](media/create-object-detection-solution/road-safety-2.jpg)
 
 Hopefully, your object detection model did a good job of detecting pedestrians and cyclists in the test images.
+
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
+1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ## Learn more
 
