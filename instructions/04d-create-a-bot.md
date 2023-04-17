@@ -8,7 +8,7 @@ The Language service's custom question answering feature enables you to quickly 
 
 1. Open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
-1. Click the **&#65291;Create a resource** button, search for *Language service*, and create a **Language service** resource with the following settings, and then click **Continue to create your resource**:
+2. Click the **&#65291;Create a resource** button, search for *Language service*, and create a **Language service** resource with the following settings, and then click **Continue to create your resource**:
     - **Select Additional Features**
     - **Default features**: *Keep the default features*.
     - **Custom features**: *Select custom question answering*.
@@ -24,17 +24,17 @@ The Language service's custom question answering feature enables you to quickly 
     - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected*.
 
 
-    > **Note**
+    > **Note :**
     > If you have already provisioned a free-tier **Azure Cognitive Search** resources, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
 
    ![](media/create-a-bot/ai900_4d-02.png)
 
-1. Click **Review and Create** and then click **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
+3. Click **Review and Create** and then click **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
 
-1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
+4. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
 
 
-1. If prompted to select an Azure resource, ensure the following settings and click on **Done**:
+5. If prompted to select an Azure resource, ensure the following settings and click on **Done**:
     - **Azure directory**: The Azure directory containing the pre alloted subscription.
     - **Azure subscription**: The default Azure subscription.
     - **Resource type**: *Language*.
@@ -42,15 +42,15 @@ The Language service's custom question answering feature enables you to quickly 
 
    ![](media/create-a-bot/ai900_4d-03.png)
 
-1. If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
+6. If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
     1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
     2. On the **Settings** page, view the **Resources** tab.
     3. Select the language resource you just created, and click **Switch resource**.
     4. At the top of the page, click **Language Studio** to return to the Language Studio home page.
 
-1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
+7. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
 
-1. If On the **Select the project you want to work with** page is empty then click on **Create new project**. Execute the following steps, else proceed to the next step.
+8. If On the **Select the project you want to work with** page is empty then click on **Create new project**. Execute the following steps, else proceed to the next step.
 
     1. On **Connect to Azure search** page click on **Connect to Azure search**.
     1. On **Azure Search** page  select drop down of select Azure Search resources and click on **Add Azure Search resources** 
@@ -58,7 +58,7 @@ The Language service's custom question answering feature enables you to quickly 
     1. At the top of the page, click **Language Studio** to return to the Language Studio home page.
     1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
 
-1. On the **Choose language setting for resource ai900language-<inject key="DeploymentID" enableCopy="false" />** page, select **I want to select the language when I create a project in this resource** and click **Next**.
+9. On the **Choose language setting for resource ai900language-<inject key="DeploymentID" enableCopy="false" />** page, select **I want to select the language when I create a project in this resource** and click **Next**.
 
 1. On the **Enter basic information** page, enter the following details and click **Next**:
     - **Language resource**: choose your language resource.  
