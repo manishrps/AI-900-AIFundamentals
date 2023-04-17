@@ -23,9 +23,8 @@ The Language service's custom question answering feature enables you to quickly 
     - **Pricing tier**: S (1K Calls per minute)
     - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected*.
 
-
-    > **Note :**
-    > If you have already provisioned a free-tier **Azure Cognitive Search** resources, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
+  > **Note :**
+  > If you have already provisioned a free-tier **Azure Cognitive Search** resources, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
 
    ![](media/create-a-bot/ai900_4d-02.png)
 
