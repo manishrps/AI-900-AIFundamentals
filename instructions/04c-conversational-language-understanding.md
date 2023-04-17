@@ -194,7 +194,7 @@ Now let's open and edit a pre-written script, which will run the client applicat
     git clone https://github.com/MicrosoftLearning/AI-900-AIFundamentals ai-900
     ```
 
-    >**Note**
+    >**Note :**
     >If you already used this command in another lab to clone the *ai-900* repository, you can skip this step.
 
 1. The files are downloaded to a folder named **ai-900**. Now we want to see all of the files in this folder and work with them. Type the following commands into the shell:
@@ -249,7 +249,7 @@ Now let's open and edit a pre-written script, which will run the client applicat
 
 1. Experiment with a few more commands; including commands that the model was not trained to support, such as "Hello" or "switch on the oven". The app should generally understand commands for which its language model is defined, and fail gracefully for other input.
 
->**Note**
+>**Note :**
 >Each time you will need to start with **./understand.ps1** followed by the phrase. Include quotation marks around your phrase.
 
 ## Learn more
