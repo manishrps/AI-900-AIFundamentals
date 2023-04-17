@@ -1,6 +1,6 @@
 # Explore classification with Azure Machine Learning Designer
 
-> **Note**
+> **Note :**
 > To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
 
 ## Task 1: Create an Azure Machine Learning workspace  
@@ -21,7 +21,7 @@
 
 1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
 
-> **Note**
+> **Note :**
 > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
 
 ## Task 2: Create compute
@@ -43,7 +43,7 @@
     - **Enable SSH access**: leave as default
     - Select **Create**
 
-> **Note**
+> **Note :**
 > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
@@ -167,7 +167,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
     Notice that the left hand panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
->**Note**
+>**Note :**
 > if the the error occurs and stat that the data type is already in the collection, so submit the pipeline again and re-run it.
 
 ## Task 8: View the transformed data
