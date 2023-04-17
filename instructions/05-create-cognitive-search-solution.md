@@ -112,6 +112,7 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
     - **Blob folder**: *Leave this blank*.
     - **Description**: Reviews for Fourth Coffee shops.
 
+
 1. Select **Next: Add cognitive skills (Optional)**.
 
 1. In the **Attach Cognitive Services** section, select your Cognitive Services resource.  
@@ -143,17 +144,17 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
     - Image details
     - Image references
 
-    > **Note**
+    > **Note :**
     > If a warning asking for a **Storage Account Connection String** appears.
     
     
     ![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](media/6a-azure-cognitive-search-enrichments-warning-05.png)
 
-    > 1. Select **Choose an existing connection**. Choose the storage account you created earlier.
+    > a. Select **Choose an existing connection**. Choose the storage account you created earlier.
 
-    > 1. Click on **+ Container** to create a new container called **knowledge-store** with the privacy level set to private, and select **Create**.
+    > b. Click on **+ Container** to create a new container called **knowledge-store** with the privacy level set to private, and select **Create**.
 
-    > 1. Select the **knowledge-store** container, and then click **Select** at the bottom of the screen.
+    > c. Select the **knowledge-store** container, and then click **Select** at the bottom of the screen.
 
 1. Select **Azure blob projects: Document**. A setting for *Container name* with the *knowledge-store* container auto-populated displays. Don't change the container name.
 
