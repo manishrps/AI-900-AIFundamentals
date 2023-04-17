@@ -1,6 +1,6 @@
 # Explore clustering with Azure Machine Learning Designer
 
-## Task 1: Create an Azure Machine Learning workspace in the azure portal.
+## Task 1: Create an Azure Machine Learning workspace in the azure portal
 
 1. Select **+ Create a resource**, search for Machine Learning, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: Use existing Azure subscription.
@@ -38,7 +38,7 @@
     - **Enable SSH access**: *do not select*
     - Select **Create**
 
-       > **Note**
+       > **Note:**
        > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
@@ -94,7 +94,7 @@ In Azure Machine Learning, data for model training and other operations is usual
 
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents measurements of the culmen (bill) length and depth, flipper length, and body mass for multiple observations of penguins. There are three species of penguin represented in the dataset: *Adelie*, *Gentoo*, and *Chinstrap*.
 
-     > **Note**
+     > **Note :**
      > The penguins dataset used in the this exercise is a subset of data collected and made available by [Dr. Kristen
 Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php)
 and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
