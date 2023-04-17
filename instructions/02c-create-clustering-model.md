@@ -20,7 +20,7 @@
 
 ## Task 2: Create compute
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
 2. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
     - **Location**: Select the same region where your resource group was created.
@@ -177,7 +177,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
 1. Select **Submit**, and run the pipeline as a new experiment click on **Create New** and named it as **mslearn-penguin-training** on your compute cluster. Click on **Submit**
 
-     > **Note**
+     > **Note :**
      > if the pripeline failed, then re-submit again.
 
 1. Wait for the run to finish. This may take 5 minutes or more.
@@ -237,7 +237,7 @@ Follow the steps below, using the image above for reference as you add and confi
 
 1. The *K-Means* algorithm groups items into the number of clusters you specify - a value referred to as ***K***. Select the **K-Means Clustering** module and in the right hand pane, set the **Number of centroids** parameter to **3**.
 
-    > **Note**
+    > **Note :**
     > You can think of data observations, like the penguin measurements, as being multidimensional vectors. The K-Means algorithm works by:
     > 1. initializing *K* coordinates as randomly selected points called *centroids* in  *n*-dimensional space (where *n* is the number of dimensions in the feature vectors).
     > 2. Plotting the feature vectors as points in the same space, and assigning each point to its closest centroid.
@@ -301,7 +301,7 @@ After creating and running a pipeline to train the clustering model, you can cre
 
 1. In Azure Machine Learning studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-penguin-training**, then select the **Train Penguin Clustering** pipeline. 
 
-1. Locate the menu above the canvas and click on **Create inference pipeline**. You may need to expand your screen to full and click on the **...** icon on the top right hand corner of the screen in order to find **Create inference pipeline** in the menu.  
+1. Locate the menu above the canvas and click on **Create inference pipeline**. You may need to expand your screen to full and click on the **...** icon on the top right-hand corner of the screen in order to find **Create inference pipeline** in the menu.  
 
     ![Screenshot of location of create inference pipeline.](media/create-inference-pipeline-2c.png) 
 
@@ -345,8 +345,8 @@ After creating and running a pipeline to train the clustering model, you can cre
 
 Your inference pipeline assigns penguin observations to clusters based on their features. Now you're ready to publish the pipeline so that client applications can use it.
 
-   >**Note**
-   >In this exercise, you'll deploy the web service to to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
+   >**Note :**
+   >In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
 ## Task 13: Deploy a service
 
@@ -369,8 +369,7 @@ Your inference pipeline assigns penguin observations to clusters based on their 
 
 1. To view the deployment status, expand the left pane by selecting the menu icon at the top left of the screen. View the **Endpoints** page (under **Assets**) and select **predict-penguin-clusters**. When the deployment has finished, the **Deployment state** will change to **Healthy**.
 
-   >**Note:** 
-   >It will take 15-20 mins
+   >**Note:** It will take 15-20 mins for the deployment to change the status
  
 
 ## Task 14: Test the service
@@ -397,8 +396,7 @@ Your inference pipeline assigns penguin observations to clusters based on their 
     }
     ```
 
-     > **Note**
-     > The JSON above defines features for a penguin, and uses the **predict-penguin-clusters** service you created to predict a cluster assignment.
+     > **Note:** The JSON above defines features for a penguin, and uses the **predict-penguin-clusters** service you created to predict a cluster assignment. 
 
 1. Select **Test**. On the right hand of the screen, you should see the output **'Assignments'**. Notice how the assigned cluster is the one with the shortest distance to cluster center.
 
