@@ -119,7 +119,7 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
 1. In the **Add enrichments** section:
     - Change the **Skillset name** to **coffee-skillset**.
     - Select the checkbox **Enable OCR and merge all text into merged_content field**.
-        > **Note**
+        > **Note :**
         > It's important to select **Enable OCR** to see all of the enriched field options.
     - Ensure that the **Source data field** is set to **merged_content**.
     - Change the **Enrichment granularity level** to **Pages (5000 character chunks)**.
@@ -149,11 +149,9 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
     
     ![Screenshot that shows the Storage account connection screen warning with 'Choose an existing connection' selected.](media/6a-azure-cognitive-search-enrichments-warning-05.png)
 
-    > a. Select **Choose an existing connection**. Choose the storage account you created earlier.
-
-    > b. Click on **+ Container** to create a new container called **knowledge-store** with the privacy level set to private, and select **Create**.
-
-    > c. Select the **knowledge-store** container, and then click **Select** at the bottom of the screen.
+      * Select **Choose an existing connection**. Choose the storage account you created earlier.
+      * Click on **+ Container** to create a new container called **knowledge-store** with the privacy level set to private, and select **Create**.
+      * Select the **knowledge-store** container, and then click **Select** at the bottom of the screen.
 
 1. Select **Azure blob projects: Document**. A setting for *Container name* with the *knowledge-store* container auto-populated displays. Don't change the container name.
 
@@ -198,14 +196,14 @@ Use the Search explorer to write and test queries. Search explorer is a tool bui
 
     In the **Query string** field, enter `search=*&$count=true`, and then select **Search**. The search query returns all the documents in the search index, including a count of all the documents in the **@odata.count** field. The search index should return a JSON document containing your search results.
 
-    > **Note**
+    > **Note :**
     > If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
 
 1. Now let's filter by location. Enter `search=$filter=locations eq 'Chicago'` in the **Query string** field, and then select **Search**. The query searches all the documents in the  index and filters for reviews with a Chicago location.
 
 1. Now let's filter by sentiment. Enter `search=$filter=sentiment eq 'negative'` in the **Query string** field, and then select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment.
 
-   > **Note**
+   > **Note :**
    > See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
 
 1. One of the problems we might want to solve for is why there might be certain reviews. Let's take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
