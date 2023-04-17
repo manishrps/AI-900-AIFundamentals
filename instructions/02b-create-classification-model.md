@@ -26,7 +26,7 @@
 
 ## Task 2: Create compute
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
 1. On the **Compute** page, select the **Compute clusters** tab, Click on **+ New** and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
     - **Location**: *Select the same region where your workspace was created*.
@@ -104,7 +104,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
 ### Task 5: Load data to canvas
 
-1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline(Under **pipline Drafts**).
+1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline (Under **pipline Drafts**).
 
 1. Then in the project, next to the pipeline name on the left, select the arrows icon to expand the panel if it is not already expanded. The panel should open by default to the **Asset library** pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, **Data** and **Component**.
 
@@ -341,14 +341,14 @@ Your inference pipeline predicts whether or not patients are at risk for diabete
 
 After you've created and tested an inference pipeline for real-time inferencing, you can publish it as a service for client applications to use.
 
-> **Note**
+> **Note :**
 > In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
 ## Task 13: Deploy a service
 
 1. View the **Predict Diabetes** inference pipeline you created in the previous unit.
 
-1. Select **Job detail** on the left hand pane. This will open up another window.
+1. Select **Job detail** on the left-hand pane. This will open another window.
 
     ![Screenshot of job details next to the completed job.](media/create-classification-model/completed-job-inference1.png)
 
@@ -391,7 +391,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
     }
     ```
 
-    > **Note**
+    > **Note :**
     > The JSON above defines features for a patient, and uses the **predict-diabetes** service you created to predict a diabetes diagnosis.
 
 1. Select **Test**. On the right hand of the screen, you should see the output **'DiabetesPrediction'**. The output is 1 if the patient is predicted to have diabetes, and 0 if the patient is predicted not to have diabetes.  
