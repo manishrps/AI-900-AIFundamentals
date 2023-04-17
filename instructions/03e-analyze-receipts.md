@@ -101,6 +101,15 @@ Now that you have a custom model, you can run a simple client application that u
 
 1. Review the returned results. See that Form Recognizer is able to interpret the data in the form, correctly identifying the merchant address and phone number, and the transaction date and time, as well as the line items, subtotal, tax, and total amounts.
 
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
+1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
 ## Learn more
 
 This simple app shows only some of the Form Recognizer capabilities of the Computer Vision service. To learn more about what you can do with this service, see the [Form Recognizer page](https://docs.microsoft.com/azure/applied-ai-services/form-recognizer/overview).
