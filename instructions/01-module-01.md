@@ -27,15 +27,6 @@ Let's start by creating an **Anomaly Detector** resource in your Azure subscript
       >**Note :** 
       >You will need the endpoint and keys to connect from client applications.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
-
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
-
 ## Task 2: Run Cloud Shell
 
 To test the capabilities of the Anomaly Detector service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
@@ -57,15 +48,6 @@ To test the capabilities of the Anomaly Detector service, we'll use a simple com
 1. Wait for PowerShell to start. You should see the following screen in the Azure portal:  
 
      ![Wait for PowerShell to start.](media/powershell-prompt.png)
-
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
-
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ## Task 3: Configure and run a client application
 
@@ -126,6 +108,16 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 1. Review the results, noting that the final column in the results is **True** or **False** to indicate if the value recorded at each date/time is considered an anomaly or not. Consider how we could use this information in a real-life situation. What action could the application trigger if the values were of fridge temperature or blood pressure and anomalies were detected?
      
       ![Picture1](media/Ai900-mod1-img9.png)
+
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
+1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message then the lab is completed. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
 
 ## Learn more
 
