@@ -1,6 +1,8 @@
 # Explore clustering with Azure Machine Learning Designer
 
-## Task 1: Create an Azure Machine Learning workspace in the azure portal
+## Exercise 1: Create an Azure Machine Learning workspace in the Azure portal
+
+### Task 1: Create an Azure Machine Learning workspace in the Azure portal
 
 1. Select **+ Create a resource**, search for Machine Learning, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: Use existing Azure subscription.
@@ -16,11 +18,18 @@
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
-1. In Azure Machine Learning studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
+1. In Azure Machine Learning Studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated with your directory are listed, and select the one you created for this exercise.
 
-## Task 2: Create compute
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### Task 2: Create compute
+
+1. In [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
 2. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
     - **Location**: Select the same region where your resource group was created.
@@ -29,8 +38,7 @@
     - **Virtual machine size**:
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
-
-    - Select **Next** (**If you have not able to see this option click on the  ...   at the top and right side of browser and zoom out till this option is visible**)
+    - Select **Next** 
     - **Compute name**: **ai900-vm-<inject key="DeploymentID" enableCopy="false" />**
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
@@ -41,13 +49,20 @@
        > **Note:**
        > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
-The compute cluster will take some time to be created. You can move onto the next step while you wait.
+The compute cluster will take some time to be created. You can move on to the next step while you wait.
 
-## Task 3: Create a pipeline in designer
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-To get started with Azure Machine Learning designer, first you must create a pipeline.
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Author**), and select the plus sign to create a new pipeline.
+### Task 3: Create a pipeline in designer
+
+To get started with Azure Machine Learning Designer, first, you must create a pipeline.
+
+1. In [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Author**), and select the plus sign to create a new pipeline.
 
 1. At the top right-hand side of the screen, select **Settings**. If the **Settings** pane is not visible, select the wheel icon next to the pipeline name at the top.
 
@@ -59,7 +74,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
     ![Screenshot of the Machine Learning Studio Settings pane.](media/create-pipeline-help-2c.png)
 
-## Task 4: Create a dataset
+### Task 4: Create a dataset
 
 In Azure Machine Learning, data for model training and other operations is usually encapsulated in an object called a *dataset*. In this module, you'll use a dataset that includes observations of three species of penguin.
 
@@ -95,17 +110,24 @@ In Azure Machine Learning, data for model training and other operations is usual
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents measurements of the culmen (bill) length and depth, flipper length, and body mass for multiple observations of penguins. There are three species of penguin represented in the dataset: *Adelie*, *Gentoo*, and *Chinstrap*.
 
      > **Note :**
-     > The penguins dataset used in the this exercise is a subset of data collected and made available by [Dr. Kristen
+     > The penguins dataset used in this exercise is a subset of data collected and made available by [Dr. Kristen
 Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php)
 and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
 member of the [Long Term Ecological Research
 Network](https://lternet.edu/).
 
-## Task 5: Load data to canvas
+ **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  
+### Task 5: Load data to a canvas
 
 1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Train Penguin Clustering** which is under Pipelines drafts.
 
-1. Next to the pipeline name on the left, select the arrows icon to expand the panel if it is not already expanded. The panel should open by default to the **Asset library** pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, **Data** and **Component**.
+1. Next to the pipeline name on the left, select the arrow icon to expand the panel if it is not already expanded. The panel should open by default to the **Asset library** pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, **Data** and **Component**.
 
     ![Screenshot of location of designer asset library, search bar, and data icon.](media/designer-asset-library-data-2c.png)
 
@@ -132,9 +154,9 @@ Network](https://lternet.edu/).
 
 1. Close the dataset visualization so you can see the dataset on the pipeline canvas.
 
-## Task 6: Apply transformations
+### Task 6: Apply transformations
 
-1. In the **Asset library** pane on the left, click on **Component**, which contain a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
+1. In the **Asset library** pane on the left, click on **Component**, which contains a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
 
     ![Screenshot of location of designer asset library, search bar, and components icon.](media/designer-asset-library-components-2c.png)
 
@@ -142,17 +164,17 @@ Network](https://lternet.edu/).
 
     ![Screenshot of the penguin-data dataset connected to the Select Columns in Dataset module.](media/dataset-select-columns-2c.png)
 
-1. Double click on the **Select Columns in Dataset** module, and in the pane on the right, select **Edit column**. Then in the **Select columns** window, select **By name** and use the **+** links to select the column names **CulmenLength**, **CulmenDepth**, **FlipperLength**, and **BodyMass**; like this:
+1. Double-click on the **Select Columns in Dataset** module, and in the pane on the right, select **Edit column**. Then in the **Select columns** window, select **By name** and use the **+** links to select the column names **CulmenLength**, **CulmenDepth**, **FlipperLength**, and **BodyMass**; like this:
 
     ![Screenshot of how to include the column names CulmenLength, CulmenDepth, FlipperLength, and BodyMass.](media/select-columns-2c.png)
 
-1. Save and Close the **Select Columns in a Dataset** module settings to return to the designer canvas .
+1. Save and Close the **Select Columns in a Dataset** module settings to return to the designer canvas.
 
 1. In the **Asset library**, search for a **Clean Missing Data** module and place it onto the canvas, below the **Select columns in a dataset** module and connect them like this:
 
     ![Screenshot of how to connect the Select Columns in Dataset module to the Clean Missing Data module.](media/clean-missing-data-2c.png)
 
-1. Double click the **Clean Missing Data** module, and in the settings pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules** and include **All columns**; like this click on **save** and close:
+1. Double-click the **Clean Missing Data** module, and in the settings pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules** and include **All columns**; like this click on **save** and close:
 
     ![Screenshot of how to use the with rules option to select all columns.](media/normalize-columns-2c.png)
 
@@ -165,47 +187,54 @@ Network](https://lternet.edu/).
 
     ![Screenshot of the Clean Missing Data module connected to the Normalize Data module.](media/dataset-normalize-2c.png)
 
-1. Double click the **Normalize Data** module, and in the pane on the right, set the **Transformation method** to **MinMax** and select **Edit column**. Then in the **Columns to transform** window, select **With rules** and include **All columns**; like this:
+1. Double-click the **Normalize Data** module, and in the pane on the right, set the **Transformation method** to **MinMax** and select **Edit column**. Then in the **Columns to transform** window, select **With rules** and include **All columns**; like this:
 
     ![Screenshot of how to select all columns.](media/normalize-columns-2c.png)
 
 1. Save and Close the **Normalize Data** module settings to return to the designer canvas.
 
-## Task 7: Run the pipeline
+### Task 7: Run the pipeline
 
 To apply your data transformations, you need to run the pipeline as an experiment.
 
 1. Select **Submit**, and run the pipeline as a new experiment click on **Create New** and named it as **mslearn-penguin-training** on your compute cluster. Click on **Submit**
 
-     > **Note :**
-     > if the pripeline failed, then re-submit again.
+     >**Note :**
+     >If the pipeline failed, then re-submit again.
 
 1. Wait for the run to finish. This may take 5 minutes or more.
 
     ![Screenshot of designer asset library with the completed job and job details button below.](media/completed-job-2c.png)
 
-    Notice that the left hand panel is now on the **Submitted jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
+    Notice that theleft-hand panel is now on the **Submitted jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
-## Task 8: View the transformed data
+### Task 8: View the transformed data
 
-1. When the run has completed, the dataset is now prepared for model training. Click on **Job detail**. You will be taken to another tab which will show the modules like this:
+1. When the run has been completed, the dataset is now prepared for model training. Click on **Job detail**. You will be taken to another tab which will show the modules like this:
 
     ![Screenshot of the modules in a completed state with green bar on the left of each module.](media/normalize-complete-2a.png)
 
-1. In the new tab, right click on the **Normalize Data** module, select **Preview data**, then select **Transformed dataset** to view the results, it will look similar to like this:
+1. In the new tab, right-click on the **Normalize Data** module, select **Preview data**, then select **Transformed dataset** to view the results, it will look similar to this:
   
     ![Screenshot of the modules in a completed state with green bar on the left of each module.](media/2c-normalize-visualiztion.png)
    
-
 1. View the data, noting that the **Species** column has been removed, there are no missing values, and the values for all four features have been normalized to a common scale.
 
 1. Close the normalized data result visualization. Return to the previous pipeline tab.
 
 Now that you have selected and prepared the features you want to use from the dataset, you're ready to use them to train a clustering model.
 
-After you've used data transformations to prepare the data, you can use it to train a machine learning model.
+After you've used data transformations to prepare the data, you can use it to train a machine-learning model.
 
-## Task 9: Add training modules
+ **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+
+### Task 9: Add training modules
 
 Work through the following steps to extend the **Train Penguin Clustering** pipeline as shown here:
 
@@ -229,27 +258,27 @@ Follow the steps below, using the image above for reference as you add and confi
 
 1. In the **Asset library**, search for and place a **Train Clustering Model** module to the canvas, under the **Split Data** module. Then connect the *Results dataset1* (left) output of the **Split Data** module to the *Dataset* (right) input of the **Train Clustering Model** module.
 
-1. The clustering model should assign clusters to the data items by using all of the features you selected from the original dataset. Double click the **Train Clustering Model** module and in the right hand pane, select **Edit column**. Use the **With rules** option to include all columns; like this:
+1. The clustering model should assign clusters to the data items by using all of the features you selected from the original dataset. Double-click the **Train Clustering Model** module and in the right-hand pane, select **Edit column**. Use the **With rules** option to include all columns; like this:
 
     ![Screenshot of how to include all columns in the column set.](media/cluster-features-2c.png)
 
 1. The model we're training will use the features to group the data into clusters, so we need to train the model using a *clustering* algorithm. In the **Asset library**, search for and place a **K-Means Clustering** module to the canvas, to the left of the **penguin-data** dataset and above the **Train Clustering Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Clustering Model** module.
 
-1. The *K-Means* algorithm groups items into the number of clusters you specify - a value referred to as ***K***. Select the **K-Means Clustering** module and in the right hand pane, set the **Number of centroids** parameter to **3**.
+1. The *K-Means* algorithm groups items into the number of clusters you specify - a value referred to as ***K***. Select the **K-Means Clustering** module and in the right-hand pane, set the **Number of centroids** parameter to **3**.
 
     > **Note :**
     > You can think of data observations, like the penguin measurements, as being multidimensional vectors. The K-Means algorithm works by:
-    > 1. initializing *K* coordinates as randomly selected points called *centroids* in  *n*-dimensional space (where *n* is the number of dimensions in the feature vectors).
+    > 1. Initializing *K* coordinates as randomly selected points called *centroids* in  *n*-dimensional space (where *n* is the number of dimensions in the feature vectors).
     > 2. Plotting the feature vectors as points in the same space, and assigning each point to its closest centroid.
     > 3. Moving the centroids to the middle of the points allocated to it (based on the *mean* distance).
     > 4. Reassigning the points to their closest centroid after the move.
-    > 5. Repeating steps 3 and 4 until the cluster allocations stabilize or the specified number of iterations has completed.
+    > 5. Repeating steps 3 and 4 until the cluster allocations stabilize or the specified number of iterations has been completed.
 
    After using 70% of the data to train the clustering model, you can use the remaining 30% to test it by using the model to assign the data to clusters.
 
 1. In the **Asset library**, search for and place an **Assign Data to Clusters** module to the canvas, below the **Train Clustering Model** module. Then connect the **Trained model** (left) output of the **Train Clustering Model** module to the **Trained model** (left) input of the **Assign Data to Clusters** module; and connect the **Results dataset2** (right) output of the **Split Data** module to the **Dataset** (right) input of the **Assign Data to Clusters** module.
 
-## Task 10: Run the training pipeline
+### Task 10: Run the training pipeline
 
 Now you're ready to run the training pipeline and train the model.
 
@@ -271,7 +300,7 @@ The model is predicting clusters for the penguin observations, but how reliable 
 
 Evaluating a clustering model is made difficult by the fact that there are no previously known *true* values for the cluster assignments. A successful clustering model is one that achieves a good level of separation between the items in each cluster, so we need metrics to help us measure that separation.
 
-## Task 11: Add an Evaluate Model module
+### Task 11: Add an Evaluate Model module
 
 1. Open the **Train Penguin Clustering** pipeline you created in the previous unit if it's not already open.
 
@@ -285,7 +314,7 @@ Evaluating a clustering model is made difficult by the fact that there are no pr
 
 1. Wait for the experiment run to finish.
 
-1. When the experiment run has finished, select **Job detail**. Right click on the **Evaluate Model** module and select **Preview data**, then select **Evaluation results**. Review the metrics in each row:
+1. When the experiment run has finished, select **Job detail**. Right-click on the **Evaluate Model** module and select **Preview data**, then select **Evaluation results**. Review the metrics in each row:
     - **Average Distance to Other Center**
     - **Average Distance to Cluster Center**
     - **Number of Points**
@@ -297,23 +326,23 @@ Now that you have a working clustering model, you can use it to assign new data 
 
 After creating and running a pipeline to train the clustering model, you can create an *inference pipeline*. The inference pipeline uses the model to assign new data observations to clusters. This model will form the basis for a predictive service that you can publish for applications to use.
 
-## Task 12: Create an inference pipeline
+### Task 12: Create an inference pipeline
 
 1. In Azure Machine Learning studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-penguin-training**, then select the **Train Penguin Clustering** pipeline. 
 
-1. Locate the menu above the canvas and click on **Create inference pipeline**. You may need to expand your screen to full and click on the **...** icon on the top right-hand corner of the screen in order to find **Create inference pipeline** in the menu.  
+1. Locate the menu above the canvas and click on **Create inference pipeline**. You may need to expand your screen to full and click on the **...** icon on the top right-hand corner of the screen in order to find **Create inference pipeline** in the menu. 
 
     ![Screenshot of location of create inference pipeline.](media/create-inference-pipeline-2c.png) 
 
 1. In the **Create inference pipeline** drop-down list, click **Real-time inference pipeline**. After a few seconds, a new version of your pipeline named **Train Penguin Clustering-real time inference** will be opened.
 
-1. Navigate to **Settings** on the upper right hand menu. Under **Draft details**, rename the new pipeline to **Predict Penguin Clusters**, and then review the new pipeline. The transformations and clustering model in your training pipeline are a part of this pipeline. The trained model will be used to score the new data. The pipeline also contains a web service output to return results. 
+1. Navigate to **Settings** on the upper right-hand menu. Under **Draft details**, rename the new pipeline to **Predict Penguin Clusters**, and then review the new pipeline. The transformations and clustering model in your training pipeline are a part of this pipeline. The trained model will be used to score the new data. The pipeline also contains a web service output to return results. 
 
     You're going to make the following changes to the inference pipeline:
 
     ![Screenshot changes made to the pipeline including which components to add and remove marked in red.](media/inference-changes-2c.png)
 
-    - Add a **web service input** if its not there from the component under assets library drag and drop for new data to be submitted.
+    - Add a **web service input**if it's not there from the component unde assets library drag and drop for new data to be submitted.
     - Replace the **penguin-data** dataset with an **Enter Data Manually** module that doesn't include the **Species** column.
     - Remove the **Select Columns in Dataset** module, which is now redundant.
     - Connect the **Web Service Input** and **Enter Data Manually** modules (which represent inputs for data to be clustered) to the first **Apply Transformation** module.
@@ -346,9 +375,9 @@ After creating and running a pipeline to train the clustering model, you can cre
 Your inference pipeline assigns penguin observations to clusters based on their features. Now you're ready to publish the pipeline so that client applications can use it.
 
    >**Note :**
-   >In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
+   >In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
-## Task 13: Deploy a service
+### Task 13: Deploy a service
 
 1. View the **Predict Penguin Clusters** inference pipeline you created in the previous unit.
 
@@ -372,7 +401,7 @@ Your inference pipeline assigns penguin observations to clusters based on their 
    >**Note:** It will take 15-20 mins for the deployment to change the status
  
 
-## Task 14: Test the service
+### Task 14: Test the service
 
 1. On the **Endpoints** page, open the **predict-penguin-clusters** real-time endpoint, and select the **Test** tab.
 
@@ -396,19 +425,14 @@ Your inference pipeline assigns penguin observations to clusters based on their 
     }
     ```
 
-     > **Note:** The JSON above defines features for a penguin, and uses the **predict-penguin-clusters** service you created to predict a cluster assignment. 
+     > **Note:** 
+     > The JSON above defines features for a penguin, and uses the **predict-penguin-clusters** service you created to predict a cluster assignment. 
 
-1. Select **Test**. On the right hand of the screen, you should see the output **'Assignments'**. Notice how the assigned cluster is the one with the shortest distance to cluster center.
+1. Select **Test**. On the right hand of the screen, you should see the output **'Assignments'**. Notice how the assigned cluster is the one with the shortest distance to the cluster center.
 
     ![Screenshot of the Test pane with sample test result.](media/test-interface-2c.png)
 
 You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
 
-> **Note**: **Congratulations!** You have successfully completed this exercise. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
