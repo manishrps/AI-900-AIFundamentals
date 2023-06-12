@@ -1,8 +1,5 @@
 # Explore classification with Azure Machine Learning Designer
 
-> **Note :**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 ## Task 1: Create an Azure Machine Learning workspace  
 
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
