@@ -2,7 +2,7 @@
 
 Azure Cognitive Services encapsulate common AI functionality that can be categorized into four main pillars: vision, speech, language, and decision services. In this exercise, you will take a look at one of the decision services to get a general sense of how to provision and use a cognitive services resource in a software application.
 
-The specific cognitive service you will explore in this exercise is Anomaly Detector. Anomaly Detector is used to analyze data values over time and to detect any unusual values that might indicate a problem or an issue for further investigation. For example, a sensor in a temperature-controlled storage facility might monitor the temperature every minute and log the measured values. You can use the Anomaly Detector service to analyze the logged temperature values and flag any that fall significantly outside of the normal range of expected temperatures.
+The specific cognitive service you will explore in this exercise is **Anomaly Detector**. Anomaly Detector is used to analyze data values over time and to detect any unusual values that might indicate a problem or an issue for further investigation. For example, a sensor in a temperature-controlled storage facility might monitor the temperature every minute and log the measured values. You can use the Anomaly Detector service to analyze the logged temperature values and flag any that fall significantly outside of the normal range of expected temperatures.
 
 To test the capabilities of the Anomaly Detection service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply to real-world solutions, such as websites or phone apps.
 
@@ -125,7 +125,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
       
       >**Note**: If you will be not able to find this option, you can use also Shortcut Keys **ctrl + S** to save and **ctrl + Q** to close the editor.
       
-    Remember, anomaly detection is an artificial intelligence technique used to determine whether values in a series are within expected parameters. The sample client application will use your Anomaly Detector service to analyze a file containing a series of dates/times and numeric values. The application should return results indicating at each time point, whether the numeric value is within expected parameters.
+    Remember, anomaly detection is an artificial intelligence technique used to determine whether values in a series are within expected parameters. The sample client application will use your Anomaly Detector service to analyze a file containing a series of date/times and numeric values. The application should return results indicating at each time point, whether the numeric value is within expected parameters.
 
 1. In the PowerShell pane, enter the following commands to run the code:
 
@@ -142,19 +142,10 @@ Now that you have a Cloud Shell environment, you can run a simple application th
       
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-  > - Navigate to the Lab Validation Page, from the upper right corner in the lab guide section.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
-
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message then the lab is completed. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 
 ## Learn more
