@@ -163,13 +163,21 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 1. Switch back to the browser tab containing the Azure portal, and select the **Cloud shell** (**[>_]**)  button at the top of the page to the right of the search box. This opens a cloud shell pane at the bottom of the portal.
 
-    The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/powershell-portal-guide-1.png)
 
- 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **AI-900-Module-03b-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (2)** for the **Storage account Name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>(3)** for the **File share Name** , then click on **Create Storage**.
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img6.png)
+
+ 1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**.
+    
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img7.png)
+
+ 1. Please make sure you have selected your resource group **AI-900-Module-03b-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (2)** for the **Storage account Name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>(3)** for the **File share Name** , then click on **Create Storage (4)**.
+ 
     When the cloud shell is ready, it should look similar to this:
     
-       ![Create storage by clicking confirm.](media/cloudshell-storage.png)
+      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img8.png)
 
     > **Tip**: Ensure that the type of shell indicated on the top left of the Cloud Shell pane is *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
