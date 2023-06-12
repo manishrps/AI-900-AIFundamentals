@@ -19,6 +19,7 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
 
    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
+
 1. In the Marketplace page search for **Anomaly Detector (1)** and Select **Anomaly Detector (2)**
    
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img2.png)
@@ -73,8 +74,8 @@ To test the capabilities of the Anomaly Detector service, we'll use a simple com
 
 1. Wait for PowerShell to start. You should see the following screen in the Azure portal:  
 
-     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img10.png)
-
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img10.png)
+     
 ### Task 3: Configure and run a client application
 
 Now that you have a Cloud Shell environment, you can run a simple application that uses the Anomaly Detector service to analyze data.
@@ -145,6 +146,16 @@ Now that you have a Cloud Shell environment, you can run a simple application th
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+
+1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Hit the **Validate** button for the corresponding task.
+   - If you receive a success message then the lab is completed. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
 
 ## Learn more
 

@@ -69,7 +69,7 @@ Azure Machine Learning includes a sample dataset that you can use for your regre
 
 1. Click on **Component**. Search for and place the **Automobile price data (Raw)** dataset onto the canvas.
 
-1. click on the **Automobile price data (Raw)** dataset on the canvas, and click on **Use Data**.
+1. Hover the mouse on **Automobile price data (Raw)** dataset on the canvas, and click on **Use Data** on pop-up.
 
 1. Review the **Dataset output** schema of the data, noting that you can see the distributions of the various columns as histograms.
 
@@ -91,7 +91,7 @@ You typically apply data transformations to prepare the data for modeling. In th
 
     ![Screenshot of the Automobile price data dataset connected to the Select Columns in Dataset module.](media/dataset-select-columns-2a.png)
 
-3. Double click on the **Select Columns in Dataset** module to access a settings pane on the right. Select **Edit column**. Then in the **Select columns** window, select **By name** and **Add all** to add all the columns. Then remove **normalized-losses**, so your final column selection looks like this:
+3. Double click on the **Select Columns in Dataset** module to access a settings pane on the right. Select **Edit column**. Then in the **Select columns** window, select **By name** and click on **Add all** to add all the columns. Then remove **normalized-losses**, so your final column selection looks like this:
 
     ![Screenshot of all columns other than normalized_losses.](media/select-columns-2a.png)
 
@@ -106,6 +106,7 @@ Follow the remaining steps, use the image for reference as you add and configure
 5. In the **Asset library**, search for a **Clean Missing Data** module and place it under the **Select Columns in Dataset** module on the canvas. Then connect the output from the **Select Columns in Dataset** module to the input of the **Clean Missing Data** module.
 
 6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower** like this:
+    > 💡 **Note:** After typing the word click in empty area to insert the word.
 
     ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
 
@@ -119,7 +120,7 @@ Follow the remaining steps, use the image for reference as you add and configure
 
 8. In the **Asset library**, search for a **Normalize Data** module and place it on the canvas, below the **Clean Missing Data** module. Then connect the left-most output from the **Clean Missing Data** module to the input of the **Normalize Data** module.
 
-9. Double click on the **Normalize Data** module to view its parameters pane. You will need to specify the transformation method and the columns to be transformed. Set the transformation method to **MinMax**. Apply a rule by selecting **Edit column** to include the following **Column names**:
+9. Double click on the **Normalize Data** module to view its parameters pane. You will need to specify the transformation method and the columns to be transformed. Set the transformation method to **MinMax**. Apply a rule by selecting **Edit column** to include the following **Column names** and then click on **Save**.
     - **symboling**
     - **wheel-base**
     - **length**
@@ -182,7 +183,7 @@ After you've used data transformations to prepare the data, you can use it to tr
 
 1. In the **Asset library**, search for and place a **Train Model** module to the canvas, under the **Split Data** module. Then connect the *Results dataset1* (left) output of the **Split Data** module to the *Dataset* (right) input of the **Train Model** module.
 
-1. The model you are training will predict the **price** value, so select the **Train Model** module and modify its settings to set the **Label column** to  **price** (matching the case and spelling exactly!)
+1. The model you are training will predict the **price** value, so select the **Train Model** module and modify its settings to set the **Label column** to  **price** (matching the case and spelling exactly!) and click on **Save**.
 
     The **price** label the model will predict is a numeric value, so we need to train the model using a *regression* algorithm.
 
