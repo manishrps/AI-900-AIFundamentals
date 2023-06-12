@@ -6,7 +6,7 @@
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *select AI-900-Module-02b-<inject key="DeploymentID" enableCopy="false"/>*
     - **Workspace name**: *Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>***
-    - **Region**:  *Select the same region where your resource group was created*
+    - **Region**: **<inject key="location" enableCopy="false"/>**
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
@@ -399,7 +399,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
     You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
    - Click on the **Lab Validation tab** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
    - Hit the **Validate** button for the corresponding task.
