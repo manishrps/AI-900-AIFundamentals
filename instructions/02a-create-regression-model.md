@@ -244,7 +244,6 @@ One way to evaluate a regression model is to compare the predicted labels to the
     - **Relative Absolute Error (RAE)**
     - **Coefficient of Determination (R<sup>2</sup>)**
     
-     >**Note:** If you can't see all regression performance metrics it is because screen is 100% zoom in if have to zoom out the screen until you see all regression performance metrics .
 1. Close the *Evaluation_results* pane.
 
 When you've identified a model with evaluation metrics that meet your needs, you can prepare to use that model with new data.
@@ -392,7 +391,7 @@ Wait for the web service to be deployed - this can take several minutes. The dep
 
 1. Select **Test**. On the right hand of the screen, you should see the output **'predicted_price'**. The output is the predicted price for a vehicle with the particular input features specified in the data. 
 
-    ![Screenshot of the Test pane.](media/test-interface-2a.png)
+    ![Screenshot of the Test pane.](media/test-interface2a.png)
 
 Let's review what you have done. You cleaned and transformed a dataset of automobile data, then used the car *features* to train a model. The model predicts the price of an automobile, which is the *label*.
 
