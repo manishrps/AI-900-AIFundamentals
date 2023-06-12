@@ -4,21 +4,36 @@
 
 ### Task 1: Create an Azure Machine Learning workspace in the Azure portal
 
-1. Select **+ Create a resource**, search for Machine Learning, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
-    - **Subscription**: Use existing Azure subscription.
-    - **Resource group**: Select **AI-900-Module-02c-<inject key="DeploymentID" enableCopy="false" />**
-    - **Workspace name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**
-    - **Region**: Select the same region where your resource group was created.
-    - **Storage account**: Note the default new storage account that will be created for your workspace.
-    - **Key vault**: Note the default new key vault that will be created for your workspace.
-    - **Application insights**: Note the default new application insights resource that will be created for your workspace.
-    - **Container registry**: None (one will be created automatically the first time you deploy a model to a container)
+1. Select **+ Create a resource**, search for Machine Learning.
 
-1. Select **Review + create**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
+ 
+   ![Picture1](media/ai900mod2cimg2.png)
+
+1. On **Azure Machine Learning** Page Click on **Create**. 
+   
+1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+
+    - **Subscription**: Use existing Azure subscription. **(1)**
+    - **Resource group**: Select **AI-900-Module-02c-<inject key="DeploymentID" enableCopy="false" /> (2)**
+    - **Workspace name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
+    - **Region**: Select <inject key="location" enableCopy="false" />. **(4)**
+    - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
+    - **Key vault**: Note the default new key vault that will be created for your workspace. **(6)**
+    - **Application insights**: Note the default new application insights resource that will be created for your workspace. **(7)**
+    - **Container registry**: None (one will be created automatically the first time you deploy a model to a container) **(8)**
+
+1. Select **Review + create (9)**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
+  
+    ![Picture1](media/ai900mod2cimg3.png)
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
 1. In Azure Machine Learning Studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated with your directory are listed, and select the one you created for this exercise.
+
+   ![Picture1](media/ai900mod2cimg4.png)
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -32,20 +47,28 @@
 1. In [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
 2. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
-    - **Location**: Select the same region where your resource group was created.
+
+      ![Picture1](media/ai900mod2cimg5.png)
+
+    - **Location**: Select <inject key="location" enableCopy="false" />.
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
     - **Virtual machine size**:
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next** 
+
+      ![Picture1](media/ai900mod2cimg6.png)
+
     - **Compute name**: **ai900-vm-<inject key="DeploymentID" enableCopy="false" />**
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
     - **Enable SSH access**: *do not select*
     - Select **Create**
-
+   
+       ![Picture1](media/ai900mod2cimg7.png)
+       
        > **Note:**
        > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
@@ -72,11 +95,11 @@ To get started with Azure Machine Learning Designer, first, you must create a pi
 
 1. Select the *close icon* on the top right of the **Settings** pane to close the pane, and then select **Save**.
 
-    ![Screenshot of the Machine Learning Studio Settings pane.](media/create-pipeline-help-2c.png)
+     ![Picture1](media/ai900mod2cimg10.png)
 
 ### Task 4: Create a dataset
 
-In Azure Machine Learning, data for model training and other operations is usually encapsulated in an object called a *dataset*. In this module, you'll use a dataset that includes observations of three species of penguin.
+In Azure Machine Learning, data for model training and other operations are usually encapsulated in an object called a *dataset*. In this module, you'll use a dataset that includes observations of three species of penguin.
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Data** page (under **Assets**). The Data page contains specific data files or tables that you plan to work with in Azure ML. You can create datasets from this page as well.
 
@@ -86,12 +109,22 @@ In Azure Machine Learning, data for model training and other operations is usual
         * **Description**: Penguin data
         * **Dataset type**: Tabular
     * **Select Next**
+     
+       ![Picture1](media/ai900mod2cimg12.png)
+     
     * **Data source**: From Web Files
-    *  **Select Next**
+    
+      ![Picture1](media/ai900mod2cimg11.png)
+    
+    * **Select Next**
+    
     * **Web URL**:
         * **Web URL**: https://aka.ms/penguin-data
         * **Skip data validation**: *do not select*
     * **Select Next**
+    
+       ![Picture1](media/ai900mod2cimg14.png)
+     
     * **Settings**:
         * **File format**: Delimited
         * **Delimiter**: Comma
@@ -100,13 +133,21 @@ In Azure Machine Learning, data for model training and other operations is usual
         * **Skip rows**: None
         * **Dataset contains multi-line data**: *do not select*
     * **Select Next**
+    
+         ![Picture1](media/ai900mod2cimg15.png)
+       
     * **Schema**:
         * Include all columns other than **Path**
         * Review the automatically detected types
     * **Select Next**
+ 
+         ![Picture1](media/ai900mod3bimg16.png)
+        
     * **Review**
         * Select **Create**
 
+        ![Picture1](media/ai900mod2cimg16.png)
+     
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents measurements of the culmen (bill) length and depth, flipper length, and body mass for multiple observations of penguins. There are three species of penguin represented in the dataset: *Adelie*, *Gentoo*, and *Chinstrap*.
 
      > **Note :**
