@@ -19,7 +19,6 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
 
    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
-
 1. In the Marketplace page search for **Anomaly Detector (1)** and Select **Anomaly Detector (2)**
    
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img2.png)
