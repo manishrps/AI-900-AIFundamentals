@@ -8,7 +8,7 @@ In this exercise, you will train a regression model that predicts the price of a
     - **Subscription**: Use exiting Azure subscription.
     - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**.
     - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />.**
-    - **Region**: Select the same region where your resource group was created.
+    - **Region**: <inject key="location" enableCopy="false" />
     - **Storage account**: Note the default new storage account that will be created for your workspace.
     - **Key vault**: Note the default new key vault that will be created for your workspace.
     - **Application insights**: Note the default new application insights resource that will be created for your workspace.
@@ -341,7 +341,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
     -  **Description**: Auto price regression
     - **Compute type**: Azure Container Instance
 
-Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left Notifications of the Microsoft Azure Machine Learning Studio.
+1. Wait for the service to be deployed - this can take upto **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
 
 ## Task 13: Test the service
 
@@ -405,4 +405,4 @@ You also tested a service that is ready to be connected to a client application 
   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
