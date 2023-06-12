@@ -198,7 +198,7 @@ Now you can test your deployed service.
 
     ![Screenshot of location of Endpoints on the left hand menu.](media/use-automated-machine-learning/endpoints-2.png)
 
-> **Note**: The realtime endpoint may be in unhealthy state, wait for another 10 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 5.
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 5.
 
 ### Learn more
 
