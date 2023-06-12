@@ -20,6 +20,13 @@
 
 1. In Azure Machine Learning Studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated with your directory are listed, and select the one you created for this exercise.
 
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ### Task 2: Create compute
 
 1. In [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
@@ -31,7 +38,7 @@
     - **Virtual machine size**:
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
-    - Select **Next** (**If you have not able to see this option click on the  ...   at the top and right side of the  browser and zoom out till this option is visible**)
+    - Select **Next** 
     - **Compute name**: **ai900-vm-<inject key="DeploymentID" enableCopy="false" />**
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
@@ -43,6 +50,13 @@
        > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move on to the next step while you wait.
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 3: Create a pipeline in designer
 
@@ -102,6 +116,13 @@ and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
 member of the [Long Term Ecological Research
 Network](https://lternet.edu/).
 
+ **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ 
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  
 ### Task 5: Load data to a canvas
 
 1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Train Penguin Clustering** which is under Pipelines drafts.
@@ -187,7 +208,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
     Notice that theleft-hand panel is now on the **Submitted jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
-###Task 8: View the transformed data
+### Task 8: View the transformed data
 
 1. When the run has been completed, the dataset is now prepared for model training. Click on **Job detail**. You will be taken to another tab which will show the modules like this:
 
@@ -204,6 +225,14 @@ To apply your data transformations, you need to run the pipeline as an experimen
 Now that you have selected and prepared the features you want to use from the dataset, you're ready to use them to train a clustering model.
 
 After you've used data transformations to prepare the data, you can use it to train a machine-learning model.
+
+ **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 
 ### Task 9: Add training modules
 
@@ -406,9 +435,4 @@ Your inference pipeline assigns penguin observations to clusters based on their 
 You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
 
 
- **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
