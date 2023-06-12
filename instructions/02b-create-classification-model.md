@@ -363,7 +363,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
 1. Select **Deploy**
 
-1. Wait for the web service to be deployed - this can take upto 30 minutes to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
+1. Wait for the web service to be deployed - this can take upto **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
 
 ## Task 14: Test the service
 
