@@ -6,7 +6,7 @@ In this exercise, you will train a regression model that predicts the price of a
 
 1. Select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**..
+    - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**.
     - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />.**
     - **Region**: Select the same region where your resource group was created.
     - **Storage account**: Note the default new storage account that will be created for your workspace.
@@ -43,7 +43,7 @@ In this exercise, you will train a regression model that predicts the price of a
 > **Note :**
 > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
-The compute cluster will take some time to be created. You can move onto the next step while you wait.
+The compute cluster will take some time to be created. You can move onto the next task while it's being created.
 
 ## Task 3: Create a pipeline in Designer 
 
