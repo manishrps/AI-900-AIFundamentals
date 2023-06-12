@@ -57,7 +57,7 @@ The compute cluster will take some time to be created. You can move onto the nex
 
 1. Select the *close* icon on the top right of the **Settings** pane to close the pane. 
 
-![Screenshot of the Machine Learning Studio Settings pane.](media/create-pipeline-help-2c.png)
+    ![Screenshot of the Machine Learning Studio Settings pane.](media/create-pipeline-help-2c.png)
 
 ## Task 4: Add and explore a dataset
 
@@ -97,7 +97,7 @@ You typically apply data transformations to prepare the data for modeling. In th
 
 4. Click on the **Save** button then **close** Select Columns in Dataset pane.
 
-In the rest of this exercise, you go through steps to create a pipeline that looks like this:
+    In the rest of this exercise, you go through steps to create a pipeline that looks like this:
 
    ![Screenshot of the Automobile price data dataset with Normalize Data module.](media/data-transforms-2a.png)
 
@@ -105,7 +105,8 @@ Follow the remaining steps, use the image for reference as you add and configure
 
 5. In the **Asset library**, search for a **Clean Missing Data** module and place it under the **Select Columns in Dataset** module on the canvas. Then connect the output from the **Select Columns in Dataset** module to the input of the **Clean Missing Data** module.
 
-6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower** like this:
+6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower**. Then, click on **Save**. The below screenshot has been provided for your reference: 
+
     > 💡 **Note:** After typing the word click in empty area to insert the word.
 
     ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
@@ -185,7 +186,7 @@ After you've used data transformations to prepare the data, you can use it to tr
 
 1. The model you are training will predict the **price** value, so select the **Train Model** module and modify its settings to set the **Label column** to  **price** (matching the case and spelling exactly!) and click on **Save**.
 
-    The **price** label the model will predict is a numeric value, so we need to train the model using a *regression* algorithm.
+    The **price** label model will predict a numeric value, so we need to train the model using a *regression* algorithm.
 
 1. In the **Asset library**, search for and place a **Linear Regression** module to the canvas, to the left of the **Split Data** module and above the **Train Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Model** module.
 
@@ -274,12 +275,12 @@ When you've identified a model with evaluation metrics that meet your needs, you
 
 1. The inference pipeline assumes that new data will match the schema of the original training data, so the **Automobile price data (Raw)** dataset from the training pipeline is included. However, this input data includes the **price** label that the model predicts, which is unintuitive to include in new car data for which a price prediction hasn't yet been made. Delete this module and replace it with an **Enter Data Manually** module from the **Data Input and Output** section, containing the following CSV data, which includes feature values without labels for three cars (copy and paste the entire block of text):
 
-    ```CSV
-    symboling,normalized-losses,make,fuel-type,aspiration,num-of-doors,body-style,drive-wheels,engine-location,wheel-base,length,width,height,curb-weight,engine-type,num-of-cylinders,engine-size,fuel-system,bore,stroke,compression-ratio,horsepower,peak-rpm,city-mpg,highway-mpg
-    3,NaN,alfa-romero,gas,std,two,convertible,rwd,front,88.6,168.8,64.1,48.8,2548,dohc,four,130,mpfi,3.47,2.68,9,111,5000,21,27
-    3,NaN,alfa-romero,gas,std,two,convertible,rwd,front,88.6,168.8,64.1,48.8,2548,dohc,four,130,mpfi,3.47,2.68,9,111,5000,21,27
-    1,NaN,alfa-romero,gas,std,two,hatchback,rwd,front,94.5,171.2,65.5,52.4,2823,ohcv,six,152,mpfi,2.68,3.47,9,154,5000,19,26
-    ```
+        ```CSV
+        symboling,normalized-losses,make,fuel-type,aspiration,num-of-doors,body-style,drive-wheels,engine-location,wheel-base,length,width,height,curb-weight,engine-type,num-of-cylinders,engine-size,fuel-system,bore,stroke,compression-ratio,horsepower,peak-rpm,city-mpg,highway-mpg
+        3,NaN,alfa-romero,gas,std,two,convertible,rwd,front,88.6,168.8,64.1,48.8,2548,dohc,four,130,mpfi,3.47,2.68,9,111,5000,21,27
+        3,NaN,alfa-romero,gas,std,two,convertible,rwd,front,88.6,168.8,64.1,48.8,2548,dohc,four,130,mpfi,3.47,2.68,9,111,5000,21,27
+        1,NaN,alfa-romero,gas,std,two,hatchback,rwd,front,94.5,171.2,65.5,52.4,2823,ohcv,six,152,mpfi,2.68,3.47,9,154,5000,19,26
+        ```
 
 1. Connect the new **Enter Data Manually** module to the same **dataset** input of the **Select Columns in Dataset** module as the **Web Service Input**.
 
@@ -291,16 +292,16 @@ When you've identified a model with evaluation metrics that meet your needs, you
     - Delete the connection between the **Score Model** module and the **Web Service Output**.
     - Add an **Execute Python Script** module from the **Python Language** section, replacing all of the default python script with the following code (which selects only the **Scored Labels** column and renames it to **predicted_price**):
 
-```Python
-import pandas as pd
+        ```Python
+        import pandas as pd
 
-def azureml_main(dataframe1 = None, dataframe2 = None):
+        def azureml_main(dataframe1 = None, dataframe2 = None):
 
-    scored_results = dataframe1[['Scored Labels']]
-    scored_results.rename(columns={'Scored Labels':'predicted_price'},
-                        inplace=True)
-    return scored_results
-```
+            scored_results = dataframe1[['Scored Labels']]
+            scored_results.rename(columns={'Scored Labels':'predicted_price'},
+                                inplace=True)
+            return scored_results
+        ```
 
 1. Connect the output from the **Score Model** module to the **Dataset1** (left-most) input of the **Execute Python Script**, and connect the left output(Result Dataset) of the **Execute Python Script** module to the (outpout data) of the **Web Service Output**.
 
@@ -329,13 +330,13 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
 1. Select **Job detail** on the left hand pane, which will open a new tab.
 
-    ![Screenshot of job details next to the completed job. ](media/completed-job-inference-2a.png)
+    ![Screenshot of job details next to the completed job. ](media/ai900_mod02a_t12_s2.png)
 
 1. In the new tab, select **Deploy**.
 
-    ![Screenshot of the deploy button for your Predict Auto Price inference pipeline.](media/deploy-2c.png)
+    ![Screenshot of the deploy button for your Predict Auto Price inference pipeline.](media/ai900_mod02a_t12_s3.png)
 
-1. In the configuration screen, select **Deploy a new real-time endpoint**, using the following settings:
+1. In the configuration screen, select **Deploy a new real-time endpoint** and then click on **Deploy**, using the following settings:
     -  **Name**: predict-auto-price
     -  **Description**: Auto price regression
     - **Compute type**: Azure Container Instance
@@ -349,7 +350,7 @@ Wait for the web service to be deployed - this can take several minutes. The dep
     ![Screenshot of the location of the Endpoints option on the left-hand pane.](media/endpoints-lab-2a.png)
     
     >**Note:**
-    > You have to Wait for 15-20 to to reflect the Test code which is in the json formate.
+    > You have to Wait for 15-20 minutes for the test code to reflect which can be seen in json format.
 
 1. When the **predict-auto-price** endpoint opens, select the **Test** tab. We will use it to test our model with new data. Delete the current data under **Input data to test real-time endpoint**. Copy and paste the below data into the data section:  
 
@@ -403,7 +404,7 @@ You also tested a service that is ready to be connected to a client application 
 
 1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - On the upper right corner of the lab guide section, navigate to the **Lab Validation** Page.
    - Hit the **Validate** button for the corresponding task.
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
