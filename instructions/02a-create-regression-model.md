@@ -316,6 +316,7 @@ When you've identified a model with evaluation metrics that meet your needs, you
 1. Close the visualization tab.
 
 Your inference pipeline predicts prices for cars based on their features. Now you're ready to publish the pipeline so that client applications can use it.
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
 
 ## Task 11: Deploy model
 
