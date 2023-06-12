@@ -168,6 +168,8 @@ Network](https://lternet.edu/).
 
 1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Train Penguin Clustering** which is under Pipelines drafts.
 
+    ![Picture1](media/ai900mod2cimg17.png)
+
 1. Next to the pipeline name on the left, select the arrow icon to expand the panel if it is not already expanded. The panel should open by default to the **Asset library** pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, **Data** and **Component**.
 
     ![Screenshot of location of designer asset library, search bar, and data icon.](media/designer-asset-library-data-2c.png)
@@ -175,6 +177,8 @@ Network](https://lternet.edu/).
 1. Click on **Data**. Search for and place the **penguin-data** dataset onto the canvas.
 
 1. Click on **penguin-data** then click on **Use Data**
+
+     ![Picture1](media/ai900mod2cimg18.png)
 
 1. Right-click (Ctrl+click on a Mac) the **penguin-data** dataset on the canvas, and click on **Preview data**.
 
@@ -242,6 +246,8 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
      >**Note :**
      >If the pipeline failed, then re-submit again.
+
+    ![Picture1](media/ai900mod2cimg19.png)
 
 1. Wait for the run to finish. This may take 5 minutes or more.
 
