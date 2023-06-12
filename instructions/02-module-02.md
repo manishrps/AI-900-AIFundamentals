@@ -4,6 +4,11 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 ## Task 1: Create an Azure Machine Learning workspace  
 
+1.If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with the Azure credentials as shown below:
+  
+   - Username: <inject key="Username" enableCopy="false" />
+   - Password: <inject key="Password" enableCopy="false" />
+
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: *Use the existing Azure subscription*
     - **Resource group**: *Select AI-900-Module-02-<inject key="DeploymentID" enableCopy="false"/>*
@@ -27,7 +32,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 ## Task 2: Create compute
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select **Compute**(under **Manage**).
 
 1. On the **Compute** page, select the **Compute clusters** tab and to add a new compute cluster, click on **+ New** with the following settings. You'll use this to train a machine learning model:
     - **Location**: *Select the same as your workspace. If that location is not listed, choose the one closest to you*.
@@ -105,17 +110,17 @@ Follow the next steps to run a job that uses automated machine learning to train
     
     - **Configure job**:
         - **New experiment name**: mslearn-bike-rental
-        - **Target column**: rentals (*this is the label that the model is trained to predict)*
+        - **Target column**: rentals(Integer) (*this is the label that the model is trained to predict)*
         - **Select compute type**: *Compute cluster*
-        - **Select Azure ML compute cluster**: *the compute cluster that you created previously*.
+        - **Select Azure ML compute cluster**: **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**.
     - Click on **Next**.
     
     - **Select task and settings**: 
         - **Task type**: Regression *(the model predicts a numeric value)* 
    
-            ![Screenshot of a selection pane with boxes around the Regression task type and additional configuration settings.](media/use-automated-machine-learning/ai-900-regression.png)
+     - Notice under task type there are settings *View additional configuration settings* and *View featurization settings*. Now configure these settings. Click on **View additional configuration settings**.
 
-    - Notice under task type there are settings *View additional configuration settings* and *View featurization settings*. Now configure these settings. Click on **View additional configuration settings**.
+       ![Screenshot of a selection pane with boxes around the Regression task type and additional configuration settings.](media/use-automated-machine-learning/ai-900-regression.png)
 
     - **Additional configuration settings:**
         - **Primary metric**: Select **Normalized root mean squared error**
@@ -164,9 +169,9 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     ![Screenshot of the metrics tab with the residuals and predicted_true charts selected.](media/use-automated-machine-learning/ai-900-matrix1.png)
 
-    Review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
+    Scroll down and review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
 
-1. Select the **Explanations(preview)** tab. Select an Explanation ID and then select **Aggregate feature importance**. This chart shows how much each feature in the dataset influences the label prediction, like this:
+1. Select the **Explanations(preview)** tab. Select an Explanation ID and then select **Aggregate feature importance** tab. This chart shows how much each feature in the dataset influences the label prediction, like this:
 
     ![Screenshot of the feature importance chart on the Explanations tab.](media/use-automated-machine-learning/feature-importance1.png)
 
