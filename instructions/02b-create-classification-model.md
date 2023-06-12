@@ -362,6 +362,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
     - **Compute type**: Azure Container Instance
 
 1. Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left of the designer interface.
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
 
 ## Task 14: Test the service
 
