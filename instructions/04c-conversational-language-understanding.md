@@ -66,7 +66,7 @@ An **intent** is an action you want to perform - for example, you might want to 
 
 1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_on**. Next to the **switch_on** intent, type the utterance **turn the light on** and press **Enter** to submit this utterance to the list.
 
-    ![Add an utterance to the training set by typing in "turn the light on" under Utterance.](media/add-utterance-on-4c.png)
+    ![Add an utterance to the training set by typing in "turn the light on" under Utterance.](media/ai900_mod04c_t2_s2.png)
 
 1. The language service needs at least five different utterance examples for each intent to sufficiently train the language model. Add five more utterance examples for the **switch_on** intent:  
     - **switch on the fan**
@@ -172,7 +172,7 @@ Now let's try out your deployed model. To do so, we'll use a command-line applic
 
 1. In the Azure portal, select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. Clicking the button opens a Cloud Shell pane at the bottom of the portal.
 
-    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/powershell-portal-guide-4c.png)
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/analyze-images-computer-vision-service/powershell-portal-guide-1(1).png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
 
