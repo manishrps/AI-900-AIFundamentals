@@ -37,7 +37,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
 
     - **Subscription**: Use existing subscription. **(1)**
     - **Resource group**:Select **AI-900-Module-03b-<inject key="DeploymentID" enableCopy="false"/> (2)**
-    - **Region**: Select the same region where your resource group was created.**(3)**
+    - **Region**: Select **<inject key="location" enableCopy="false" /> (3)**
     - **Name**: Enter **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: Standard S0 **(5)**
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Check the box. **(6)**
