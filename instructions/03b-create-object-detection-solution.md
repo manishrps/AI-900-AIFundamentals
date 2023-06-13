@@ -1,4 +1,4 @@
-# Explore object detection
+# Module 03b: Explore object detection
 
 *Object detection* is a form of computer vision in which a machine learning model is trained to classify individual instances of objects in an image, and indicate a *bounding box* that marks its location. You can think of this as a progression from *image classification* (in which the model answers the question "What is this an image of?") to building solutions where we can ask the model "What objects are in this image, and where are they?".
 
@@ -19,15 +19,13 @@ You can use the Custom Vision service by creating either a **Custom Vision** res
 
 Create a **Cognitive Services** resource in your Azure subscription.
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-
 1. In the Azure Portal click the **&#65291;Create a resource** button.
 
    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
-1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services** 
+1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services**.
 
-     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
      
 1. On Cognitive Services Page Click on **Create**. 
      

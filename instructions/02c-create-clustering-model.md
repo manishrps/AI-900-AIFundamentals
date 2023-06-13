@@ -1,4 +1,4 @@
-# Explore clustering with Azure Machine Learning Designer
+# Module 02c: Explore clustering with Azure Machine Learning Designer
 
 ## Exercise 1: Create an Azure Machine Learning workspace in the Azure portal
 

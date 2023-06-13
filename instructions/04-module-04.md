@@ -1,4 +1,4 @@
-# Explore text analytics
+# Module 04: Explore text analytics
 
 Natural Language Processing (NLP) is a branch of artificial intelligence (AI) that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
@@ -15,8 +15,6 @@ To test the capabilities of the Language service, we'll use a simple command-lin
 You can use the Computer Vision service by creating either a **Language** resource or a **Cognitive Services** resource.
 
 If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
-
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
 1. In the Azure Portal click the **&#65291;Create a resource** button.
 
