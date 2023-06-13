@@ -12,16 +12,16 @@ If you haven't already done so, create a **Face API** resource in your Azure sub
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
-1. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
+1. Click the **&#65291;Create a resource** button, search for *Face*, and create a **Face** resource with the following settings:
     - **Subscription**: *Use existing Azure subscription*.
     - **Resource group**: **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" />**.
     - **Region**: Select **<inject key="location" enableCopy="false"/>**.
-    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Name**: Enter **ai900face-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Pricing tier**: Free F0.
 
 1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
 
-1. View the **Keys and Endpoint** page for your Cognitive Services resource. click on Show keys, you will need the endpoint and keys to connect from client applications thus, copy the same over to a notepad.
+1. View the **Keys and Endpoint** page for your Face resource. click on Show keys, you will need the endpoint and keys to connect from client applications thus, copy the same over to a notepad.
 
 ## Task 2: Run Cloud Shell
 
@@ -69,7 +69,7 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to detect faces in an image](media/create-face-solutions/ai900_03c-6.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
+1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Face resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
 
     > **Tip**
     > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
