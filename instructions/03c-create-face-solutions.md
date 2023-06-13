@@ -8,7 +8,7 @@ To test the capabilities of the Face service, we'll use a simple command-line ap
 
 You can use the Face service by creating a **Face** resource. (Face API is no longer available in Cognitive Services)
 
-If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
+If you haven't already done so, create a **Face API** resource in your Azure subscription.
 
 1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
