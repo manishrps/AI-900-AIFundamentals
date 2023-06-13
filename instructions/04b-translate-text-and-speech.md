@@ -98,7 +98,7 @@ Now that you have a custom model, you can run a simple client application that u
 
     Use the below link to hear the input audio which will be processed by this application and translates:
    
-        https://www.microsoft.com/videoplayer/embed/RWORN0
+       https://www.microsoft.com/videoplayer/embed/RWORN0
 
     >**Note**: Copy the above link to your browser, to listen the audio file. Do not use the Lab VM browser.
 
