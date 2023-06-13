@@ -2,9 +2,11 @@
 
 For customer support scenarios, it's common to create a bot that can interpret and answer frequently asked questions through a website chat window, email, or voice interface. Underlying the bot interface is a knowledge base of questions and appropriate answers that the bot can search for suitable responses.
 
-## Task 1 : Create a custom question answering knowledge base
+## Exercise 1: Create a custom question-answering knowledge base
 
-The Language service's custom question answering feature enables you to quickly create a knowledge base, either by entering question and answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
+## Task 1: Create a custom question-answering knowledge base
+
+The Language service's custom question-answering feature enables you to quickly create a knowledge base, either by entering question-and-answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
 1. Open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
@@ -23,14 +25,13 @@ The Language service's custom question answering feature enables you to quickly 
     - **Pricing tier**: S (1K Calls per minute)
     - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: *Selected*.
 
-> **Note :** If you have already provisioned a free-tier **Azure Cognitive Search** resources, your quota may not allow you to create another one. In which case, select a tier other than **Free F**.
+> **Note:** If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In this case, select a tier other than **Free F**.
 
    ![](media/create-a-bot/ai900_4d-02.png)
 
-3. Click **Review and Create** and then click **Create**. Wait for the deployment of the Language service that will support your custom question answering knowledge base.
+3. Click **Review and Create** and then click **Create**. Wait for the deployment of the Language service that will support your custom question-answering knowledge base.
 
 4. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
-
 
 5. If prompted to select an Azure resource, ensure the following settings and click on **Done**:
     - **Azure directory**: The Azure directory containing the pre alloted subscription.
@@ -41,22 +42,22 @@ The Language service's custom question answering feature enables you to quickly 
    ![](media/create-a-bot/ai900_4d-03.png)
 
 6. If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-    1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
+    1. On the bar at the top of the page, click the **Settings (&#9881;)** button.
     2. On the **Settings** page, view the **Resources** tab.
     3. Select the language resource you just created, and click **Switch resource**.
     4. At the top of the page, click **Language Studio** to return to the Language Studio home page.
 
 7. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
 
-8. If On the **Select the project you want to work with** page is empty then click on **Create new project**. Execute the following steps, else proceed to the next step.
+8. On the **Choose language setting for resource ai900language-<inject key="DeploymentID" enableCopy="false" />** page, select **I want to select the language when I create a project in this resource** and click **Next**.
+
+9. If not prompted then on the **Select the project you want to work with** page is empty then click on **Create new project**. Execute the following steps, or else proceed to the **next step**.
 
     1. On **Connect to Azure search** page click on **Connect to Azure search**.
-    1. On **Azure Search** page  select drop down of select Azure Search resources and click on **Add Azure Search resources** 
-    1. On **Creat Azure Search** page enter **Azure Search Service Name** enter the laungae service you have created earlier you have created **Azure search region:** east us2. **Azure search pricing tier:** Free F (3 Indexes) - (If this tier is not available, select Standard S (50 Indexes)) and click on **Create**.
+    1. On the **Azure Search** page select dropdown of Select Azure Search resources and click on **Add Azure Search resources** 
+    1. On the  **Create Azure Search** page enter **Azure Search Service Name** and enter the language service you have created earlier you have created **Azure search region:** east us2. **Azure search pricing tier:** Free F (3 Indexes) - (If this tier is not available, select Standard S (50 Indexes)) and click on **Create**.
     1. At the top of the page, click **Language Studio** to return to the Language Studio home page.
     1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
-
-9. On the **Choose language setting for resource ai900language-<inject key="DeploymentID" enableCopy="false" />** page, select **I want to select the language when I create a project in this resource** and click **Next**.
 
 1. On the **Enter basic information** page, enter the following details and click **Next**:
     - **Language resource**: choose your language resource.  
@@ -75,11 +76,11 @@ The Language service's custom question answering feature enables you to quickly 
     - **URL**: `https://raw.githubusercontent.com/MicrosoftLearning/AI-900-AIFundamentals/main/data/qna/margies_faq.docx`
     - **Classify file structure**: *Auto-detect* 
 
-## Task 2 : Edit the knowledge base
+### Task 2: Edit the knowledge base
 
 Your knowledge base is based on the details in the FAQ document and some pre-defined responses. You can add custom question-and-answer pairs to supplement these.
 
-1. Click **Edit knowledge base** on the left hand panel. Then click **+** to add a new question answer pair.
+1. Click **Edit knowledge base** on the left-hand panel. Then click **+** to add a new question-answer pair.
 
    ![](media/create-a-bot/ai900_4d-04.png)
 
@@ -93,7 +94,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
 1. Click **Done**. Then at the top of the page click **Save** to save your changes. You may need to change the size of your window to see the button.
 
-## Task 3 : Train and test the knowledge base
+### Task 3 : Train and test the knowledge base
 
 Now that you have a knowledge base, you can test it.
 
@@ -110,7 +111,7 @@ Now that you have a knowledge base, you can test it.
 
 1. When you're done testing the knowledge base, click **Test** to close the test pane.
 
-## Task 4 : Create a bot for the knowledge base
+### Task 4: Create a bot for the knowledge base
 
 The knowledge base provides a back-end service that client applications can use to answer questions through some sort of user interface. Commonly, these client applications are bots. To make the knowledge base available to a bot, you must publish it as a service that can be accessed over HTTP. You can then use the Azure Bot Service to create and host a bot that uses the knowledge base to answer user questions.
 
@@ -144,7 +145,7 @@ The knowledge base provides a back-end service that client applications can use 
         - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* 
         
         > **Note :**
-        > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created your Language resource in. Select your Language resource and navigate to its left-hand menu. Then select *Keys and Endpoint*. Copy one of the keys. 
+        > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your Language resource in. Select your Language resource and navigate to its left-hand menu. Then select *Keys and Endpoint*. Copy one of the keys. 
 
     -  
         - **Language project name**: MargiesTravel
@@ -162,17 +163,17 @@ The knowledge base provides a back-end service that client applications can use 
 
 1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting *I need to cancel my hotel*.
 
-Experiment with the bot. You'll probably find that it can answer questions from the FAQ quite accurately, but it will have limited ability to interpret questions that it has not been trained with. You can always use the Language Studio to edit the knowledge base to improve it, and republish it.
+Experiment with the bot. You'll probably find that it can answer questions from the FAQ quite accurately, but it will have limited ability to interpret questions that it has not been trained with. You can always use the Language Studio to edit the knowledge base to improve it and republish it.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
-## Learn more
+
+### Learn more
 
 - To learn more about the Question Answering service, view [the documentation](https://docs.microsoft.com/azure/cognitive-services/language-service/question-answering/overview).
 - To learn more about the Microsoft Bot Service, view [the Azure Bot Service page](https://azure.microsoft.com/services/bot-service/).
