@@ -47,8 +47,7 @@ To implement natural language understanding with Conversational Language Underst
     - **Enable multiple languages in project**: Do not select
     
 
-     ![Enter details for the project.](media/create-project-4c.png)
-
+    ![Enter details for the project.](media/create-project-4c.png)
 
     >**Tip :**
     >Write down your *project name*, you will use it later.
