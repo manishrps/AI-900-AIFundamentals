@@ -14,8 +14,6 @@ The **Computer Vision** cognitive service provides support for OCR tasks, includ
 
 You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
 
-If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
-
 1. In the Azure Portal, Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Retain the Existing Subscription*.
     - **Resource group**: Select **AI-900-Module-03d-<inject key="DeploymentID" enableCopy="false"/>**.
