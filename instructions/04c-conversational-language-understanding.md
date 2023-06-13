@@ -9,13 +9,13 @@ To test the capabilities of the Conversational Language Understanding service, w
 You can use the Conversational Language Understanding service by creating a **Language service** resource.
 
 1. Click the **&#65291;Create a resource** button, search for *Language service*, and create a **Language service** resource with the following settings:
-    - Select additional features: *Keep the default features and click Continue to create your resource*  
+    - **Select additional features**: *Keep the default features and click Continue to create your resource*  
     - **Subscription**: Use exsiting subscription.
     - **Resource group**: Select **AI-900-Module-04c-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**: Select the same region where your resource group was created.
+    - **Region**: **<inject key="location" enableCopy="false"/>**
     - **Name**: enter **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: S (1K Calls per minute)
-    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice.**: Selected.
+    - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: Selected.
 
 1. Review and create the resource, and wait for deployment to complete.
 
@@ -25,10 +25,11 @@ To implement natural language understanding with Conversational Language Underst
 
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true) and sign in using the Microsoft account associated with your Azure subscription.
 
-1. If prompted to choose a Language resource, select the following settings:
+1. If prompted to choose a Language resource, select the following settings and then click on **Done**: 
     - **Azure directory**: The Azure directory containing your subscription.
     - **Azure subscription**: Select exsiting subscription.
-    - **Language resource**: **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource type**: Language.
+    - **Resource name**: **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**.
     
     >**Tip :**
     >If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
@@ -58,8 +59,8 @@ An **intent** is an action you want to perform - for example, you might want to 
 
 1. In the **Schema definition** pane, ensure that **Intents** is selected Then click **Add**, and add an intent with the name **switch_on** (in lower-case) and click **Add intent**.
 
-    ![Click on add under Intents on the Build Schema pane.](media/build-schema-4c.png)
-    ![Add the switch_on intent then select Add intent.](media/add-intent-4c.png)
+    ![Click on add under Intents on the Build Schema pane.](media/ai900_mod04c_t2_s1.png)
+    ![Add the switch_on intent then select Add intent.](media/ai900_mod04c_t2_s1-a.png)
 
 1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_on**. Next to the **switch_on** intent, type the utterance **turn the light on** and press **Enter** to submit this utterance to the list.
 
@@ -74,29 +75,29 @@ An **intent** is an action you want to perform - for example, you might want to 
 
 1. On the **Labeling entities for training** pane on the right-hand side of the screen, select **Labels**, then select **Add entity**. Type **device** (in lower-case), select **List** and select **Add entity**.
 
-    ![Add an entity by selecting Tags on the Tagging entities for training panel, then select Add entity.](media/add-entity-4c.png) 
-    ![Type in device under Entity name and select List, then select Add entity.](media/add-entity-device-4c.png)
+    ![Add an entity by selecting Tags on the Tagging entities for training panel, then select Add entity.](media/ai900_mod04c_t2_s4.png) 
+    ![Type in device under Entity name and select List, then select Add entity.](media/ai900_mod04c_t2_s4-a.png)
 
 1. In the **turn the fan on** utterance, highlight the word "fan". Then in the list that appears, in the *Search for an entity* box select **device**.
 
-    ![Highlight the word fan in the utterance and select device.](media/switch-on-entity-4c.png)
+    ![Highlight the word fan in the utterance and select device.](media/ai900_mod04c_t2_s5.png)
 
 1. Do the same for all the utterances. Label the rest of the *fan* or *light* utterances with the **device** entity. When you're finished, verify that you have the following utterances and make sure to select **Save changes**:
 
     | **intent** | **utterance** | **entity** |
     | --------------- | ------------------ | ------------------ |
-    | switch_on   | Put on the fan      | Device - *select fan* |
-    | switch_on   | Put on the light    | Device - *select light* |
-    | switch_on   | Switch on the light | Device - *select light* |
-    | switch_on   | Turn the fan on     | Device - *select fan* |
-    | switch_on   | Switch on the fan   | Device - *select fan* |
-    | switch_on   | Turn the light on   | Device - *select light* |
+    | switch_on   | turn the fan on     | Device - *select fan* |
+    | switch_on   | switch on the light | Device - *select light* |
+    | switch_on   | put the light on    | Device - *select light* |
+    | switch_on   | put the fan on      | Device - *select fan* |
+    | switch_on   | switch on the fan   | Device - *select fan* |
+    | switch_on   | turn the light on   | Device - *select light* |
 
-    ![Once you are done, select Save changes.](media/save-changes-4c.png) 
+    ![Once you are done, select Save changes.](media/ai900_mod04c_t2_s6.png) 
 
 1. In the pane on the left, click **Schema definition** and verify that your **switch_on** intent is listed. Then click **Add** and add a new intent with the name **switch_off** (in lower-case).
 
-   ![Return to the Build Schema screen and add a switch_off intent.](media/add-switch-off-4c.png) 
+   ![Return to the Build Schema screen and add a switch_off intent.](media/ai900_mod04c_t2_s7.png) 
 
 1. Click on the **switch_off** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_off**. Next to the **switch_off** intent, add the utterance ***turn the light off***.
 
@@ -125,7 +126,7 @@ Now you're ready to use the intents and entities you have defined to train the c
 1. On the left hand side of Language Studio, select **Training jobs**, then select **Start a training job**. Use the following settings: 
     - **Train a new model**: **ai900train-<inject key="DeploymentID" enableCopy="false" />**
     - **Training mode**: Standard training (free)
-    - **Data Splitting**: select Automatically split the testing set from the training data, keep default percentages
+    - **Data Splitting**: Select **Automatically split the testing set from the training data** and keep default percentages.
     - Click **Train** at the bottom of the page.
 
 1. Wait for training to complete. 
@@ -136,8 +137,8 @@ To use your trained model in a client application, you must deploy it as an endp
 
 1. On the left-hand side of Language Studio, click **Deploying a model**.
 
-1. Select your model name and click **Add deployment**. Use these settings:
-    - **Create or select an existing deployment name**: **ai900deploy-<inject key="DeploymentID" enableCopy="false" />**
+1. Click **Add deployment** and use the following settings:
+    - **Create a new deployment name**: **ai900deploy-<inject key="DeploymentID" enableCopy="false" />**
     - **Assign trained model to your deployment name**: Select the name of the trained model.
     - Click **Deploy**
 
@@ -151,7 +152,7 @@ To use your trained model in a client application, you must deploy it as an endp
 
     *switch the light on*
 
-    ![Test your model by selecting your deployed model, then entering text and selecting Run the test.](media/test-model-4c.png) 
+    ![Test your model by selecting your deployed model, then entering text and selecting Run the test.](media/ai900_mod04c_t4_s4.png) 
 
     Review the result that is returned, noting that it includes the predicted intent (which should be **switch_on**) and the predicted entity (**device**) with confidence scores that indicates the probability the model calculated for the predicted intent and entity. The JSON tab shows the comparative confidence for each potential intent (the one with the highest confidence score is the predicted intent)
 
@@ -208,9 +209,9 @@ Now let's open and edit a pre-written script, which will run the client applicat
 
     ![The code editor.](media/powershell-portal-guide4c.png)
 
-1. In the **Files** pane on the left, select the **understand.ps1** file in the **ai-900** folder. This file contains some code that uses your Conversational Language Understanding model. 
+1. In the **Files** pane on the left, select the **understand.ps1** file. This file contains some code that uses your Conversational Language Understanding model. 
 
-    ![The code for the language understanding lab with box around credentials you need to modify and save before running the program.](media/understand-code-4c.png)
+    ![The code for the language understanding lab with box around credentials you need to modify and save before running the program.](media/ai900_mod04c_e3_s3.png)
 
     Don't worry too much about the details of the code. The important thing is that you'll use the instructions below to modify the file to specify the language model you trained. 
 
@@ -252,14 +253,12 @@ Now let's open and edit a pre-written script, which will run the client applicat
 >**Note :**
 >Each time you will need to start with **./understand.ps1** followed by the phrase. Include quotation marks around your phrase.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ## Learn more
 
