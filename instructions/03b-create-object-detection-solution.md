@@ -19,15 +19,13 @@ You can use the Custom Vision service by creating either a **Custom Vision** res
 
 Create a **Cognitive Services** resource in your Azure subscription.
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-
 1. In the Azure Portal click the **&#65291;Create a resource** button.
 
    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
 1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services** 
 
-     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
      
 1. On Cognitive Services Page Click on **Create**. 
      
