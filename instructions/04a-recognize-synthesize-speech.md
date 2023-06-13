@@ -1,4 +1,4 @@
-# Explore speech
+# Module 4a: Explore Speech
 
 To build software that can interpret audible speech and respond appropriately, you can use the **Speech** cognitive service, which provides a simple way to transcribe spoken language into text and vice-versa.
 
@@ -7,12 +7,6 @@ For example, suppose you want to create a smart device that can respond verbally
 To test the capabilities of the Speech service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
 ## Task 1: Create a Cognitive Services resource
-
-You can use the Speech service by creating either a **Speech** resource or a **Cognitive Services** resource.
-
-If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
-
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
 
 1. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*.
