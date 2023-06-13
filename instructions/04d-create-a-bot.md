@@ -173,7 +173,7 @@ The knowledge base provides a back-end service that client applications can use 
         - **Resource group**: Select **AI-900-Module-04d-<inject key="DeploymentID" enableCopy="false"/> (2)**.
         
     - **Instance details**
-        - **Resource group Location**: Select **AI-900-Module-04d-<inject key="loacation" enableCopy="false"/> (3)**.
+        - **Resource group Location**: Select **-<inject key="loacation" enableCopy="false"/> (3)**.
         
     - **Azure Bot**
         - **Bot handle**: *A unique name for your bot* (*pre-populated*) **(4)**
