@@ -169,19 +169,24 @@ The knowledge base provides a back-end service that client applications can use 
 1. In the Azure portal, create a Web App Bot. (You may see a warning message to check that the source of the template is trustworthy. You do not need to take any action for that message.) Continue by updating the following settings:
 
     - **Project Details**
+    
         - **Subscription**: Use existing subscription. **(1)**
         - **Resource group**: Select **AI-900-Module-04d-<inject key="DeploymentID" enableCopy="false"/> (2)**.
         
     - **Instance details**
+    
         - **Resource group Location**: Select **<inject key="location" enableCopy="false" /> (3)**.
         
     - **Azure Bot**
+    
         - **Bot handle**: *A unique name for your bot* (*pre-populated*) **(4)**
         
     - **Choose your pricing tier**
+
         - **Pricing tier**: Free (F0) (You may need to select *Change plan*) **(5)**
         
     - **Microsoft App ID**
+    
         - **Creation type**: *Select Create new User-assigned managed identity* **(6)**
   
        ![](media/ai900mod4dimg19.png)

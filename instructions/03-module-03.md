@@ -1,8 +1,5 @@
 # Explore Computer Vision
 
-> **Note :**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 The ***Computer Vision*** cognitive service uses pre-trained machine learning models to analyze images and extract information about them.
 
 For example, suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using the Computer Vision service, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
@@ -12,8 +9,6 @@ In this lab, you'll use a simple command-line application to see the Computer Vi
 ## Task 1: Create a *Cognitive Services* resource
 
 You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
-
-If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
 1. In the Azure Portal, select the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
