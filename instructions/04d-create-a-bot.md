@@ -49,7 +49,8 @@ The Language service's custom question-answering feature enables you to quickly 
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
     * Password: <inject key="AzureAdUserPassword"></inject>
     
-      ![](media/ai900mod4dimg5.png)
+     
+     ![](media/ai900mod4dimg5.png)
 
 1. If prompted to select an Azure resource, ensure the following settings and click on **Done (5)**:
     - **Azure directory**: The Azure directory containing the pre alloted subscription. **(1)**
@@ -113,7 +114,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
 1. Click **Edit knowledge base** on the left-hand panel. Then click **+** to add a new question-answer pair.
 
-   ![](media/ai900mod4dimg22.png)
+    ![](media/ai900mod4dimg22.png)
 
 1. In the **Add a new question answer pair** page, set the **Source** to *Editorial*.
 
@@ -123,7 +124,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
 1. Click **Done**. 
 
-   ![](media/ai900mod4dimg23.png)
+    ![](media/ai900mod4dimg23.png)
    
 1. Then at the top of the page click **Save** to save your changes. You may need to change the size of your window to see the button.
   
@@ -135,11 +136,11 @@ Now that you have a knowledge base, you can test it.
 
 1. At the top of the page, click **Test** to test your knowledge base.
 
-   [](media/ai900mod4dimg14.png)
+    [](media/ai900mod4dimg14.png)
 
 1. In the test pane, at the bottom enter the message *Hello*. The response **Hello** should be returned.
 
-   [](media/ai900mod4dimg15.png)
+    [](media/ai900mod4dimg15.png)
 
 1. In the test pane, at the bottom enter the message **I want to book a flight**. An appropriate response from the FAQ should be returned.
 
@@ -182,14 +183,14 @@ The knowledge base provides a back-end service that client applications can use 
     - **Microsoft App ID**
         - **Creation type**: *Select Create new User-assigned managed identity* **(6)**
   
-   ![](media/ai900mod4dimg19.png)
+       ![](media/ai900mod4dimg19.png)
 
 5. Select **Next: Web App >** to continue updating the settings. 
     - **App Service**
         - **App name**: *Same as the **Bot handle** with **.azurewebsites.net** appended automatically*
         - **SDK language**: *Choose either C# or Node.js*
         
-       ![](media/ai900mod4dimg24.png)
+        ![](media/ai900mod4dimg24.png)
         
     - **App Service Plan**
         - **Creation Type**: *Select Create new app service plan* 
@@ -201,7 +202,6 @@ The knowledge base provides a back-end service that client applications can use 
         > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your Language resource in. Select your Language resource and navigate to its left-hand menu. Then select *Keys and Endpoint*. Copy one of the keys. 
 
          ![](media/ai900mod4dimg20.png)
-
     -  
         - **Language project name**: MargiesTravel
         - **Language service endpoint hostname**: *Pre-populated with your language service endpoint*
@@ -213,7 +213,7 @@ The knowledge base provides a back-end service that client applications can use 
 
 1. Select **Review + Create**.
 
-  ![](media/ai900mod4dimg25.png)
+    ![](media/ai900mod4dimg25.png)
 
 1. Wait for your bot to be created (the notification icon at the top right, which looks like a bell, will be animated while you wait). Then in the notification that deployment has completed, click **Go to resource** (or alternatively, on the home page, click **Resource groups**.
 
