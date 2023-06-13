@@ -421,7 +421,7 @@ After creating and running a pipeline to train the clustering model, you can cre
 Your inference pipeline assigns penguin observations to clusters based on their features. Now you're ready to publish the pipeline so that client applications can use it.
 
    >**Note :**
-   >In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
+   >In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an **inference cluster**, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
 ### Task 13: Deploy a service
 
@@ -444,13 +444,16 @@ Your inference pipeline assigns penguin observations to clusters based on their 
 
 1. To view the deployment status, expand the left pane by selecting the menu icon at the top left of the screen. View the **Endpoints** page (under **Assets**) and select **predict-penguin-clusters**. When the deployment has finished, the **Deployment state** will change to **Healthy**.
 
-> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another **30 minutes** for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
 
 ### Task 14: Test the service
 
 1. On the **Endpoints** page, open the **predict-penguin-clusters** real-time endpoint, and select the **Test** tab.
 
     ![Screenshot of the location of the Endpoints option on the left-hand pane.](media/endpoints-screenshot-2c.png)
+    
+      >**Note:**
+      > You have to Wait for 15-20 minutes for the test code to reflect which can be seen in json format.
 
 1. We will use it to test our model with new data. Delete the current data under **Input data to test real-time endpoint**. Copy and paste the below data into the data section: 
 
