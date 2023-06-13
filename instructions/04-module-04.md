@@ -1,4 +1,4 @@
-# Explore text analytics
+# Module 04: Explore text analytics
 
 Natural Language Processing (NLP) is a branch of artificial intelligence (AI) that deals with written and spoken language. You can use NLP to build solutions that extract semantic meaning from text or speech, or that formulate meaningful responses in natural language.
 
