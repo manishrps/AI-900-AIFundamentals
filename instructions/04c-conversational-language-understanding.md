@@ -45,8 +45,10 @@ To implement natural language understanding with Conversational Language Underst
     - **Description**: Simple home automation
     - **Utterances primary language**: English
     - **Enable multiple languages in project**: Do not select
+    
 
-    ![Enter details for the project.](media/create-project-4c.png)
+     ![Enter details for the project.](media/create-project-4c.png)
+
 
     >**Tip :**
     >Write down your *project name*, you will use it later.
@@ -60,6 +62,7 @@ An **intent** is an action you want to perform - for example, you might want to 
 1. In the **Schema definition** pane, ensure that **Intents** is selected Then click **Add**, and add an intent with the name **switch_on** (in lower-case) and click **Add intent**.
 
     ![Click on add under Intents on the Build Schema pane.](media/ai900_mod04c_t2_s1.png)
+    
     ![Add the switch_on intent then select Add intent.](media/ai900_mod04c_t2_s1-a.png)
 
 1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_on**. Next to the **switch_on** intent, type the utterance **turn the light on** and press **Enter** to submit this utterance to the list.
@@ -76,6 +79,7 @@ An **intent** is an action you want to perform - for example, you might want to 
 1. On the **Labeling entities for training** pane on the right-hand side of the screen, select **Labels**, then select **Add entity**. Type **device** (in lower-case), select **List** and select **Add entity**.
 
     ![Add an entity by selecting Tags on the Tagging entities for training panel, then select Add entity.](media/ai900_mod04c_t2_s4.png) 
+    
     ![Type in device under Entity name and select List, then select Add entity.](media/ai900_mod04c_t2_s4-a.png)
 
 1. In the **turn the fan on** utterance, highlight the word "fan". Then in the list that appears, in the *Search for an entity* box select **device**.
