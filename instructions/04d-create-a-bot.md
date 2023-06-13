@@ -47,6 +47,7 @@ The Language service's custom question-answering feature enables you to quickly 
 1. Sign in using the following username and password.
     
     * Email/Username: <inject key="AzureAdUserEmail"></inject>
+    
     * Password: <inject key="AzureAdUserPassword"></inject>
     
      
@@ -187,31 +188,31 @@ The knowledge base provides a back-end service that client applications can use 
 
 5. Select **Next: Web App >** to continue updating the settings. 
     - **App Service**
-        - **App name**: *Same as the **Bot handle** with **.azurewebsites.net** appended automatically*
-        - **SDK language**: *Choose either C# or Node.js*
+        - **App name**: *Same as the **Bot handle** with **.azurewebsites.net** appended automatically* 
+        - **SDK language**: *Choose either C# or Node.js* 
         
         ![](media/ai900mod4dimg24.png)
         
     - **App Service Plan**
-        - **Creation Type**: *Select Create new app service plan* 
+        - **Creation Type**: *Select Create new app service plan*  **(1)**
         
     - **App Settings**
-        - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* **
+        - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* **(2)**
         
         > **Note :**
         > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your Language resource in. Select your Language resource and navigate to its left-hand menu. Then select *Keys and Endpoint*. Copy one of the keys. 
 
          ![](media/ai900mod4dimg20.png)
     -  
-        - **Language project name**: MargiesTravel
-        - **Language service endpoint hostname**: *Pre-populated with your language service endpoint*
+        - **Language project name**: MargiesTravel **(3)**
+        - **Language service endpoint hostname**: *Pre-populated with your language service endpoint* **(4)**
         
     - **Language service details**
-        - **Subscription Id**: *Pre-populated with your subscription ID* 
-        - **Resource Group Name**: *Pre-populated with your resource group name* 
-        - **Account Name**: *Pre-populated with your resource name* 
+        - **Subscription Id**: *Pre-populated with your subscription ID* **(5)**
+        - **Resource Group Name**: *Pre-populated with your resource group name*  **(6)**
+        - **Account Name**: *Pre-populated with your resource name* **(7)**
 
-1. Select **Review + Create**.
+1. Select **Review + Create (8)**.
 
     ![](media/ai900mod4dimg25.png)
 
