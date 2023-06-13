@@ -1,4 +1,4 @@
-# Module 3b: Explore object detection
+# Module 03b: Explore object detection
 
 *Object detection* is a form of computer vision in which a machine learning model is trained to classify individual instances of objects in an image, and indicate a *bounding box* that marks its location. You can think of this as a progression from *image classification* (in which the model answers the question "What is this an image of?") to building solutions where we can ask the model "What objects are in this image, and where are they?".
 
