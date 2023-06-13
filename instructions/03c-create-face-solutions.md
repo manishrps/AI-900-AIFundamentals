@@ -95,9 +95,9 @@ Now that you have a custom model, you can run a simple client application that u
     ```
 
 1. Review the returned information, which includes the location of the face in the image. The location of a face is indicated by the top-left coordinates, and the width and height of a *bounding box*, as shown here:
-
+    
     ![An image of a person with their face outlined](media/create-face-solutions/ai900_03c-8.jpg)
-
+    ![An image of a person with their face outlined](media/resultai-9003c.png)
     >**Note :**
     >Face service capabilities that return personally identifiable features are restricted. See https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/ for details.
 
