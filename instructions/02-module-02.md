@@ -4,11 +4,16 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 ## Task 1: Create an Azure Machine Learning workspace  
 
+1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with the Azure credentials as shown below:
+  
+   - Username: <inject key="AzureAdUserEmail" enableCopy="false" />
+   - Password: <inject key="AzureAdUserPassword" enableCopy="false" />
+   
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: *Use the existing Azure subscription*
-    - **Resource group**: *Select AI-900-Module-02-<inject key="DeploymentID" enableCopy="false"/>*
+    - **Resource group**: Select **AI-900-Module-02-<inject key="DeploymentID" enableCopy="false"/>**
     - **Workspace name**: Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Region**: *Select the same region where your resource group was created*
+    - **Region**: Select **<inject key="location" enableCopy="false"/>**
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
@@ -22,12 +27,9 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and **select the one you created for this exercise**.
 
-    > **Note:**
-    > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
-
 ## Task 2: Create compute
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select **Compute**(under **Manage**).
 
 1. On the **Compute** page, select the **Compute clusters** tab and to add a new compute cluster, click on **+ New** with the following settings. You'll use this to train a machine learning model:
     - **Location**: *Select the same as your workspace. If that location is not listed, choose the one closest to you*.
@@ -44,10 +46,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
     - **Enable SSH access**: keep it as default
     - Select **Create**
 
-       > **Note**
-       > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
-
-The compute cluster will take some time to be created. You can move onto the next step while you wait.
+   > **Note**:The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
 ## Task 3: Create a dataset
 
@@ -105,17 +104,17 @@ Follow the next steps to run a job that uses automated machine learning to train
     
     - **Configure job**:
         - **New experiment name**: mslearn-bike-rental
-        - **Target column**: rentals (*this is the label that the model is trained to predict)*
+        - **Target column**: rentals(Integer) (*this is the label that the model is trained to predict)*
         - **Select compute type**: *Compute cluster*
-        - **Select Azure ML compute cluster**: *the compute cluster that you created previously*.
+        - **Select Azure ML compute cluster**: **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**.
     - Click on **Next**.
     
     - **Select task and settings**: 
         - **Task type**: Regression *(the model predicts a numeric value)* 
    
-            ![Screenshot of a selection pane with boxes around the Regression task type and additional configuration settings.](media/use-automated-machine-learning/ai-900-regression.png)
+     - Notice under task type there are settings *View additional configuration settings* and *View featurization settings*. Now configure these settings. Click on **View additional configuration settings**.
 
-    - Notice under task type there are settings *View additional configuration settings* and *View featurization settings*. Now configure these settings. Click on **View additional configuration settings**.
+       ![Screenshot of a selection pane with boxes around the Regression task type and additional configuration settings.](media/use-automated-machine-learning/ai-900-regression.png)
 
     - **Additional configuration settings:**
         - **Primary metric**: Select **Normalized root mean squared error**
@@ -164,9 +163,9 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     ![Screenshot of the metrics tab with the residuals and predicted_true charts selected.](media/use-automated-machine-learning/ai-900-matrix1.png)
 
-    Review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
+    Scroll down and review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
 
-1. Select the **Explanations(preview)** tab. Select an Explanation ID and then select **Aggregate feature importance**. This chart shows how much each feature in the dataset influences the label prediction, like this:
+1. Select the **Explanations(preview)** tab. Select an Explanation ID and then select **Aggregate feature importance** tab. This chart shows how much each feature in the dataset influences the label prediction, like this:
 
     ![Screenshot of the feature importance chart on the Explanations tab.](media/use-automated-machine-learning/feature-importance1.png)
 
@@ -198,7 +197,7 @@ Now you can test your deployed service.
 
     ![Screenshot of location of Endpoints on the left hand menu.](media/use-automated-machine-learning/endpoints-2.png)
 
-> **Note**: The realtime endpoint may be in unhealthy state, wait for another 10 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 5.
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 5.
 
 ### Learn more
 
@@ -242,11 +241,10 @@ Let's review what you have done. You used a dataset of historical bicycle rental
 
 You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
 
-> **Note**: **Congratulations!** You have successfully completed this exercise. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+### You have successfully completed this lab.

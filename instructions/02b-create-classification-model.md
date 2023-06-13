@@ -1,15 +1,12 @@
 # Explore classification with Azure Machine Learning Designer
 
-> **Note :**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
 ## Task 1: Create an Azure Machine Learning workspace  
 
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *select AI-900-Module-02b-<inject key="DeploymentID" enableCopy="false"/>*
     - **Workspace name**: *Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>***
-    - **Region**:  *Select the same region where your resource group was created*
+    - **Region**: Select **<inject key="location" enableCopy="false"/>**
     - **Storage account**: *Note the default new storage account that will be created for your workspace*
     - **Key vault**: *Note the default new key vault that will be created for your workspace*
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
@@ -36,7 +33,7 @@
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
-    - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="true"/>**.
+    - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
@@ -294,7 +291,7 @@ The performance of this model isn't all that great, partly because we performed 
     - Remove the **Evaluate Model** module.
     - Insert an **Execute Python Script** module before the web service output to return only the patient ID, predicted label value, and probability.
 
-1. The pipeline does not automatically include a **Web Service Input** component for models created from custom data sets. Search for a **Web Service Input** component from the asset library and place it at the top of the pipeline. Connect the output of the **Web Service Input** component to the right-side input of the **Apply Transformation** component that is already on the canvas.
+1. The pipeline does not automatically include a **Web Service Input** component for models created from custom data sets. Search for a **Web Service Input** component from the asset library and place it at the top of the pipeline.  Connect the output of the **Web Service Input** component to the **Select Columns in Dataset** component that is already on the canvas.
 
 1. The inference pipeline assumes that new data will match the schema of the original training data, so the **diabetes-data** dataset from the training pipeline is included. However, this input data includes the **Diabetic** label that the model predicts, which is not included in new patient data for which a diabetes prediction hasn't yet been made. Delete this module and replace it with an **Enter Data Manually** module, containing the following CSV data, which includes feature values without labels for three new patient observations:
 
@@ -305,7 +302,7 @@ The performance of this model isn't all that great, partly because we performed 
     1228510,4,115,50,29,243,34.69215364,0.741159926,59
     ```
 
-1. Connect the new **Enter Data Manually** module to the same **Dataset** input of the **Apply Transformation** module as the **Web Service Input**.
+1. Connect the new **Enter Data Manually** module to the same **Dataset** input of the **Select Columns in Dataset** module as the **Web Service Input**.
 
 1. Edit the **Select Columns in Dataset** module. Remove **Diabetic** from the *Selected Columns*. 
 
@@ -356,12 +353,14 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
     ![Screenshot of the deploy button for your Predict Auto Price inference pipeline.](media/create-classification-model/deploy-screenshot1.png)
 
-1. At the top right, select **Deploy**, and deploy a **new real-time endpoint**, using the following settings:
+1. At the top right, select **Deploy**, and deploy a **new real-time endpoint**, using the following settings.
     -  **Name**: predict-diabetes
     -  **Description**: Classify diabetes
     - **Compute type**: Azure Container Instance
 
-1. Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left of the designer interface.
+1. Select **Deploy**
+
+1. Wait for the web service to be deployed - this can take upto **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
 
 ## Task 14: Test the service
 
@@ -400,11 +399,9 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
     You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
 
-> **Note**: **Congratulations!** You have successfully completed this exercise. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Click on the **Lab Validation tab** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
    - Hit the **Validate** button for the corresponding task.
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
