@@ -29,10 +29,10 @@ The Language service's custom question-answering feature enables you to quickly 
 1. On the **Create Language** page, specify the following settings:
     - **Subscription**: Use existing Azure subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" /> (2)**.
-    - **Region**: Select **AI-900-Module-03c-<inject key="location" enableCopy="false" /> (3)**
+    - **Region**: Select **<inject key="location" enableCopy="false" /> (3)**
     - **Name**:Enter **ai900language-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: S (1K Calls per minute) **(5)**
-    - **Azure Serach region**: Select **AI-900-Module-03c-<inject key="location" enableCopy="false" /> (6)**
+    - **Azure Serach region**: Select **<inject key="location" enableCopy="false" /> (6)**
     - **Azure Pricing tier**: **Free F(3 Indexes)**
     - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: **Selected (6)**.
     
@@ -187,13 +187,16 @@ The knowledge base provides a back-end service that client applications can use 
        ![](media/ai900mod4dimg19.png)
 
 5. Select **Next: Web App >** to continue updating the settings. 
+
     - **App Service**
+    
         - **App name**: *Same as the **Bot handle** with **.azurewebsites.net** appended automatically* 
         - **SDK language**: *Choose either C# or Node.js* 
         
         ![](media/ai900mod4dimg24.png)
         
     - **App Service Plan**
+    
         - **Creation Type**: *Select Create new app service plan*  **(1)**
         
     - **App Settings**
@@ -208,6 +211,7 @@ The knowledge base provides a back-end service that client applications can use 
         - **Language service endpoint hostname**: *Pre-populated with your language service endpoint* **(4)**
         
     - **Language service details**
+    
         - **Subscription Id**: *Pre-populated with your subscription ID* **(5)**
         - **Resource Group Name**: *Pre-populated with your resource group name*  **(6)**
         - **Account Name**: *Pre-populated with your resource name* **(7)**
