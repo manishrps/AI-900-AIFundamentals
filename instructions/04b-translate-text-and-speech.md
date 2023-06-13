@@ -96,9 +96,9 @@ Now that you have a custom model, you can run a simple client application that u
     - Translate text from English into French, Italian, and Chinese.
     - Translate audio from English into text in French
 
-    Use the video player below to hear the input audio the application will process:
+    Use the below link to hear the input audio which will be processed by this application and translates:
    
-   <div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RWORN0" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
+        https://www.microsoft.com/videoplayer/embed/RWORN0
 
     >**Note**: Copy the above link to your browser, to listen the audio file. Do not use the Lab VM browser.
 
