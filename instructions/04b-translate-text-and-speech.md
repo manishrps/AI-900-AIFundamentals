@@ -15,7 +15,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 1. In the Azure Portal, Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Retain the Existing Subscription*.
     - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**: *Select the same region where your resource group got deployed.*.
+    - **Region**: Select **<inject key="location" enableCopy="false"/>**.
     - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
@@ -43,7 +43,7 @@ To test the capabilities of the Translation service, we'll use a simple command-
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **show advanced settings**. Please make sure you have selected your resource group **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="true"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="true"/>** For the **File share name**, then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **show advanced settings**. Please make sure you have selected your resource group **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, then click on **Create Storage**.
 
     ![Create storage by clicking confirm.](media/translate-text-and-speech/create-a-storage.png)
 
@@ -97,10 +97,12 @@ Now that you have a custom model, you can run a simple client application that u
     - Translate audio from English into text in French
 
     Use the video player below to hear the input audio the application will process:
+   
+   <div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RWORN0" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
 
-     <div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RWORN0" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
+    >**Note**: Copy the above link to your browser, to listen the audio file. Do not use the Lab VM browser.
 
-    > **Note**: A real application could accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file.
+    >**Note**: A real application could accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file.
     
 1. In the Cloud Shell pane, enter the following command to run the code:
 
@@ -111,11 +113,10 @@ Now that you have a custom model, you can run a simple client application that u
 
 1. Review the output. Did you see the translation from text in English to French, Italian, and Chinese?  Did you see the English audio "hello" translated into text in French?
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Click on the **Lab Validation** tab located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
    - Hit the **Validate** button for the corresponding task.
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
