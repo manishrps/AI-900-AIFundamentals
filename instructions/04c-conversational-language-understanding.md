@@ -66,7 +66,7 @@ An **intent** is an action you want to perform - for example, you might want to 
 
 1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_on**. Next to the **switch_on** intent, type the utterance **turn the light on** and press **Enter** to submit this utterance to the list.
 
-    ![Add an utterance to the training set by typing in "turn the light on" under Utterance.](media/add-utterance-on-4c.png)
+    ![Add an utterance to the training set by typing in "turn the light on" under Utterance.](media/ai900_mod04c_t2_s2.png)
 
 1. The language service needs at least five different utterance examples for each intent to sufficiently train the language model. Add five more utterance examples for the **switch_on** intent:  
     - **switch on the fan**
