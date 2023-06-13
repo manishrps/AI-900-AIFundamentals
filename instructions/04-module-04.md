@@ -63,7 +63,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
   
    ![Create storage by clicking confirm.](media/ai900mod1img7.png)
    
-1.  Please make sure you have selected your resource group **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="true"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="true"/>** For the **File share name**, then click on **Create Storage**.
+1.  Please make sure you have selected your resource group **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, then click on **Create Storage**.
 
     ![Create storage by clicking confirm.](media/ai900mod1img8.png)
 
