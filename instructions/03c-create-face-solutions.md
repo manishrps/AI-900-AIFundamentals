@@ -10,8 +10,6 @@ You can use the Face service by creating a **Face** resource. (Face API is no lo
 
 If you haven't already done so, create a **Face API** resource in your Azure subscription.
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
-
 1. Click the **&#65291;Create a resource** button, search for *Face*, and create a **Face** resource with the following settings:
     - **Subscription**: *Use existing Azure subscription*.
     - **Resource group**: **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" />**.
