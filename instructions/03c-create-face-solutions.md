@@ -4,9 +4,9 @@ Computer vision solutions often require an artificial intelligence (AI) solution
 
 To test the capabilities of the Face service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Task 1 : Create a *Cognitive Services* resource
+## Task 1 : Create a *Face API* resource
 
-You can use the Face service by creating either a **Face** resource or a **Cognitive Services** resource.
+You can use the Face service by creating a **Face** resource. (Face API is no longer available in Cognitive Services)
 
 If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
@@ -17,8 +17,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
     - **Resource group**: **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" />**.
     - **Region**: Select **<inject key="location" enableCopy="false"/>**.
     - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Pricing tier**: Standard S0
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected.
+    - **Pricing tier**: Free F0.
 
 1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
 
