@@ -35,12 +35,12 @@
 
    ![Picture1](media/ai900mod2cimg4.png)
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+ **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 2: Create compute
 
@@ -157,7 +157,7 @@ and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
 member of the [Long Term Ecological Research
 Network](https://lternet.edu/).
 
- **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
  
    > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
@@ -172,7 +172,7 @@ Network](https://lternet.edu/).
 
 1. Next to the pipeline name on the left, select the arrow icon to expand the panel if it is not already expanded. The panel should open by default to the **Asset library** pane, indicated by the books icon at the top of the panel. Note that there is a search bar to locate assets. Notice two buttons, **Data** and **Component**.
 
-    ![Screenshot of location of designer asset library, search bar, and data icon.](media/designer-asset-library-data-2c.png)
+    ![Screenshot of location of designer asset library, search bar, and data icon.](media/create-classification-model/search-data.png)
 
 1. Click on **Data**. Search for and place the **penguin-data** dataset onto the canvas.
 
@@ -203,7 +203,7 @@ Network](https://lternet.edu/).
 
 1. In the **Asset library** pane on the left, click on **Component**, which contains a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
 
-    ![Screenshot of location of designer asset library, search bar, and components icon.](media/designer-asset-library-components-2c.png)
+    ![Screenshot of location of designer asset library, search bar, and components icon.](media/create-classification-model/search-component.png))
 
 1. To cluster the penguin observations, we're going to use only the measurements - we'll ignore the species column. So, search for a **Select Columns in Dataset** module and place it on the canvas, below the **penguin-data** module and connect the output at the bottom of the **penguin-data** module to the input at the top of the **Select Columns in Dataset** module, like this:
 
@@ -251,7 +251,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
 1. Wait for the run to finish. This may take 5 minutes or more.
 
-    ![Screenshot of designer asset library with the completed job and job details button below.](media/completed-job-2c.png)
+    ![Screenshot of designer asset library with the completed job and job details button below.](media/create-classification-model/completed-job1.png)
 
     Notice that theleft-hand panel is now on the **Submitted jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
@@ -273,13 +273,12 @@ Now that you have selected and prepared the features you want to use from the da
 
 After you've used data transformations to prepare the data, you can use it to train a machine-learning model.
 
- **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
    > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
 
 ### Task 9: Add training modules
 
@@ -430,7 +429,7 @@ Your inference pipeline assigns penguin observations to clusters based on their 
 
 1. Select **Job detail** on the left hand pane. This will open up another tab.
 
-   ![Screenshot of job details next to the completed job](media/completed-job-2c.png)
+   ![Screenshot of job details next to the completed job](media/create-classification-model/completed-job1.png)
 
 1. In the new tab, select **Deploy**.
 
@@ -479,6 +478,3 @@ Your inference pipeline assigns penguin observations to clusters based on their 
     ![Screenshot of the Test pane with sample test result.](media/test-interface-2c.png)
 
 You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
-
-
-
