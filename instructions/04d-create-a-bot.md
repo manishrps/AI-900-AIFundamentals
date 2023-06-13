@@ -175,7 +175,7 @@ The knowledge base provides a back-end service that client applications can use 
         
     - **Instance details**
     
-        - **Resource group Location**: Select **<inject key="loacation" enableCopy="false"/> (3)**.
+        - **Resource group Location**: Select **<inject key="location" enableCopy="false" /> (3)**.
         
     - **Azure Bot**
     
