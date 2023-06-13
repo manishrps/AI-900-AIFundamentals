@@ -195,9 +195,6 @@ Now let's open and edit a pre-written script, which will run the client applicat
     git clone https://github.com/MicrosoftLearning/AI-900-AIFundamentals ai-900
     ```
 
-    >**Note :**
-    >If you already used this command in another lab to clone the *ai-900* repository, you can skip this step.
-
 1. The files are downloaded to a folder named **ai-900**. Now we want to see all of the files in this folder and work with them. Type the following commands into the shell:
 
      ```PowerShell
@@ -229,8 +226,8 @@ Now let's open and edit a pre-written script, which will run the client applicat
     $projectName = "name"
     $deploymentName = "name"
     ```
-
-1. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
+    
+1. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
 1. In the PowerShell pane, enter the following command to run the code:
 
