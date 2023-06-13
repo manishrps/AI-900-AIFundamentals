@@ -1,4 +1,4 @@
-# Module-5 Explore knowledge mining
+# Module 5: Explore Knowledge Mining
 
 Let's imagine you work for Fourth Coffee, a national coffee chain. You're asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure Cognitive Search index using data extracted from customer reviews.  
 
@@ -231,7 +231,7 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. In the *Containers*, select the container *coffee-skillset-image-projection*. Select any of the items.
 
-    ![Screenshot of the skillset container.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
+    ![Screenshot of the skillset container.](media/create-cognitive-search-solution/ai-900-coffee.png)
 
 1. Select any of the *.jpg* files. Select **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
 
