@@ -1,5 +1,5 @@
-# Explore question answering
-
+# Module 4d : Explore question answering 
+## Explore question answering
 For customer support scenarios, it's common to create a bot that can interpret and answer frequently asked questions through a website chat window, email, or voice interface. Underlying the bot interface is a knowledge base of questions and appropriate answers that the bot can search for suitable responses.
 
 ## Exercise 1: Create a custom question-answering knowledge base
@@ -10,7 +10,7 @@ The Language service's custom question-answering feature enables you to quickly 
 
 1. Click the **&#65291;Create a resource** button, search for **Language service**.
 
-   ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod1img1.png)
+    ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod1img1.png)
    
 1. In the Marketplace page search for **Language Services** and Select **Language Services** 
 
@@ -25,17 +25,19 @@ The Language service's custom question-answering feature enables you to quickly 
     - **Default features**: *Keep the default features*.
     - **Custom features**: *Select custom question answering*.
 
-    ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod4dimg3.png)
+      ![Creating a Language Service resource with custom question answering enabled.](media/ai900mod4dimg3.png)
 
 1. On the **Create Language** page, specify the following settings:
     - **Subscription**: Use existing Azure subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" /> (2)**.
-    - **Region**: Select **AI-900-Module-03c-<inject key="location" enableCopy="false" /> (3)**.
+    - **Region**: Select **AI-900-Module-03c-<inject key="location" enableCopy="false" /> (3)**
     - **Name**:Enter **ai900language-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: S (1K Calls per minute) **(5)**
+    - **Azure Serach region**: Select **AI-900-Module-03c-<inject key="location" enableCopy="false" /> (6)**
+    - **Azure Pricing tier**: **Free F(3 Indexes)**
     - **By checking this box I certify that I have reviewed and acknowledge the terms in the Responsible AI Notice**: **Selected (6)**.
-
-     > **Note:** If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In this case, select a tier other than **Free F(3 Indexes)**.
+    
+      >**Note:** If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In this case, select a tier other than **Free F(3 Indexes)**.
 
 1. Click **Review and Create** and then click **Create**. Wait for the deployment of the Language service that will support your custom question-answering knowledge base.
 
@@ -59,10 +61,11 @@ The Language service's custom question-answering feature enables you to quickly 
       ![](media/ai900mod4dimg6.png)
       
 1. If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-    1. On the bar at the top of the page, click the **Settings (&#9881;)** button.
-    2. On the **Settings** page, view the **Resources** tab.
-    3. Select the language resource you just created, and click **Switch resource**.
-    4. At the top of the page, click **Language Studio** to return to the Language Studio home page.
+
+     - On the bar at the top of the page, click the **Settings (&#9881;)** button.
+     - On the **Settings** page, view the **Resources** tab.
+     - Select the language resource you just created, and click **Switch resource**.
+     - At the top of the page, click **Language Studio** to return to the Language Studio home page.
 
 1. At the top of the Language Studio portal, in the **Create new** menu, select **Custom question answering**.
 
@@ -127,7 +130,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
   
      ![](media/ai900mod4dimg13.png)
    
-### Task 3 : Train and test the knowledge base
+### Task 3: Train and test the knowledge base
 
 Now that you have a knowledge base, you can test it.
 
@@ -152,15 +155,15 @@ Now that you have a knowledge base, you can test it.
 
 The knowledge base provides a back-end service that client applications can use to answer questions through some sort of user interface. Commonly, these client applications are bots. To make the knowledge base available to a bot, you must publish it as a service that can be accessed over HTTP. You can then use the Azure Bot Service to create and host a bot that uses the knowledge base to answer user questions.
 
-1. At the left of the Language Studio page, click **Deploy knowledge base (1)**.At the top of the page, click **Deploy (2)**.
+1. At the left of the Language Studio page, click **Deploy knowledge base (1)**. At the top of the page, click **Deploy (2)**.
 
-     [](media/ai900mod4dimg16.png)
+     ![](media/ai900mod4dimg16.png)      
 
 1. A dialogue box will ask if you want to deploy the project. Select **Deploy**.
 
 1. After the service has been deployed, click **Create a bot**. This opens the Azure portal in a new browser tab so you can create a Web App Bot in your Azure subscription.
  
-    [](media/ai900mod4dimg18.png)
+     ![](media/ai900mod4dimg18.png)
 
 1. In the Azure portal, create a Web App Bot. (You may see a warning message to check that the source of the template is trustworthy. You do not need to take any action for that message.) Continue by updating the following settings:
 
@@ -172,29 +175,33 @@ The knowledge base provides a back-end service that client applications can use 
         - **Resource group Location**: Select **AI-900-Module-04d-<inject key="loacation" enableCopy="false"/> (3)**.
         
     - **Azure Bot**
-        - **Bot handle**: *A unique name for your bot* (*pre-populated*) **(3)**
+        - **Bot handle**: *A unique name for your bot* (*pre-populated*) **(4)**
         
     - **Choose your pricing tier**
-        - **Pricing tier**: Free (F0) (You may need to select *Change plan*) **(4)**
+        - **Pricing tier**: Free (F0) (You may need to select *Change plan*) **(5)**
         
     - **Microsoft App ID**
-        - **Creation type**: *Select Create new User-assigned managed identity* **(5)**
-
-          [](media/ai900mod4dimg19.png)
+        - **Creation type**: *Select Create new User-assigned managed identity* **(6)**
+  
+   ![](media/ai900mod4dimg19.png)
 
 5. Select **Next: Web App >** to continue updating the settings. 
     - **App Service**
         - **App name**: *Same as the **Bot handle** with **.azurewebsites.net** appended automatically*
         - **SDK language**: *Choose either C# or Node.js*
         
+       ![](media/ai900mod4dimg24.png)
+        
     - **App Service Plan**
-        - **Creation Type**: *Select Create new app service plan*
+        - **Creation Type**: *Select Create new app service plan* 
         
     - **App Settings**
-        - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* 
+        - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* **
         
         > **Note :**
         > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your Language resource in. Select your Language resource and navigate to its left-hand menu. Then select *Keys and Endpoint*. Copy one of the keys. 
+
+         ![](media/ai900mod4dimg20.png)
 
     -  
         - **Language project name**: MargiesTravel
@@ -207,11 +214,17 @@ The knowledge base provides a back-end service that client applications can use 
 
 1. Select **Review + Create**.
 
-1. Wait for your bot to be created (the notification icon at the top right, which looks like a bell, will be animated while you wait). Then in the notification that deployment has completed, click **Go to resource** (or alternatively, on the home page, click **Resource groups**, open the resource group where you created the web app bot, and click it.)
+  ![](media/ai900mod4dimg25.png)
+
+1. Wait for your bot to be created (the notification icon at the top right, which looks like a bell, will be animated while you wait). Then in the notification that deployment has completed, click **Go to resource** (or alternatively, on the home page, click **Resource groups**.
+
+1. Open the resource group where you created the **web app bot**.
 
 1. In the left-hand pane of your bot look for **Settings**, click on **Test in Web Chat**, and wait until the bot displays the message **Hello and Welcome** (it may take a few seconds to initialize).
 
-1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting *I need to cancel my hotel*.
+1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting **I need to cancel my hotel**.
+
+     ![](media/azurebot.png)
 
 Experiment with the bot. You'll probably find that it can answer questions from the FAQ quite accurately, but it will have limited ability to interpret questions that it has not been trained with. You can always use the Language Studio to edit the knowledge base to improve it and republish it.
 
@@ -221,7 +234,6 @@ Experiment with the bot. You'll probably find that it can answer questions from 
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
-
 
 ### Learn more
 
