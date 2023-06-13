@@ -23,7 +23,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
 
    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
-1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services** 
+1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services**.
 
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
      
