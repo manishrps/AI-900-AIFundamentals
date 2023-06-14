@@ -450,7 +450,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
 1. Select **Test**. On the right hand of the screen, you should see the output **'predicted_price'**. The output is the predicted price for a vehicle with the particular input features specified in the data. 
 
-    ![Screenshot of the Test pane.](media/test-interface-2a.png)
+    ![Picture1](media/ai900lab2aimg4.png)
 
 Let's review what you have done. You cleaned and transformed a dataset of automobile data, then used the car *features* to train a model. The model predicts the price of an automobile, which is the *label*.
 
