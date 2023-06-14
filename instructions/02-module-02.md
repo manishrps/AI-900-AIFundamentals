@@ -2,9 +2,22 @@
 
 In this exercise, you will use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
 
-## Task 1: Create an Azure Machine Learning workspace  
+## Exercise 1: Create an Azure Machine Learning workspace  
 
-1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+### Task 1: Create an Azure Machine Learning workspace
+
+1. Select **+ Create a resource**, search for Machine Learning.
+
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
+ 
+    ![Picture1](media/ai900mod2cimg2.png)
+
+1. On **Azure Machine Learning** Page Click on **Create**. 
+   
+1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+
     - **Subscription**: *Use the existing Azure subscription*
     - **Resource group**: Select **AI-900-Module-02-<inject key="DeploymentID" enableCopy="false"/>**
     - **Workspace name**: Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>**
@@ -27,13 +40,19 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select **Compute**(under **Manage**).
 
 1. On the **Compute** page, select the **Compute clusters** tab and to add a new compute cluster, click on **+ New** with the following settings. You'll use this to train a machine learning model:
-    - **Location**: *Select the same as your workspace. If that location is not listed, choose the one closest to you*.
+
+      ![Picture1](media/ai900mod2cimg5.png)
+      
+    - **Location**: Select <inject key="location" enableCopy="false" />.
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
     - **Virtual machine size**:
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
+    
+      ![Picture1](media/ai900mod2cimg6.png)
+      
     - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
@@ -41,6 +60,8 @@ In this exercise, you will use a dataset of historical bicycle rental details to
     - **Enable SSH access**: keep it as default
     - Select **Create**
 
+       ![Picture1](media/ai900mod2cimg7.png)
+       
    > **Note**:The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
 ## Task 3: Create a dataset
@@ -139,6 +160,8 @@ Follow the next steps to run a job that uses automated machine learning to train
 
 1. When the status changes to *Running*, view the **Models** tab and observe as each possible combination of training algorithm and pre-processing steps is tried and the performance of the resulting model is evaluated. The page automatically refreshes periodically, but you can also select **Refresh**. It might take 10 minutes or so before models start to appear, as the cluster nodes must be initialized before training can begin.
 
+      ![Picture1](media/ai900lab2img3.png)
+
 1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
 
 ## Task 4: Review the best model
@@ -172,11 +195,17 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     ![Screenshot of the best model summary with a box around the algorithm name on the details tab.](media/use-automated-machine-learning/ai-900-algorithm.png)
 
-1. On the **Model** tab, select the **Deploy** button and use the **web service** option to deploy the model with the following settings and then click on **Deploy**.
+1. On the **Model** tab, select the **Deploy** button and use the **web service** option.
+
+      ![Picture1](media/ai900lab2img2.png)
+      
+3. To deploy the model with the following settings and then click on **Deploy**.
     - **Name**: predict-rentals
     - **Description**: Predict cycle rentals
     - **Compute type**: Azure Container Instance
     - **Enable authentication**: Selected
+
+       ![Picture1](media/ai900lab2img1.png)
 
 1. Wait for the deployment to start - this may take a few seconds. Then, in the **Model summary** section, observe the **Deploy status** for the **predict-rentals** service, which should be **Running**. Wait for this status to change to **Succeeded**, which may take some time. You may need to select **Refresh** periodically.
 
