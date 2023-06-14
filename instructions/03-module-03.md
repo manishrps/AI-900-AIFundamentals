@@ -1,4 +1,4 @@
-# Moudle 03: Explore Computer Vision
+# Module 03: Explore Computer Vision
 
 The ***Computer Vision*** cognitive service uses pre-trained machine learning models to analyze images and extract information about them.
 
