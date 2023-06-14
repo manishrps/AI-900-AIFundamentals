@@ -1,9 +1,9 @@
 # Module 02a: Explore regression with Azure Machine Learning Designer
 
-In this lab, you will:
-- Create a Machine Learning Workspace.
-- Create a compute and run pipelines by adding data.
-- Deploy and evaluate a model.
+In this lab, you will train a regression model that predicts the price of an automobile based on its characteristics. This includes:
+- Creating a Machine Learning Workspace.
+- Creating a compute and running pipelines by adding data.
+- Deploying and evaluating a model.
 
 ## Task 1: Create an Azure Machine Learning workspace  
 
