@@ -115,7 +115,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
 1. Review the schema of the data in the *Profile* tab, noting that you can see the distributions of the various columns as histograms.
 
-1. Scroll down and select the column heading for the **Diabetic** column, and note that it contains two values **0** and **1**. These values represent the two possible classes for the *label* that your model will predict, with a value of **0** meaning that the patient does not have diabetes, and a value of **1** meaning that the patient is diabetic.
+1. Scroll and select the column heading for the **Diabetic** column, and note that it contains two values **0** and **1**. These values represent the two possible classes for the *label* that your model will predict, with a value of **0** meaning that the patient does not have diabetes, and a value of **1** meaning that the patient is diabetic.
 
 1. Scroll back up and review the other columns, which represent the *features* that will be used to predict the label. Note that most of these columns are numeric, but each feature is on its own scale. For example, **Age** values range from 21 to 77, while **DiabetesPedigree** values range from 0.078 to 2.3016. When training a machine learning model, it is sometimes possible for larger values to dominate the resulting predictive function, reducing the influence of features that on a smaller scale. Typically, data scientists mitigate this possible bias by *normalizing* the numeric columns so they're on the similar scales.
 
@@ -165,7 +165,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
     Notice that the left hand panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
 >**Note :**
-> if the the error occurs and stat that the data type is already in the collection, so submit the pipeline again and re-run it.
+> if the the error occurs and states that the data type is already in the collection, submit the pipeline again and re-run it.
 
 ## Task 8: View the transformed data
 
