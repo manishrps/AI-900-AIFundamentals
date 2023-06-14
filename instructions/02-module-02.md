@@ -160,6 +160,8 @@ Follow the next steps to run a job that uses automated machine learning to train
 
 1. When the status changes to *Running*, view the **Models** tab and observe as each possible combination of training algorithm and pre-processing steps is tried and the performance of the resulting model is evaluated. The page automatically refreshes periodically, but you can also select **Refresh**. It might take 10 minutes or so before models start to appear, as the cluster nodes must be initialized before training can begin.
 
+      ![Picture1](media/ai900lab2img3.png)
+
 1. Wait for the job to finish. It might take a while — now might be a good time for a coffee break!
 
 ## Task 4: Review the best model
@@ -193,11 +195,17 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     ![Screenshot of the best model summary with a box around the algorithm name on the details tab.](media/use-automated-machine-learning/ai-900-algorithm.png)
 
-1. On the **Model** tab, select the **Deploy** button and use the **web service** option to deploy the model with the following settings and then click on **Deploy**.
+1. On the **Model** tab, select the **Deploy** button and use the **web service** option.
+
+      ![Picture1](media/ai900lab2img2.png)
+      
+3. To deploy the model with the following settings and then click on **Deploy**.
     - **Name**: predict-rentals
     - **Description**: Predict cycle rentals
     - **Compute type**: Azure Container Instance
     - **Enable authentication**: Selected
+
+       ![Picture1](media/ai900lab2img1.png)
 
 1. Wait for the deployment to start - this may take a few seconds. Then, in the **Model summary** section, observe the **Deploy status** for the **predict-rentals** service, which should be **Running**. Wait for this status to change to **Succeeded**, which may take some time. You may need to select **Refresh** periodically.
 
