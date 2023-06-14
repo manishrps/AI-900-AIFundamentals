@@ -5,7 +5,7 @@ The ***Computer Vision*** cognitive service uses pre-trained machine learning mo
 For example, suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using the Computer Vision service, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
 In this lab, you'll use a simple command-line application to see the Computer Vision service in action. The same principles and functionality apply in real-world solutions, such as web sites or phone apps. This includes:
-- Creating Azure Cognitive Services and other Azure resources.
+- Creating Azure Cognitive Services and Azure Storage Account.
 - Configuring and running a client application.
 
 ## Task 1: Create a *Cognitive Services* resource
