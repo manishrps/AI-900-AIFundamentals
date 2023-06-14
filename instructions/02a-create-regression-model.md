@@ -5,13 +5,26 @@ In this lab, you will train a regression model that predicts the price of an aut
 - Creating a compute and running pipelines by adding data.
 - Deploying and evaluating a model.
 
-## Task 1: Create an Azure Machine Learning workspace  
+## Exercise 1: Create an Azure Machine Learning workspace  
 
-1. Select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+### Task 1: Create an Azure Machine Learning workspace  
+
+1. Select **+ Create a resource**, search for Machine Learning.
+
+     ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
+ 
+    ![Picture1](media/ai900mod2cimg2.png)
+
+1. On **Azure Machine Learning** Page Click on **Create**. 
+
+1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+
     - **Subscription**: Use exiting Azure subscription.
     - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**.
     - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />.**
-    - **Region**: <inject key="location" enableCopy="false" />
+    - **Region**: Select <inject key="location" enableCopy="false" />
     - **Storage account**: Note the default new storage account that will be created for your workspace.
     - **Key vault**: Note the default new key vault that will be created for your workspace.
     - **Application insights**: Note the default new application insights resource that will be created for your workspace.
@@ -23,7 +36,9 @@ In this lab, you will train a regression model that predicts the price of an aut
 
 1. In Azure Machine Learning studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
 
-## Task 2: Create compute
+   ![Picture1](media/ai900mod2cimg4.png)
+
+### Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
@@ -48,7 +63,7 @@ In this lab, you will train a regression model that predicts the price of an aut
 
 The compute cluster will take some time to be created. You can move onto the next task while it's being created.
 
-## Task 3: Create a pipeline in Designer 
+### Task 3: Create a pipeline in Designer 
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Authoring**), and select **+ to create a new pipeline.**
 
@@ -60,9 +75,9 @@ The compute cluster will take some time to be created. You can move onto the nex
 
 1. Select the *close* icon on the top right of the **Settings** pane to close the pane. 
 
-    ![Screenshot of the Machine Learning Studio Settings pane.](media/create-pipeline-help-2c.png)
+    ![Picture1](media/ai900mod2cimg10.png)
 
-## Task 4: Add and explore a dataset
+### Task 4: Add and explore a dataset
 
 Azure Machine Learning includes a sample dataset that you can use for your regression model.
 
@@ -84,7 +99,7 @@ Azure Machine Learning includes a sample dataset that you can use for your regre
 
     ![Screenshot of the Automobile price data dataset on the designer canvas.](media/dataset-2a.png)
 
-## Task 5: Add data transformations
+### Task 5: Add data transformations
 
 You typically apply data transformations to prepare the data for modeling. In the case of the automobile price data, you add transformations to address the issues you identified when you explored the data.
 
@@ -145,7 +160,7 @@ Follow the remaining steps, use the image for reference as you add and configure
     >**Tip :**
     >If you compare the values in the **stroke**, **peak-rpm**, and **city-mpg** columns, they are all measured in different scales, and it is possible that the larger values for **peak-rpm** might bias the training algorithm and create an over-dependency on this column compared to columns with lower values, such as **stroke**. Typically, data scientists mitigate this possible bias by *normalizing* the numeric columns so they're on the similar scales.
 
-## Task 6: Run the pipeline
+### Task 6: Run the pipeline
 
 To apply your data transformations, you must run the pipeline.
 
@@ -167,7 +182,7 @@ To apply your data transformations, you must run the pipeline.
 
 The dataset is now prepared for model training. Close the Job detail tab to return to the pipeline.
 
-## Task 7: Create training pipeline
+### Task 7: Create training pipeline
 
 After you've used data transformations to prepare the data, you can use it to train a machine learning model. Work through the following steps to extend the **Auto Price Training** pipeline.
 
@@ -204,7 +219,7 @@ After you've used data transformations to prepare the data, you can use it to tr
 
     ![Screenshot of how to split data, then train with linear regression and score.](media/train-score-2a.png)
 
-## Task 8: Run the training pipeline
+### Task 8: Run the training pipeline
 
 Now you're ready to run the training pipeline and train the model.
 
@@ -220,7 +235,7 @@ Now you're ready to run the training pipeline and train the model.
 
 The model is predicting values for the **price** label, but how reliable are its predictions? To assess that, you need to evaluate the model.
 
-## Task 9: Evaluate model
+### Task 9: Evaluate model
 
 One way to evaluate a regression model is to compare the predicted labels to the actual labels in the validation dataset to held back during training. Another way is to compare the performance of multiple models.
 
@@ -254,7 +269,7 @@ One way to evaluate a regression model is to compare the predicted labels to the
 
 When you've identified a model with evaluation metrics that meet your needs, you can prepare to use that model with new data.
 
-## Task 10: Create and run an inference pipeline
+### Task 10: Create and run an inference pipeline
 
 1. In Azure Machine Learning studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-auto-training**, then select the **Auto Price Training** pipeline. 
 
@@ -321,14 +336,14 @@ When you've identified a model with evaluation metrics that meet your needs, you
 Your inference pipeline predicts prices for cars based on their features. Now you're ready to publish the pipeline so that client applications can use it.
 > **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
 
-## Task 11: Deploy model
+### Task 11: Deploy model
 
 After you've created and tested an inference pipeline for real-time inferencing, you can publish it as a service for client applications to use.
 
 > **Note**
 > In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
-## Task 12: Deploy a service
+### Task 12: Deploy a service
 
 1. View the **Predict Auto Price** inference pipeline you created in the previous unit.
 
@@ -347,7 +362,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
 1. Wait for the service to be deployed - this can take upto **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
 
-## Task 13: Test the service
+### Task 13: Test the service
 
 1. On the **Endpoints** page, open the **predict-auto-price** real-time endpoint.
 
