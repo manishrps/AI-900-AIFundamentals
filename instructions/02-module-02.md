@@ -1,14 +1,9 @@
-# Explore Automated Machine Learning in Azure ML
+# Module 2: Explore Automated Machine Learning in Azure ML
 
 In this exercise, you will use a dataset of historical bicycle rental details to train a model that predicts the number of bicycle rentals that should be expected on a given day, based on seasonal and meteorological features.
 
 ## Task 1: Create an Azure Machine Learning workspace  
 
-1. If you are not logged in already, click on the **Azure portal** shortcut that is available on the desktop and log in with the Azure credentials as shown below:
-  
-   - Username: <inject key="AzureAdUserEmail" enableCopy="false" />
-   - Password: <inject key="AzureAdUserPassword" enableCopy="false" />
-   
 1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
     - **Subscription**: *Use the existing Azure subscription*
     - **Resource group**: Select **AI-900-Module-02-<inject key="DeploymentID" enableCopy="false"/>**

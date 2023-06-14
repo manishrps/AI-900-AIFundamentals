@@ -157,7 +157,7 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
 
 1. Select **Next: Customize target index**. Change the **Index name** to **coffee-index**.
 
-1. Ensure that the **Key** is set to **metadata_storage_path**. Leave **Suggester name** blank and **Search mode** autopopulated.
+1. Ensure that the **Key** is set to **metadata_storage_path**. Leave **Suggester name** blank and **Search mode** auto populated.
 
 1. Review the index fields' default settings. Select **filterable** for all the fields that are already selected by default.
 
@@ -249,6 +249,10 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
+
+### You have successfully completed this lab.
+
 ## Learn more
 
 This simple search index only some of the capabilities of the Azure Cognitive Search service. To learn more about what you can do with this service, see the [Azure Cognitive Search service page](/azure/search/search-what-is-azure-search).
+
