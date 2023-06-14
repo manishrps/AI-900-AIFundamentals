@@ -5,7 +5,7 @@ A common computer vision challenge is to detect and interpret text in an image. 
 To test the capabilities of the Read API, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
 In this lab, you will:
-- Create an Azure Cognitive Service and a storage account.
+- Create an Azure Cognitive Service and Azure Storage Account.
 - Configure and run a client application.
 
 ## Use the Computer Vision Service to Read Text in an Image
