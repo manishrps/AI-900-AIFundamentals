@@ -22,7 +22,7 @@ The solution you'll create for Fourth Coffee requires the following resources in
 
 - A **Storage account** with blob containers, which will store raw documents and other collections of tables, objects, or files.
 
-### Task 1 : Create an **Azure Cognitive Search** resource
+### Task 1 : Create an Azure Cognitive Search resource
    
 1. Click the **+ Create a resource** button, search for **Azure Cognitive Search**, and create a **Azure Cognitive Search** resource with the following settings:
 
@@ -106,7 +106,7 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
     - **Data source name**: coffee-customer-data
     - **Data to extract**: Content and metadata
     - **Parsing mode**: Default
-    - **Connection string**: *Select **Choose an existing connection**. Select your storage account, select the **coffee-reviews** container, and then click **Select**.
+    - **Connection string**: Select **Choose an existing connection**. Select your storage account, select the **coffee-reviews** container, and then click **Select**.
     - **Managed identity authentication**: None
     - **Container name**: this setting is auto-populated after you choose an existing connection.
     - **Blob folder**: *Leave this blank*.
@@ -196,7 +196,8 @@ Use the Search explorer to write and test queries. Search explorer is a tool bui
 
     In the **Query string** field, enter `search=*&$count=true`, and then select **Search**. The search query returns all the documents in the search index, including a count of all the documents in the **@odata.count** field. The search index should return a JSON document containing your search results.
 
-    > **Note :**If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
+    > **Note :**
+    > If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
 
 1. Now let's filter by location. Enter `search=$filter=locations eq 'Chicago'` in the **Query string** field, and then select **Search**. The query searches all the documents in the  index and filters for reviews with a Chicago location.
 
