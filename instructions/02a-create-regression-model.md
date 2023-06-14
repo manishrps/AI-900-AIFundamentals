@@ -1,6 +1,9 @@
-# Explore regression with Azure Machine Learning Designer
+# Module 02a: Explore regression with Azure Machine Learning Designer
 
-In this exercise, you will train a regression model that predicts the price of an automobile based on its characteristics.
+In this lab, you will train a regression model that predicts the price of an automobile based on its characteristics. This includes:
+- Creating a Machine Learning Workspace.
+- Creating a compute and running pipelines by adding data.
+- Deploying and evaluating a model.
 
 ## Task 1: Create an Azure Machine Learning workspace  
 

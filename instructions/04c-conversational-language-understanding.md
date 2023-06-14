@@ -1,10 +1,14 @@
-# Explore language understanding
+# Module 04c: Explore language understanding
 
 Increasingly, we expect computers to be able to use AI in order to understand spoken or typed commands in natural language. For example, you might want to implement a home automation system that enables you to control devices in your home by using voice commands such as "switch on the light" or "put the fan on", and have an AI-powered device understand the command and take appropriate action.
 
 To test the capabilities of the Conversational Language Understanding service, we'll use a command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Exercise 1: Create a *Language service* resouendeavoursrce
+In this lab, you will: 
+- Create and use a Language Service resource.
+- Configure and run a client application.
+
+## Exercise 1: Create a *Language service* resource
 
 You can use the Conversational Language Understanding service by creating a **Language service** resource.
 
