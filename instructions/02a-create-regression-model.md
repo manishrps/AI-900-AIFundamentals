@@ -37,19 +37,31 @@ In this lab, you will train a regression model that predicts the price of an aut
 1. In Azure Machine Learning studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
 
    ![Picture1](media/ai900mod2cimg4.png)
+   
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
 1. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster by selecting **+ New**, and with the following settings to train a machine learning model:
-    - **Location**: Select the same region where your resource group was created.
+
+      ![Picture1](media/ai900mod2cimg5.png)
+          
+    - **Location**: Select <inject key="location" enableCopy="false" />.
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
     - **Virtual machine size**:
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
+    
+       ![Picture1](media/ai900mod2cimg6.png)
 
     - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**
     - **Minimum number of nodes**: 0
@@ -58,10 +70,19 @@ In this lab, you will train a regression model that predicts the price of an aut
     - **Enable SSH access**: Leave as default
     - Select **Create**
 
+        ![Picture1](media/ai900mod2cimg7.png)
+        
 > **Note :**
 > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next task while it's being created.
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 3: Create a pipeline in Designer 
 
@@ -75,7 +96,7 @@ The compute cluster will take some time to be created. You can move onto the nex
 
 1. Select the *close* icon on the top right of the **Settings** pane to close the pane. 
 
-    ![Picture1](media/ai900mod2cimg10.png)
+    ![Picture1](media/ai900mod2aimg1.png)
 
 ### Task 4: Add and explore a dataset
 
@@ -94,6 +115,8 @@ Azure Machine Learning includes a sample dataset that you can use for your regre
 1. Scroll to the right of the dataset until you see the **Automobile price data (Raw)** column, which is the label that your model predicts.
 
 1. Right- Click on the **Automobile price data (raw**) under **Auto Price Training** and select **Preview data.** click on the **normalized-losses** column header. Then review the statistics for this column. Note there are quite a few missing values in this column. Missing values  limit the column's usefulness for predicting the **price** label so you might want to exclude it from training.
+
+    ![Picture1](media/ai900lab2aimg2.png)
 
 1. Close the **Automobile price data (Raw) result visualization** window so that you can see the dataset on the canvas like this:
 
@@ -124,6 +147,9 @@ Follow the remaining steps, use the image for reference as you add and configure
 5. In the **Asset library**, search for a **Clean Missing Data** module and place it under the **Select Columns in Dataset** module on the canvas. Then connect the output from the **Select Columns in Dataset** module to the input of the **Clean Missing Data** module.
 
 6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower**. Then, click on **Save**. The below screenshot has been provided for your reference: 
+
+
+      ![Picture1](media/ai900lab2aimg3.png)
 
     > 💡 **Note:** After typing the word click in empty area to insert the word.
 
@@ -203,6 +229,8 @@ After you've used data transformations to prepare the data, you can use it to tr
 1. In the **Asset library**, search for and place a **Train Model** module to the canvas, under the **Split Data** module. Then connect the *Results dataset1* (left) output of the **Split Data** module to the *Dataset* (right) input of the **Train Model** module.
 
 1. The model you are training will predict the **price** value, so select the **Train Model** module and modify its settings to set the **Label column** to  **price** (matching the case and spelling exactly!) and click on **Save**.
+
+      ![Picture1](media/ai900lab2aimg1.png)
 
     The **price** label model will predict a numeric value, so we need to train the model using a *regression* algorithm.
 
@@ -334,7 +362,16 @@ When you've identified a model with evaluation metrics that meet your needs, you
 1. Close the visualization tab.
 
 Your inference pipeline predicts prices for cars based on their features. Now you're ready to publish the pipeline so that client applications can use it.
-> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task.
+
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 
 ### Task 11: Deploy model
 
