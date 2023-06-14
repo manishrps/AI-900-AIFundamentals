@@ -1,14 +1,10 @@
-# Explore image classification​
+# Module 3a: Explore Image Classification​
 
 The *Computer Vision* cognitive service provides useful pre-built models for working with images, but you'll often need to train your own model for computer vision. For example, suppose a wildlife conservation organization organization wants to track sightings of animals by using motion-sensitive cameras. The images captured by the cameras could then be used to verify the presence of particular species in a particular area and assist with conservation efforts for endangered species. To accomplish this, the organization would benefit from an *image classification* model that is trained to identify different species of animal in the captured photographs.
 
 In Azure, you can use the ***Custom Vision*** cognitive service to train an image classification model based on existing images. There are two elements to creating an image classification solution. First, you must train a model to recognize different classes using existing images. Then, when the model is trained you must publish it as a service that can be consumed by applications.
 
 To test the capabilities of the Custom Vision service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or mobile apps.
-
-## Before you start
-
-To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
 
 ## Task 1: Create a Cognitive Services resource
 
@@ -18,14 +14,6 @@ You can use the Custom Vision service by creating either a **Custom Vision** res
 >Not every resource is available in every region. Whether you create a Custom Vision or Cognitive Services resource, only resources created in [certain regions](https://azure.microsoft.com/global-infrastructure/services/?products=cognitive-services) can be used to access Custom Vision services. For simplicity, a region is pre-selected for you in the configuration instructions below.
 
 Create a **Cognitive Services** resource in your Azure subscription.
-
-1. If you are not logged in already, click on **Azure portal** shortcut of Microsoft Edge browser that is available on the desktop and log in with below Azure credentials.
-
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
- 
-   >**Note :**
-   > On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
 
 1. In the Azure Portal, select the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
