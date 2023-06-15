@@ -1,8 +1,23 @@
-# Explore classification with Azure Machine Learning Designer
+# Module 02b: Explore classification with Azure Machine Learning Designer
 
-## Task 1: Create an Azure Machine Learning workspace  
+## Exercise 1: Create an Azure Machine Learning workspace in the Azure portal
 
-1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+### Task 1: Create an Azure Machine Learning workspace  
+
+1. Select **+ Create a resource**, search for Machine Learning.
+
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
+ 
+   ![Picture1](media/ai900mod2cimg1.png)
+
+1. On **Azure Machine Learning** Page Click on **Create**.
+
+   ![Picture1](media/ai900mod2cimg2.png)
+
+1. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *select AI-900-Module-02b-<inject key="DeploymentID" enableCopy="false"/>*
     - **Workspace name**: *Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>***
@@ -16,16 +31,24 @@
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
-1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
+1. Close any messages that are displayed.
+
+1. In Azure Machine Learning Studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated with your directory are listed, and select the one you created for this exercise.
+
+   ![Picture1](media/ai900mod2cimg4.png)
+
 
 > **Note :**
 > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
 
-## Task 2: Create compute
+### Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
-1. On the **Compute** page, select the **Compute clusters** tab, Click on **+ New** and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
+1. On the **Compute** page, select the **Compute clusters** tab, Click on **+ New**, and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
+
+     ![Picture1](media/ai900mod2cimg5.png)
+
     - **Location**: *Select the same region where your workspace was created*.
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
@@ -33,6 +56,9 @@
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
+  
+      ![Picture1](media/ai900mod2cimg6.png)
+      
     - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
@@ -40,16 +66,20 @@
     - **Enable SSH access**: leave as default
     - Select **Create**
 
-> **Note :**
-> Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
+       ![Picture1](media/ai900mod2cimg7.png)
+      
+     > **Note:**
+    > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
-## Task 3: Create a pipeline in Designer
+### Task 3: Create a pipeline in Designer
 
-To get started with Azure Machine Learning designer, first you must create a pipeline and add the dataset you want to work with.
+To get started with Azure Machine Learning Designer, first you must create a pipeline and add the dataset you want to work with.
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Authoring**), and select **+** to create a new pipeline.
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Authoring**), and select **+ to create a new pipeline**.
+
+    ![Picture1](media/ai900mod2cimg8.png)
 
 1. At the top right-hand side of the screen, select **Settings**. If the **Settings** pane is not visible, select the wheel icon next to the pipeline name at the top.
 
