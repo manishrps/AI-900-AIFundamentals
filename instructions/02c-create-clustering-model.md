@@ -17,7 +17,7 @@
    ![Picture1](media/ai900mod2cimg2.png)
 
    
-1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+1. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
     - **Subscription**: Use existing Azure subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-02c-<inject key="DeploymentID" enableCopy="false" /> (2)**
@@ -69,7 +69,7 @@
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
-    - **Enable SSH access**: *do not select*
+    - **Enable SSH access**: Leave as default
     - Select **Create**
    
        ![Picture1](media/ai900mod2cimg7.png)
