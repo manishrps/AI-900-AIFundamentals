@@ -17,7 +17,7 @@
    ![Picture1](media/ai900mod2cimg2.png)
 
    
-1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+1. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
     - **Subscription**: Use existing Azure subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-02c-<inject key="DeploymentID" enableCopy="false" /> (2)**
@@ -69,7 +69,7 @@
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
     - **Idle seconds before scale down**: 120
-    - **Enable SSH access**: *do not select*
+    - **Enable SSH access**: Leave as default
     - Select **Create**
    
        ![Picture1](media/ai900mod2cimg7.png)
@@ -90,7 +90,9 @@ The compute cluster will take some time to be created. You can move on to the ne
 
 To get started with Azure Machine Learning Designer, first, you must create a pipeline.
 
-1. In [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Author**), and select the plus sign to create a new pipeline.
+1. In [Azure Machine Learning Studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Author**), and select the plus sign to **create a new pipeline**.
+
+     ![Picture1](media/ai900mod2cimg8.png)
 
 1. At the top right-hand side of the screen, select **Settings**. If the **Settings** pane is not visible, select the wheel icon next to the pipeline name at the top.
 
@@ -313,7 +315,7 @@ Follow the steps below, using the image above for reference as you add and confi
 
     ![Screenshot of how to include all columns in the column set.](media/cluster-features-2c.png)
 
-1. The model we're training will use the features to group the data into clusters, so we need to train the model using a *clustering* algorithm. In the **Asset library**, search for and place a **K-Means Clustering** module to the canvas, to the left of the **penguin-data** dataset and above the **Train Clustering Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Clustering Model** module.
+1. The model we're training will use the features to group the data into clusters, so we need to train the model using a *clustering* algorithm. In the **Asset library**, search for and place a **K-Means Clustering** module to the canvas, to the left of the **penguin-data** dataset, and above the **Train Clustering Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Clustering Model** module.
 
 1. The *K-Means* algorithm groups items into the number of clusters you specify - a value referred to as ***K***. Select the **K-Means Clustering** module and in the right-hand pane, set the **Number of centroids** parameter to **3**.
 
@@ -370,6 +372,7 @@ Evaluating a clustering model is made difficult by the fact that there are no pr
     - **Average Distance to Cluster Center**
     - **Number of Points**
     - **Maximal Distance to Cluster Center**
+
 
 1. Close the **Evaluate Model result visualization** tab.
 
@@ -444,12 +447,13 @@ Your inference pipeline assigns penguin observations to clusters based on their 
     -  **Name**: predict-penguin-clusters
     -  **Description**: Cluster penguins.
     - **Compute type**: Azure Container Instance
+      
 
 1. Wait for the web service to be deployed - this can take several minutes. 
 
 1. To view the deployment status, expand the left pane by selecting the menu icon at the top left of the screen. View the **Endpoints** page (under **Assets**) and select **predict-penguin-clusters**. When the deployment has finished, the **Deployment state** will change to **Healthy**.
 
-> **Note**: The realtime endpoint may be in unhealthy state, wait for another **30 minutes** for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
+> **Note**: The real-time endpoint may be in an unhealthy state, wait for another **30 minutes** for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 
 
 ### Task 14: Test the service
 

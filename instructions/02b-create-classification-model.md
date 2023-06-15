@@ -1,8 +1,23 @@
-# Explore classification with Azure Machine Learning Designer
+# Module 02b: Explore classification with Azure Machine Learning Designer
 
-## Task 1: Create an Azure Machine Learning workspace  
+## Exercise 1: Create an Azure Machine Learning workspace in the Azure portal
 
-1. In the Azure Portal, select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+### Task 1: Create an Azure Machine Learning workspace  
+
+1. Select **+ Create a resource**, search for Machine Learning.
+
+    ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
+ 
+   ![Picture1](media/ai900mod2cimg1.png)
+
+1. On **Azure Machine Learning** Page Click on **Create**.
+
+   ![Picture1](media/ai900mod2cimg2.png)
+
+1. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: *select AI-900-Module-02b-<inject key="DeploymentID" enableCopy="false"/>*
     - **Workspace name**: *Enter **ai900workspace-<inject key="DeploymentID" enableCopy="false"/>***
@@ -16,16 +31,24 @@
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
-1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
+1. Close any messages that are displayed.
+
+1. In Azure Machine Learning Studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated with your directory are listed, and select the one you created for this exercise.
+
+   ![Picture1](media/ai900mod2cimg4.png)
+
 
 > **Note :**
 > This module is one of many that make use of an Azure Machine Learning workspace, including the other modules in the [Microsoft Azure AI Fundamentals: Explore visual tools for machine learning](https://docs.microsoft.com/learn/paths/create-no-code-predictive-models-azure-machine-learning/) learning path. If you are using your own Azure subscription, you may consider creating the workspace once and reusing it in other modules. Your Azure subscription will be charged a small amount for data storage as long as the Azure Machine Learning workspace exists in your subscription, so we recommend you delete the Azure Machine Learning workspace when it is no longer required.
 
-## Task 2: Create compute
+### Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left-hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
-1. On the **Compute** page, select the **Compute clusters** tab, Click on **+ New** and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
+1. On the **Compute** page, select the **Compute clusters** tab, Click on **+ New**, and add a new compute cluster with the following settings. You'll use this to train a machine learning model:
+
+     ![Picture1](media/ai900mod2cimg5.png)
+
     - **Location**: *Select the same region where your workspace was created*.
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
@@ -33,6 +56,9 @@
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
+  
+      ![Picture1](media/ai900mod2cimg6.png)
+      
     - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Minimum number of nodes**: 0
     - **Maximum number of nodes**: 2
@@ -40,16 +66,20 @@
     - **Enable SSH access**: leave as default
     - Select **Create**
 
-> **Note :**
-> Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
+       ![Picture1](media/ai900mod2cimg7.png)
+      
+     > **Note:**
+    > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
 The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
-## Task 3: Create a pipeline in Designer
+### Task 3: Create a pipeline in Designer
 
-To get started with Azure Machine Learning designer, first you must create a pipeline and add the dataset you want to work with.
+To get started with Azure Machine Learning Designer, first you must create a pipeline and add the dataset you want to work with.
 
-1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Authoring**), and select **+** to create a new pipeline.
+1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Authoring**), and select **+ to create a new pipeline**.
+
+    ![Picture1](media/ai900mod2cimg8.png)
 
 1. At the top right-hand side of the screen, select **Settings**. If the **Settings** pane is not visible, select the wheel icon next to the pipeline name at the top.
 
@@ -61,7 +91,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
     ![Screenshot of the Machine Learning Studio Settings pane.](media/create-classification-model/ai-900-settings1.png)
 
-## Task 4: Create a dataset
+### Task 4: Create a dataset
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Data** page (under **Assets**). The Data page contains specific data files or tables that you plan to work with in Azure ML. You can create datasets from this page as well.
 
@@ -99,7 +129,7 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents details from patients who have been tested for diabetes.
 
-### Task 5: Load data to canvas
+### Task 5: Load data to a canvas
 
 1. Return to your pipeline by selecting **Designer** on the left-hand menu. On the **Designer** page, select the **Diabetes Training** pipeline (Under **pipline Drafts**).
 
@@ -117,17 +147,17 @@ To get started with Azure Machine Learning designer, first you must create a pip
 
 1. Scroll and select the column heading for the **Diabetic** column, and note that it contains two values **0** and **1**. These values represent the two possible classes for the *label* that your model will predict, with a value of **0** meaning that the patient does not have diabetes, and a value of **1** meaning that the patient is diabetic.
 
-1. Scroll back up and review the other columns, which represent the *features* that will be used to predict the label. Note that most of these columns are numeric, but each feature is on its own scale. For example, **Age** values range from 21 to 77, while **DiabetesPedigree** values range from 0.078 to 2.3016. When training a machine learning model, it is sometimes possible for larger values to dominate the resulting predictive function, reducing the influence of features that on a smaller scale. Typically, data scientists mitigate this possible bias by *normalizing* the numeric columns so they're on the similar scales.
+1. Scroll back up and review the other columns, which represent the *features* that will be used to predict the label. Note that most of these columns are numeric, but each feature is on its own scale. For example, **Age** values range from 21 to 77, while **DiabetesPedigree** values range from 0.078 to 2.3016. When training a machine learning model, it is sometimes possible for larger values to dominate the resulting predictive function, reducing the influence of features that on a smaller scale. Typically, data scientists mitigate this possible bias by *normalizing* the numeric columns so they're on similar scales.
 
 1. Close the **diabetes-data result visualization** tab so that you can see the dataset on the canvas like this:
 
     ![Screenshot of the diabetes-data dataset on the designer canvas.](media/create-classification-model/diabetes-data.png)
 
-## Task 6: Add transformations
+### Task 6: Add transformations
 
 Before you can train a model, you typically need to apply some pre-processing transformations to the data.
 
-1. In the **Asset library** pane on the left, click on **Component**, which contain a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
+1. In the **Asset library** pane on the left, click on **Component**, which contains a wide range of modules you can use for data transformation and model training. You can also use the search bar to quickly locate modules.
 
     ![Screenshot of location of designer asset library, search bar, and components icon.](media/create-classification-model/search-component.png)
 
@@ -152,7 +182,7 @@ Before you can train a model, you typically need to apply some pre-processing tr
 
 The data transformation is normalizing the numeric columns to put them on the same scale, which should help prevent columns with large values from dominating model training. You'd usually apply a whole bunch of pre-processing transformations like this to prepare your data for training, but we'll keep things simple in this exercise.
 
-## Task 7: Run the pipeline
+### Task 7: Run the pipeline
 
 To apply your data transformations, you need to run the pipeline as an experiment.
 
@@ -162,14 +192,14 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
     ![Screenshot of designer asset library with the completed job and job details button below.](media/create-classification-model/completed-job1.png)
 
-    Notice that the left hand panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
+    Notice that theleft-handd panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
 >**Note :**
-> if the the error occurs and states that the data type is already in the collection, submit the pipeline again and re-run it.
+> if the error occurs and states that the data type is already in the collection, submit the pipeline again and re-run it.
 
-## Task 8: View the transformed data
+### Task 8: View the transformed data
 
-1. When the run has completed, the dataset is now prepared for model training. Click on **Job detail**. You will be taken to a new tab.
+1. When the run has been completed, the dataset is now prepared for model training. Click on **Job detail**. You will be taken to a new tab.
 
 1. Right-click (Ctrl+click on a Mac) the **Normalize Data** module on the canvas, and click on **Preview data**. Select **Transformed dataset**.
 
@@ -177,9 +207,9 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
 1. Close the normalized data result visualization. Return to the previous tab.
 
-After you've used data transformations to prepare the data, you can use it to train a machine learning model.
+After you've used data transformations to prepare the data, you can use it to train a machine-learning model.
 
-## Task 9: Add training modules
+### Task 9: Add training modules
 
 It's common practice to train the model using a subset of the data, while holding back some data with which to test the trained model. This enables you to compare the labels that the model predicts with the actual known labels in the original dataset.
 
@@ -215,7 +245,7 @@ Follow the steps below, using the image above for reference as you add and confi
 
 1. In the **Asset library**, search for and place a **Score Model** module to the canvas, below the **Train Model** module. Then connect the output of the **Train Model** module to the **Trained model** (left) input of the **Score Model** module; and connect the **Results dataset2** (right) output of the **Split Data** module to the **Dataset** (right) input of the **Score Model** module.
 
-## Task 10: Run the training pipeline
+### Task 10: Run the training pipeline
 
 Now you're ready to run the training pipeline and train the model.
 
@@ -235,7 +265,7 @@ The model is predicting values for the **Diabetic** label, but how reliable are 
 
 The validation data you held back and used to score the model includes the known values for the label. So to validate the model, you can compare the true values for the label to the label values that were predicted when you scored the validation dataset. Based on this comparison, you can calculate various metrics that describe how well the model performs.
 
-## Task 11: Add an Evaluate Model module
+### Task 11: Add an Evaluate Model module
 
 1. Open the **Diabetes Training** pipeline you created.
 
@@ -269,11 +299,11 @@ The validation data you held back and used to score the model includes the known
 
 The performance of this model isn't all that great, partly because we performed only minimal feature engineering and pre-processing. You could try a different classification algorithm, such as **Two-Class Decision Forest**, and compare the results. You can connect the outputs of the **Split Data** module to multiple **Train Model** and **Score Model** modules, and you can connect a second **Score Model** module to the **Evaluate Model** module to see a side-by-side comparison. The point of the exercise is simply to introduce you to classification and the Azure Machine Learning designer interface, not to train a perfect model!
 
-## Task 12: Create an inference pipeline
+### Task 12: Create an inference pipeline
 
-1. In Azure Machine Learning studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-diabetes-training**, then select the **Diabetes Training** pipeline.
+1. In Azure Machine Learning Studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-diabetes-training**, then select the **Diabetes Training** pipeline.
 
-1. Locate the menu above the canvas and click on **Create inference pipeline**. You may need to expand your screen to full and click on the three dots icon **...** on the top right hand corner of the screen in order to find **Create inference pipeline** in the menu.  
+1. Locate the menu above the canvas and click on **Create inference pipeline**. You may need to expand your screen to full and click on the three dots icon **...** on the top right-hand corner of the screen in order to find **Create inference pipeline** in the menu.  
 
     ![Screenshot of location of create inference pipeline.](media/create-classification-model/create-inference-pipeline2.png)
 
@@ -339,9 +369,9 @@ Your inference pipeline predicts whether or not patients are at risk for diabete
 After you've created and tested an inference pipeline for real-time inferencing, you can publish it as a service for client applications to use.
 
 > **Note :**
-> In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provide an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
+> In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically and is useful for development and testing. For production, you should create an *inference cluster*, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
-## Task 13: Deploy a service
+### Task 13: Deploy a service
 
 1. View the **Predict Diabetes** inference pipeline you created in the previous unit.
 
@@ -362,7 +392,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
 
 1. Wait for the web service to be deployed - this can take upto **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
 
-## Task 14: Test the service
+### Task 14: Test the service
 
 1. On the **Endpoints** page, open the **predict-diabetes** real-time endpoint.
 
