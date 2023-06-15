@@ -315,7 +315,7 @@ Follow the steps below, using the image above for reference as you add and confi
 
     ![Screenshot of how to include all columns in the column set.](media/cluster-features-2c.png)
 
-1. The model we're training will use the features to group the data into clusters, so we need to train the model using a *clustering* algorithm. In the **Asset library**, search for and place a **K-Means Clustering** module to the canvas, to the left of the **penguin-data** dataset and above the **Train Clustering Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Clustering Model** module.
+1. The model we're training will use the features to group the data into clusters, so we need to train the model using a *clustering* algorithm. In the **Asset library**, search for and place a **K-Means Clustering** module to the canvas, to the left of the **penguin-data** dataset, and above the **Train Clustering Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Clustering Model** module.
 
 1. The *K-Means* algorithm groups items into the number of clusters you specify - a value referred to as ***K***. Select the **K-Means Clustering** module and in the right-hand pane, set the **Number of centroids** parameter to **3**.
 
@@ -372,6 +372,7 @@ Evaluating a clustering model is made difficult by the fact that there are no pr
     - **Average Distance to Cluster Center**
     - **Number of Points**
     - **Maximal Distance to Cluster Center**
+
 
 1. Close the **Evaluate Model result visualization** tab.
 
