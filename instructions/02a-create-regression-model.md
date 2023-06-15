@@ -401,7 +401,7 @@ After you've created and tested an inference pipeline for real-time inferencing,
     -  **Description**: Auto price regression
     - **Compute type**: Azure Container Instance
 
-1. Wait for the service to be deployed - this can take up to **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
+1. Wait for the service to be deployed - this can take upto **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
 
 ### Task 13: Test the service
 
