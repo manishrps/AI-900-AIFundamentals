@@ -15,9 +15,11 @@ In this lab, you will train a regression model that predicts the price of an aut
 
 1. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
  
-    ![Picture1](media/ai900mod2cimg2.png)
+    ![Picture1](media/ai900mod2cimg1.png)
 
-1. On **Azure Machine Learning** Page Click on **Create**. 
+1. On **Azure Machine Learning** Page Click on **Create**.
+
+    ![Picture1](media/ai900mod2cimg2.png)
 
 1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 

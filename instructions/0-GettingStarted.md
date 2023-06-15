@@ -22,8 +22,10 @@
      
  1. Now enter the following password and click on **Sign in**.
     * Password: <inject key="AzureAdUserPassword"></inject>
+    
      
       ![Create storage by clicking confirm.](media/GettingStarted/ai-900-sign-2.png)
+      
       
  1. If you see the pop-up **Stay Signed in?**, click No
 
