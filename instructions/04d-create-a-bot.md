@@ -231,7 +231,7 @@ The knowledge base provides a back-end service that client applications can use 
 
 1. In the left-hand pane of your bot look for **Settings**, click on **Test in Web Chat**, and wait until the bot displays the message **Hello and Welcome** (it may take a few seconds to initialize).
 
-1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting **I need to cancel my hotel**.
+1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting **How can I book a flight?**.
 
      ![](media/azurebot.png)
 
