@@ -117,7 +117,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
     ![](media/ai900mod4dimg22.png)
 
-1. In the **Add a new question answer pair** page, set the **Source** to *Editorial*.
+1. In the **Add a new question answer pair** page, set the **Source** to **Editorial**.
 
 1. Within the **Question** box, type `Hello`.
 
