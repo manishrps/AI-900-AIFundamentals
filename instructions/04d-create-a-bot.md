@@ -117,7 +117,7 @@ Your knowledge base is based on the details in the FAQ document and some pre-def
 
     ![](media/ai900mod4dimg22.png)
 
-1. In the **Add a new question answer pair** page, set the **Source** to *Editorial*.
+1. In the **Add a new question answer pair** page, set the **Source** to **Editorial**.
 
 1. Within the **Question** box, type `Hello`.
 
@@ -208,7 +208,7 @@ The knowledge base provides a back-end service that client applications can use 
         - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* **(2)**
         
         > **Note :**
-        > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your Language resource in. Select your Language resource and navigate to its left-hand menu. Then select *Keys and Endpoint*. Copy one of the keys. 
+        > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your **Language resource** in. Select your Language resource and navigate to its left-hand menu. Then select **Keys and Endpoint**. Copy one of the keys. 
 
          ![](media/ai900mod4dimg20.png)
     -  
@@ -231,7 +231,7 @@ The knowledge base provides a back-end service that client applications can use 
 
 1. In the left-hand pane of your bot look for **Settings**, click on **Test in Web Chat**, and wait until the bot displays the message **Hello and Welcome** (it may take a few seconds to initialize).
 
-1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting **I need to cancel my hotel**.
+1. Use the test chat interface to ensure your bot answers questions from your knowledge base as expected. For example, try submitting **How can I book a flight?**.
 
      ![](media/azurebot.png)
 
