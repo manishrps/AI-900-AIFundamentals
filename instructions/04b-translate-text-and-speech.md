@@ -14,9 +14,9 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
 1. In the Azure Portal, Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Retain the Existing Subscription*.
-    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**: Select **<inject key="location" enableCopy="false"/>**.
-    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Region**: Select **<inject key="location" enableCopy="false"/>**
+    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
 
@@ -27,8 +27,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
-> **Note:**
-> To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
+> **Note:** To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
 
 ## Task-2: Run Cloud Shell
 
@@ -79,8 +78,7 @@ Now that you have a custom model, you can run a simple client application that u
 1. Don't worry too much about the details of the code, the important thing is that it needs the region/location and either of the keys for your Cognitive Services resource. Copy the values of **KEY 1** and **Location/Region** value from *Keys and Endpoints* page for your resource from the Azure portal and paste them into the code editor.
      ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/lab4b-1.png)
 
-> **Note:**
-> The Translator service does not require the use of the Cognitive Service endpoint, so there is no need to modify the Translator service endpoint. Instead, a dedicated global endpoint is available specifically for the Translator service. 
+> **Note:** The Translator service does not require the use of the Cognitive Service endpoint, so there is no need to modify the Translator service endpoint. Instead, a dedicated global endpoint is available specifically for the Translator service. 
 
 1. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
