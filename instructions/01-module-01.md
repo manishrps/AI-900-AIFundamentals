@@ -32,7 +32,7 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
     - **Subscription**: Use existing subscription **(1)**
     - **Resource group**: Select **AI-900-Module-01-<inject key="DeploymentID" enableCopy="false"/> (2)**
     - **Region**: Select **<inject key="location" enableCopy="false"/> (3)**
-    - **Name**: enter **myanomalydetector-<inject key="DeploymentID" enableCopy="false"/> (4)**
+    - **Name**: Enter **myanomalydetector-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: Free F0 **(5)**
     - Click **Review + create (6)** 
 
