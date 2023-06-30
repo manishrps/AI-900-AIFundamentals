@@ -144,9 +144,10 @@ Now you're ready to publish your trained model and use it from a client applicat
 
    ![Photograph of a group of pedestrians.](media/ai900mod3bimg10.png)
  
-1. to publish the trained model with the following settings:
-    - **Model name**: traffic-safety
-    - **Prediction resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**
+1. To publish the trained model with the following settings:
+    - **Model name**: traffic-safety **(1)**
+    - **Prediction resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (2)**
+    - Click **Publish (3)**
 
 1. After publishing, click the *Prediction URL* (&#127760;) icon to see the information required to use the published model.
 
