@@ -45,7 +45,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
       ![Picture1](media/ai900mod2cimg5.png)
       
-    - **Location**: Select <inject key="location" enableCopy="false" />.
+    - **Location**: Select <inject key="location" enableCopy="false" />
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
     - **Virtual machine size**:
@@ -124,7 +124,7 @@ Follow the next steps to run a job that uses automated machine learning to train
         - **New experiment name**: mslearn-bike-rental
         - **Target column**: rentals(Integer) (*this is the label that the model is trained to predict)*
         - **Select compute type**: *Compute cluster*
-        - **Select Azure ML compute cluster**: **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**.
+        - **Select Azure ML compute cluster**: **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**
     - Click on **Next**.
     
     - **Select task and settings**: 
