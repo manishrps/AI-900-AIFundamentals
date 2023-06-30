@@ -18,21 +18,30 @@ The **Computer Vision** cognitive service provides support for OCR tasks, includ
 
 You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
 
-1. In the Azure Portal, Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
+1. In the Azure Portal click the **&#65291;Create a resource** button.
+
+   ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
+   
+1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services**.
+
+    ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
+     
+1. On Cognitive Services Page Click on **Create**. 
+     
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg2.png)
+
+1. Create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Retain the Existing Subscription*.
-    - **Resource group**: Select **AI-900-Module-03d-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource group**: Select **AI-900-Module-03d-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: **<inject key="location" enableCopy="false"/>**
     - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
     
-    ![](media/read-text-computer-vision/lab3d-1.png)
-    
-    ![](media/read-text-computer-vision/lab3d-2.png)
-    
-    ![](media/read-text-computer-vision/lab3d-3.png)
     
 1. Click on **Review + Create** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+
+    ![](media/read-text-computer-vision/lab3d-3.png)
 
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
