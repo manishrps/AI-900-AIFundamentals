@@ -1,6 +1,6 @@
 # Module 03b: Explore object detection
 
-*Object detection* is a form of computer vision in which a machine learning model is trained to classify individual instances of objects in an image, and indicate a *bounding box* that marks its location. You can think of this as a progression from *image classification* (in which the model answers the question "What is this an image of?") to building solutions where we can ask the model "What objects are in this image, and where are they?".
+*Object detection* is a form of computer vision in which a machine learning model is trained to classify individual instances of objects in an image, and indicate a *bounding box* that marks its location. You can think of this as a progression from *image classification* (in which the model answers the question "What is this an image of?") to building solutions where we can ask the model "What objects are in this image, and where are they?"
 
 For example, a road safety initiative might identify pedestrians and cyclists as being the most vulnerable road users at traffic intersections. By using cameras to monitor intersections, images of road users could be analyzed to detect pedestrians and cyclists in order to monitor their numbers or even change the behavior of traffic signals.
 
@@ -61,8 +61,8 @@ To train an object detection model, you need to create a Custom Vision project b
 1. Create a new project with the following settings:
 
     - **Name**: Traffic Safety **(1)**
-    - **Description**: Object detection for road safety **(2)**.
-    - **Resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (3)**.
+    - **Description**: Object detection for road safety **(2)**
+    - **Resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (3)**
     - **Project Types**: Object Detection **(4)**
     - **Domains**: General \[A1] **(5)**
         >**Note**: Under the **Resource** dropdown if you don't find the resource that you created previously in the Azure portal, kindly refresh the page and reperform the task.
@@ -90,7 +90,7 @@ To train an object detection model, you need to upload images that contain the c
 
      ![Screenshot of an image with a tagged region in the Image Detaol dialog box.](media/tag-image-3b.png)
 
-1. Use the **Next** (**(>)** link on the right to go to the next image, and tag its objects. Then just keep working through the entire image collection, tagging each cyclist and pedestrian.
+1. Use the **Next** **(>)** link on the right to go to the next image, and tag its objects. Then just keep working through the entire image collection, tagging each cyclist and pedestrian.
 
     As you tag the images, note the following:
 
@@ -147,9 +147,9 @@ Now you're ready to publish your trained model and use it from a client applicat
  
 1. to publish the trained model with the following settings:
     - **Model name**: traffic-safety
-    - **Prediction resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**..
+    - **Prediction resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**
 
-1. After publishing, click the *Prediction URL* (&#127760;) icon to see information required to use the published model.
+1. After publishing, click the *Prediction URL* (&#127760;) icon to see the information required to use the published model.
 
       ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg11.png)
        
@@ -171,7 +171,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
     
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img7.png)
 
- 1. Please make sure you have selected your resource group **AI-900-Module-03b-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (2)** for the **Storage account Name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>(3)** for the **File share Name** , then click on **Create Storage (4)**.
+ 1. Please make sure you have selected your resource group **AI-900-Module-03b-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (2)** for the **Storage account Name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>(3)** for the **File share Name**, then click on **Create Storage (4)**.
  
     When the cloud shell is ready, it should look similar to this:
     
@@ -248,7 +248,7 @@ Now you can use the sample client application to detect cyclists and pedestrians
 
  Hopefully, your object detection model did a good job of detecting pedestrians and cyclists in the test images.
 
-   >
+   
    >**Note**: If you are not able to see the Result in Powershell, then nevigate back to the custom vision portal, go to the **predictions** tab, you see the details of the images as showned below:
 
    ![Photograph of a group of pedestrians.](media/ai900mod3bimg12.png)
