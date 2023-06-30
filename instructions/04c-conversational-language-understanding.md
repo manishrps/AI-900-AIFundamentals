@@ -15,7 +15,7 @@ You can use the Conversational Language Understanding service by creating a **La
 1. Click the **&#65291;Create a resource** button, search for *Language service*, and create a **Language service** resource with the following settings:
     - **Select additional features**: *Keep the default features and click Continue to create your resource*  
     - **Subscription**: Use exsiting subscription.
-    - **Resource group**: Select **AI-900-Module-04c-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource group**: Select **AI-900-Module-04c-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: **<inject key="location" enableCopy="false"/>**
     - **Name**: enter **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: S (1K Calls per minute)
@@ -33,7 +33,7 @@ To implement natural language understanding with Conversational Language Underst
     - **Azure directory**: The Azure directory containing your subscription.
     - **Azure subscription**: Select exsiting subscription.
     - **Resource type**: Language.
-    - **Resource name**: **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource name**: **learnlanguage-<inject key="DeploymentID" enableCopy="false"/>**
     
     >**Tip :**
     >If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
@@ -52,9 +52,9 @@ To implement natural language understanding with Conversational Language Underst
     
 
     ![Enter details for the project.](media/create-project-4c.png)
+   
 
-    >**Tip :**
-    >Write down your *project name*, you will use it later.
+    >**Tip :**  Write down your *project name*, you will use it later.
 
 1. On the *Review and finish* page, click **Create**.
 
