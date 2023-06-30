@@ -20,7 +20,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
-1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services** 
+1. In the Marketplace page search for **Cognitive Services** and Select **Cognitive Services** 
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
      
@@ -61,11 +61,11 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
   
    ![Create storage by clicking confirm.](media/ai900mod1img7.png)
    
-1.  Please make sure you have selected your resource group **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, then click on **Create Storage**.
+1.  Please make sure you have selected your resource group **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (2)** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (3)** For the **File share name**, then click on **Create Storage (4)**.
 
     ![Create storage by clicking confirm.](media/ai900mod1img8.png)
 
-1. Make sure the the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
     ![How to find the left hand drop down menu to switch to PowerShell](media/ai900mod1img9.png) 
 
