@@ -97,7 +97,7 @@ Now you're ready to publish your trained model and use it from a client applicat
 
     ![Screenshot of the Quick Test interface.](media/create-image-classification-system/prediction.png)
 
-   >**Note**:Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
+   >**Note**: Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
