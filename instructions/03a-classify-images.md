@@ -153,13 +153,6 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** place holders in the code file.
 
-    After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
-
-    ```PowerShell
-    $predictionUrl="https..."
-    $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
-    ```
-
 5. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
 ## Task 6: Test the client application
