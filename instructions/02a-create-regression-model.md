@@ -152,12 +152,11 @@ Follow the remaining steps, use the image for reference as you add and configure
 
 6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower**. Then, click on **Save**. The below screenshot has been provided for your reference: 
 
-
       ![Picture1](media/ai900lab2aimg3.png)
 
-    > 💡 **Note:** After typing the word click in empty area to insert the word.
+    > **Note:** After typing the word click in empty area to insert the word.
 
-    ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
+     ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
 
 7. With the **Clean Missing Data** module still selected, in the pane on the right, set the following configuration settings:
     - **Minimum missing value ratio**: 0.0
