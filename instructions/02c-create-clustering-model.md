@@ -374,7 +374,7 @@ Evaluating a clustering model is made difficult by the fact that there are no pr
     - **Maximal Distance to Cluster Center**
 
 
-1. Close the **Evaluate Model result visualization** tab.
+ 1. Close the **Evaluate Model result visualization** tab.
 
 Now that you have a working clustering model, you can use it to assign new data to clusters in an *inference pipeline*.
 
