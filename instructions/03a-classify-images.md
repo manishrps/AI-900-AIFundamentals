@@ -48,7 +48,7 @@ To train an object detection model, you need to create a Custom Vision project b
 
     ![Screenshot of the Image upload interface.](media/create-image-classification-system/upload-elephants(1).png)
 
-1. Use the **Add images** ([+]) button to upload, and select all the image from the **giraffe** folder, then upload image with the tag *giraffe*. Select all the images from the **lion** folder, then upload iamge with the tag *lion*.
+1. Use the **Add images** ([+]) button to upload, and select all the image from the **giraffe** folder, then upload image with the tag *giraffe*. Select all the images from the **lion** folder, then upload iamge with the tag **lion**.
 
 1. Explore the images you have uploaded in the Custom Vision project - there should be 17 images of each class, like this:
 
