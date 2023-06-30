@@ -31,9 +31,9 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 3. Create a **Cognitive Services** resource with the following settings:
 
     - **Subscription**: Use existing subscription. **(1)**
-    - **Resource group**: Select **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/> (2)**.
+    - **Resource group**: Select **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/> (2)**
     - **Region**:  Select **<inject key="location" enableCopy="false" /> (3)**
-    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/> (4)**.
+    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: Standard S0 **(5)**
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox. **(6)**
     
@@ -99,8 +99,7 @@ Now that you have a custom model, you can run a simple client application that u
 
 1. Don't worry too much about the details of the code. In the Azure portal, navigate to your Cognitive Services resource. Then select the **Keys and Endpoints** page on the left hand pane. Copy the key and endpoint from the page and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
 
-    > **Tip :**
-    > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
+    > **Tip:** You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
     ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/cogendpoint.png)
 
