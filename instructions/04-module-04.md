@@ -103,12 +103,6 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/cogendpoint.png)
 
-    After replacing the key and endpoint values, the first lines of code should look similar to this:
-
-    ```PowerShell
-    $key="1a2b3c4d5e6f7g8h9i0j...."
-    $endpoint="https..."
-    ```
 
 1. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
@@ -118,6 +112,9 @@ Now that you have a custom model, you can run a simple client application that u
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     ./analyze-text.ps1 review1.txt
     ```
 
