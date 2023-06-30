@@ -195,7 +195,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
     Notice that theleft-handd panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
 >**Note :**
-> if the error occurs and states that the data type is already in the collection, submit the pipeline again and re-run it.
+> If the error occurs and states that the data type is already in the collection, submit the pipeline again and re-run it.
 
 ### Task 8: View the transformed data
 
