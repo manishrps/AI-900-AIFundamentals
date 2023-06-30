@@ -28,7 +28,7 @@ The Language service's custom question-answering feature enables you to quickly 
 
 1. On the **Create Language** page, specify the following settings:
     - **Subscription**: Use existing Azure subscription. **(1)**
-    - **Resource group**: Select **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" /> (2)**.
+    - **Resource group**: Select **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" /> (2)**
     - **Region**: Select **<inject key="location" enableCopy="false" /> (3)**
     - **Name**:Enter **ai900language-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: S (1K Calls per minute) **(5)**
@@ -145,8 +145,7 @@ Now that you have a knowledge base, you can test it.
 
 1. In the test pane, at the bottom enter the message **I want to book a flight**. An appropriate response from the FAQ should be returned.
 
-    > **Note :**
-    > The response includes a *short answer* as well as a more verbose *answer passage* - the answer passage shows the full text in the FAQ document for the closest matched question, while the short answer is intelligently extracted from the passage. You can control whether the short answer is from the response by using the **Display short answer** checkbox at the top of the test pane.
+    > **Note:** The response includes a *short answer* as well as a more verbose *answer passage* - the answer passage shows the full text in the FAQ document for the closest matched question, while the short answer is intelligently extracted from the passage. You can control whether the short answer is from the response by using the **Display short answer** checkbox at the top of the test pane.
 
 1. Try another question, such as *How can I cancel a reservation?*
 
@@ -207,8 +206,7 @@ The knowledge base provides a back-end service that client applications can use 
     - **App Settings**
         - **Language Resource Key**: *You will need to copy your Language resource key and paste it here.* **(2)**
         
-        > **Note :**
-        > To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your **Language resource** in. Select your Language resource and navigate to its left-hand menu. Then select **Keys and Endpoint**. Copy one of the keys. 
+        > **Note :** To navigate to your Language resource key, open [https://portal.azure.com](https://portal.azure.com?azure-portal=true). On the home page, click on *Resource Groups* and locate the resource group you created for your **Language resource** in. Select your Language resource and navigate to its left-hand menu. Then select **Keys and Endpoint**. Copy one of the keys. 
 
          ![](media/ai900mod4dimg20.png)
     -  
