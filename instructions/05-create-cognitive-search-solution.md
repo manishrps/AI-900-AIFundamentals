@@ -42,7 +42,7 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. Return to the home page of the Azure portal, and then select the **+ Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**
     - **Region**: Select **<inject key="location" enableCopy="false" />**
     - **Name**: **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
@@ -58,7 +58,7 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. Search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: Use existing subscription.
-    - **Resource group**:  Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource group**:  Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**
     - **Storage account name**: **ai900blob<inject key="DeploymentID" enableCopy="false"/>**
     - **Location**: Select **<inject key="location" enableCopy="false" />**
     - **Performance**: Standard
@@ -119,8 +119,7 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
 1. In the **Add enrichments** section:
     - Change the **Skillset name** to **coffee-skillset**.
     - Select the checkbox **Enable OCR and merge all text into merged_content field**.
-        > **Note :**
-        > It's important to select **Enable OCR** to see all of the enriched field options.
+        > **Note :** It's important to select **Enable OCR** to see all of the enriched field options.
     - Ensure that the **Source data field** is set to **merged_content**.
     - Change the **Enrichment granularity level** to **Pages (5000 character chunks)**.
     - Don't select *Enable incremental enrichment*
@@ -196,15 +195,13 @@ Use the Search explorer to write and test queries. Search explorer is a tool bui
 
     In the **Query string** field, enter `search=*&$count=true`, and then select **Search**. The search query returns all the documents in the search index, including a count of all the documents in the **@odata.count** field. The search index should return a JSON document containing your search results.
 
-    > **Note :**
-    > If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
+    > **Note :** If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
 
 1. Now let's filter by location. Enter `search=$filter=locations eq 'Chicago'` in the **Query string** field, and then select **Search**. The query searches all the documents in the  index and filters for reviews with a Chicago location.
 
 1. Now let's filter by sentiment. Enter `search=$filter=sentiment eq 'negative'` in the **Query string** field, and then select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment.
 
-   > **Note :**
-   > See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
+   > **Note :** See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
 
 1. One of the problems we might want to solve for is why there might be certain reviews. Let's take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
 
