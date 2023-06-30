@@ -89,6 +89,9 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     ./analyze-image.ps1 store-camera-1.jpg
     ```
 
