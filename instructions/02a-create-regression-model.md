@@ -163,7 +163,7 @@ Follow the remaining steps, use the image for reference as you add and configure
     - **Maximum missing value ratio**: 1.0
     - **Cleaning mode**: Remove entire row
 
-    >**Tip**
+    >**Tip :**
     >If you view the statistics for the **bore**, **stroke**, and **horsepower** columns, you'll see a number of missing values. These columns have fewer missing values than **normalized-losses**, so they might still be useful in predicting **price** once you exclude the rows where the values are missing from training.
 
 8. In the **Asset library**, search for a **Normalize Data** module and place it on the canvas, below the **Clean Missing Data** module. Then connect the left-most output from the **Clean Missing Data** module to the input of the **Normalize Data** module.
