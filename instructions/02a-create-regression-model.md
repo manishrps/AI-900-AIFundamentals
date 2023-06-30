@@ -156,8 +156,6 @@ Follow the remaining steps, use the image for reference as you add and configure
 
     > **Note:** After typing the word click in empty area to insert the word.
 
-     ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
-
 7. With the **Clean Missing Data** module still selected, in the pane on the right, set the following configuration settings:
     - **Minimum missing value ratio**: 0.0
     - **Maximum missing value ratio**: 1.0
