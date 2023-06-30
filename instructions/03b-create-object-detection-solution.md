@@ -38,9 +38,9 @@ Create a **Cognitive Services** resource in your Azure subscription.
     - **Name**: Enter **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: Standard S0 **(5)**
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Check the box. **(6)**
-    -  Click **Review + Create (7)** 
+    -  Click **Review + Create (7)**
     
-        ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg3.png)
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg3.png)
  
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
