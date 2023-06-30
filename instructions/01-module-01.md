@@ -104,7 +104,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
 1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Anomaly Detector resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values, respectively.
 
-    > **Tip**
+    > **Tip :**
     > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
     
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img5.png)
