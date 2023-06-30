@@ -19,14 +19,11 @@ If you haven't already done so, create a **Cognitive Services** resource in your
     - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
-    
-      ![](media/read-text-computer-vision/lab3d-1.png)
-    
-      ![](media/read-text-computer-vision/lab3d-2.png)
-    
-      ![](media/read-text-computer-vision/lab3d-3.png)
+
     
 1. Click on **Review + Create** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+   
+     ![](media/read-text-computer-vision/lab3d-3.png)
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
