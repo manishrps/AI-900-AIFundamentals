@@ -74,15 +74,9 @@ Now that you have a custom model, you can run a simple client application that u
 
 1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
 
-    > **Tip**
+    > **Tip:**
     > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
-    After pasting the key and endpoint values, the first two lines of code should look similar to this:
-
-    ```PowerShell
-    $key="1a2b3c4d5e6f7g8h9i0j...."    
-    $endpoint="https..."
-    ```
 
 1.  After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor. Now that you've set up the key and endpoint, you can use your resource to analyze fields from a receipt. In this case, you'll use the Form Recognizer's built-in model to analyze a receipt for the fictional Northwind Traders retail company.
 
@@ -94,6 +88,9 @@ Now that you have a custom model, you can run a simple client application that u
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     ./form-recognizer.ps1
     ```
 
