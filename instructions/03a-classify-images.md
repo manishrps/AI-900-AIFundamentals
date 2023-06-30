@@ -131,6 +131,9 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     ```PowerShell
     rm -r ai-900 -f
+    ```
+
+    ```PowerShell
     git clone https://github.com/MicrosoftLearning/AI-900-AIFundamentals ai-900
     ```
 
@@ -138,6 +141,9 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     code classify-image.ps1
     ```
 
