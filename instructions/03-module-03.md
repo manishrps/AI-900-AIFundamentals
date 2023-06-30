@@ -1,24 +1,21 @@
-# Explore Computer Vision
-
-> **Note :**
-> To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
+# Module 03: Explore Computer Vision
 
 The ***Computer Vision*** cognitive service uses pre-trained machine learning models to analyze images and extract information about them.
 
 For example, suppose the fictitious retailer *Northwind Traders* has decided to implement a "smart store", in which AI services monitor the store to identify customers requiring assistance, and direct employees to help them. By using the Computer Vision service, images taken by cameras throughout the store can be analyzed to provide meaningful descriptions of what they depict.
 
-In this lab, you'll use a simple command-line application to see the Computer Vision service in action. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
+In this lab, you'll use a simple command-line application to see the Computer Vision service in action. The same principles and functionality apply in real-world solutions, such as web sites or phone apps. This includes:
+- Creating Azure Cognitive Services and Azure Storage Account.
+- Configuring and running a client application.
 
 ## Task 1: Create a *Cognitive Services* resource
 
 You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
 
-If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
-
 1. In the Azure Portal, select the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
     - **Resource group**: Select **AI-900-Module-03-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Region**:  *Select the same region where your resource group was created*
+    - **Region**:  **<inject key="location" enableCopy="false"/>**
     - **Name**: *Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>***
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
@@ -130,14 +127,12 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
 1. Review the results of the image analysis for the third image.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+ **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ### Learn more
 

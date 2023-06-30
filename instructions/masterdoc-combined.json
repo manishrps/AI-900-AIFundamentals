@@ -1,0 +1,81 @@
+[
+    {
+      "Name": "AI-900-AIFundamentals",
+      "Language": "English",
+      "BaseURL": "https://github.com/CloudLabs-MOC/AI-900-AIFundamentals/tree/prod",
+      "Files": [
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/0-GettingStarted.md",
+          "Order": 1
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/01-module-01.md",
+          "Order": 2
+        },
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/02-module-02.md",
+          "Order": 3
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/02a-create-regression-model.md",
+            "Order": 4
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/02b-create-classification-model.md",
+            "Order": 5
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/02c-create-clustering-model.md",
+            "Order": 6
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/03-module-03.md",
+            "Order": 7
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/03a-classify-images.md",
+            "Order": 8
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/03b-create-object-detection-solution.md",
+            "Order": 9
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/03c-create-face-solutions.md",
+            "Order": 10
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/03d-read-text-computer-vision.md",
+            "Order": 11
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/03e-analyze-receipts.md",
+            "Order": 12
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/04-module-04.md",
+            "Order": 13
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/04a-recognize-synthesize-speech.md",
+            "Order": 14
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/04b-translate-text-and-speech.md",
+            "Order": 15
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/04c-conversational-language-understanding.md",
+            "Order": 16
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/04d-create-a-bot.md",
+            "Order": 17
+        },
+        {
+            "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/AI-900-AIFundamentals/prod/instructions/05-create-cognitive-search-solution.md",
+            "Order": 18
+        }
+      ]
+    }
+  ]

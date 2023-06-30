@@ -1,4 +1,4 @@
-# Explore image classification​
+# Module 3a: Explore Image Classification​
 
 The *Computer Vision* cognitive service provides useful pre-built models for working with images, but you'll often need to train your own model for computer vision. For example, suppose a wildlife conservation organization organization wants to track sightings of animals by using motion-sensitive cameras. The images captured by the cameras could then be used to verify the presence of particular species in a particular area and assist with conservation efforts for endangered species. To accomplish this, the organization would benefit from an *image classification* model that is trained to identify different species of animal in the captured photographs.
 
@@ -6,11 +6,7 @@ In Azure, you can use the ***Custom Vision*** cognitive service to train an imag
 
 To test the capabilities of the Custom Vision service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or mobile apps.
 
-## Before you start
-
-To complete this lab, you will need an [Azure subscription](https://azure.microsoft.com/free?azure-portal=true) in which you have administrative access.
-
-## Task 1: Create a *Cognitive Services* resource
+## Task 1: Create a Cognitive Services resource
 
 You can use the Custom Vision service by creating either a **Custom Vision** resource or a **Cognitive Services** resource.
 
@@ -19,26 +15,15 @@ You can use the Custom Vision service by creating either a **Custom Vision** res
 
 Create a **Cognitive Services** resource in your Azure subscription.
 
-
-1. If you are not logged in already, click on Azure portal shortcut of Microsoft Edge browser that is available on the desktop and log in with below Azure credentials.
-
-    * Azure Username/Email: <inject key="AzureAdUserEmail"></inject> 
-    * Azure Password: <inject key="AzureAdUserPassword"></inject>
- 
-   >**Note :**
-   > On the Welcome to Microsoft Edge page, select  **Start without your data**  and on the help for importing Google browsing data page, select 		      the **Continue without this data** button. Then, proceed to select  **Confirm and start browsing**  on the next page.
-
 1. In the Azure Portal, select the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
-    - **Resource group**: *Select AI-900-Module-03a-<inject key="DeploymentID" enableCopy="false"/>*
-    - **Region**: *Select the same region where your resource group was created*
+    - **Resource group**: Select **AI-900-Module-03a-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Region**: Select **<inject key="location" enableCopy="false"/>**
     - **Name**: *Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>***
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
 
 1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
-
-1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
 ## Task 2: Create a Custom Vision project
 
@@ -59,11 +44,11 @@ To train an object detection model, you need to create a Custom Vision project b
 
    >**Note**: Under **Resource** dropdown if you don't find the resource that you created previously in the azure portal, kindly refresh the page and reperform the task. 
 
-1. Click **Add images**, and select all of the files in the **elephant** folder you extracted previously. Then upload the image files, specifying the tag *elephant*, like this:
+1. Click **Add images**, and select all of the files in the **elephant** folder you extracted previously. Then upload the image files, specifying the tag **elephant**, like this:
 
     ![Screenshot of the Image upload interface.](media/create-image-classification-system/upload-elephants(1).png)
 
-1. Use the **Add images** ([+]) button to upload, and select all the image from the **giraffe** folder, then upload image with the tag *giraffe*. Select all the images from the **lion** folder, then upload iamge with the tag *lion*.
+1. Use the **Add images** ([+]) button to upload, and select all the image from the **giraffe** folder, then upload image with the tag *giraffe*. Select all the images from the **lion** folder, then upload iamge with the tag **lion**.
 
 1. Explore the images you have uploaded in the Custom Vision project - there should be 17 images of each class, like this:
 
@@ -79,6 +64,13 @@ To train an object detection model, you need to create a Custom Vision project b
 
 1. When the model iteration has been trained, review the *Precision*, *Recall*, and *AP* performance metrics - these measure the prediction accuracy of the classification model, and should all be high.
 
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+      
 ## Task 3: Test the model
 
 Before publishing this iteration of the model for applications to use, you should test it.
@@ -103,9 +95,15 @@ Now you're ready to publish your trained model and use it from a client applicat
 
 1. After publishing, click the *Prediction URL* (&#127760;) icon to see information required to use the published model.
 
-    ![Screenshot of the prediction URL.](media/create-image-classification-system/prediction-url1.png)
+    ![Screenshot of the Quick Test interface.](media/create-image-classification-system/prediction.png)
 
-Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
+   >**Note**:Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
+
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ## Task 5: Prepare a client application
 
@@ -117,7 +115,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). If so, select **PowerShell**.
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group AI-900-Module-03a-<inject key="DeploymentID" enableCopy="false"/> and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **Show advanced settings**. Please make sure you have selected your resource group **AI-900-Module-03a-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** for the  **File share** , then click on **Create Storage**.
     
     ![Screenshot of the cloud shell in the Azure portal.](media/stoarge-up.png)
 
@@ -206,14 +204,14 @@ Now you can use the sample client application to classify images based on the an
 
 Hopefully, your image classification model correctly classified all three images.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+### You have successfully completed this lab.
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
 
 ## Learn more
 

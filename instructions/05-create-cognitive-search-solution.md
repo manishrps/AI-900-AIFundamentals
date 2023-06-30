@@ -1,4 +1,4 @@
-# Explore knowledge mining
+# Module 5: Explore Knowledge Mining
 
 Let's imagine you work for Fourth Coffee, a national coffee chain. You're asked to help build a knowledge mining solution that makes it easy to search for insights about customer experiences. You decide to build an Azure Cognitive Search index using data extracted from customer reviews.  
 
@@ -22,14 +22,14 @@ The solution you'll create for Fourth Coffee requires the following resources in
 
 - A **Storage account** with blob containers, which will store raw documents and other collections of tables, objects, or files.
 
-### Task 1 : Create an **Azure Cognitive Search** resource
+### Task 1 : Create an Azure Cognitive Search resource
    
 1. Click the **+ Create a resource** button, search for **Azure Cognitive Search**, and create a **Azure Cognitive Search** resource with the following settings:
 
     - **Subscription**: Use exiting Azure subscription.
     - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**
     - **Service name**: **ai900cognitivesearch-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Location**: Select the same region where your resource group was created.
+    - **Location**: Select **<inject key="location" enableCopy="false" />**
     - **Pricing tier**: Basic
 
 1. Select **Review + create**, and after you see the response **Validation Success**, select **Create**.
@@ -42,8 +42,8 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. Return to the home page of the Azure portal, and then select the **+ Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**: Select the same region where your resource group was created.
+    - **Resource group**: Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Region**: Select **<inject key="location" enableCopy="false" />**
     - **Name**: **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
@@ -58,9 +58,9 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. Search for *storage account*, and create a **Storage account** resource with the following settings:
     - **Subscription**: Use existing subscription.
-    - **Resource group**:  Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource group**:  Select **AI-900-Module-05-<inject key="DeploymentID" enableCopy="false"/>**
     - **Storage account name**: **ai900blob<inject key="DeploymentID" enableCopy="false"/>**
-    - **Location**: Select the same region where your resource group was created.
+    - **Location**: Select **<inject key="location" enableCopy="false" />**
     - **Performance**: Standard
     - **Redundancy**: Locally redundant storage (LRS)
 
@@ -70,7 +70,7 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. In the Azure Storage account you created, in the left-hand menu pane, select **Containers**.
 
-    ![Screenshot that shows the storage blob overview page.](media/storage-blob-1-05.png)
+    ![Screenshot that shows the storage blob overview page.](media/ai-900-str0.11.png)
 
 1. Select **+ Container**. A pane on your right-hand side opens.
 
@@ -83,7 +83,7 @@ You'll need to provision a **Cognitive Services** resource that's in the same lo
 
 1. In the Azure portal, select your *coffee-reviews* container. In the container, select **Upload**.
 
-    ![Screenshot that shows the storage container.](media/storage-blob-3-05.png)
+    ![Screenshot that shows the storage container.](media/ai-900-upload.png)
 
 1. In the **Upload blob** pane, select **Browse for files**.
   
@@ -99,14 +99,14 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
 
 1. In the Azure portal, browse to your Azure Cognitive Search resource. On the **Overview** page, select **Import data**.
 
-    ![Screenshot that shows the import data wizard.](media/azure-search-wizard-1-05.png)
+    ![Screenshot that shows the import data wizard.](media/ai-900-import.png)
 
 1. On the **Connect to your data** page, in the **Data Source** list, select **Azure Blob Storage**. Complete the data store details with the following values:
     - **Data Source**: Azure Blob Storage
     - **Data source name**: coffee-customer-data
     - **Data to extract**: Content and metadata
     - **Parsing mode**: Default
-    - **Connection string**: *Select **Choose an existing connection**. Select your storage account, select the **coffee-reviews** container, and then click **Select**.
+    - **Connection string**: Select **Choose an existing connection**. Select your storage account, select the **coffee-reviews** container, and then click **Select**.
     - **Managed identity authentication**: None
     - **Container name**: this setting is auto-populated after you choose an existing connection.
     - **Blob folder**: *Leave this blank*.
@@ -119,8 +119,7 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
 1. In the **Add enrichments** section:
     - Change the **Skillset name** to **coffee-skillset**.
     - Select the checkbox **Enable OCR and merge all text into merged_content field**.
-        > **Note :**
-        > It's important to select **Enable OCR** to see all of the enriched field options.
+        > **Note :** It's important to select **Enable OCR** to see all of the enriched field options.
     - Ensure that the **Source data field** is set to **merged_content**.
     - Change the **Enrichment granularity level** to **Pages (5000 character chunks)**.
     - Don't select *Enable incremental enrichment*
@@ -157,7 +156,7 @@ Once you have the documents in storage, you can use Azure Cognitive Search to ex
 
 1. Select **Next: Customize target index**. Change the **Index name** to **coffee-index**.
 
-1. Ensure that the **Key** is set to **metadata_storage_path**. Leave **Suggester name** blank and **Search mode** autopopulated.
+1. Ensure that the **Key** is set to **metadata_storage_path**. Leave **Suggester name** blank and **Search mode** auto populated.
 
 1. Review the index fields' default settings. Select **filterable** for all the fields that are already selected by default.
 
@@ -188,7 +187,7 @@ Use the Search explorer to write and test queries. Search explorer is a tool bui
 
 1. In your Search service's *Overview* page, select **Search explorer** at the top of the screen.
 
-   ![Screenshot of how to find Search explorer.](media/5-exercise-screenshot-7-05.png)
+   ![Screenshot of how to find Search explorer.](media/ai-900-search.png)
 
 1. Notice how the index selected is the *coffee-index* you created.
 
@@ -196,15 +195,13 @@ Use the Search explorer to write and test queries. Search explorer is a tool bui
 
     In the **Query string** field, enter `search=*&$count=true`, and then select **Search**. The search query returns all the documents in the search index, including a count of all the documents in the **@odata.count** field. The search index should return a JSON document containing your search results.
 
-    > **Note :**
-    > If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
+    > **Note :** If a **To search in the portal, please allow the portal origin in your index CORS settings** message appears, select **Allow portal**, and then select **Search**.
 
 1. Now let's filter by location. Enter `search=$filter=locations eq 'Chicago'` in the **Query string** field, and then select **Search**. The query searches all the documents in the  index and filters for reviews with a Chicago location.
 
 1. Now let's filter by sentiment. Enter `search=$filter=sentiment eq 'negative'` in the **Query string** field, and then select **Search**. The query searches all the documents in the index and filters for reviews with a negative sentiment.
 
-   > **Note :**
-   > See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
+   > **Note :** See how the results are sorted by `@search.score`. This is the score assigned by the search engine to show how closely the results match the given query.
 
 1. One of the problems we might want to solve for is why there might be certain reviews. Let's take a look at the key phrases associated with the negative review. What do you think might be the cause of the review?
 
@@ -216,7 +213,7 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. In the left-hand menu pane, select **Containers**. Select the **knowledge-store** container.
 
-    ![Screenshot of the knowledge-store container.](media/create-cognitive-search-solution/knowledge-store-blob-0.png)
+    ![Screenshot of the knowledge-store container.](media/create-cognitive-search-solution/ai-9000.1.png)
 
 1. Select any of the items, and then click the **objectprojection.json** file.
 
@@ -232,7 +229,7 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
 1. In the *Containers*, select the container *coffee-skillset-image-projection*. Select any of the items.
 
-    ![Screenshot of the skillset container.](media/create-cognitive-search-solution/knowledge-store-blob-5.png)
+    ![Screenshot of the skillset container.](media/create-cognitive-search-solution/ai-900-coffee.png)
 
 1. Select any of the *.jpg* files. Select **Edit** to see the image stored from the document. Notice how all the images from the documents are stored in this manner.
 
@@ -244,15 +241,16 @@ Let's see the power of the knowledge store in action. When you ran the *Import d
 
     Look at the key phrases the knowledge store was able to capture from the content in the reviews. Many of the fields are keys, so you can link the tables like a relational database. The last field shows the key phrases that were extracted by the skillset.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+### You have successfully completed this lab.
 
 ## Learn more
 
 This simple search index only some of the capabilities of the Azure Cognitive Search service. To learn more about what you can do with this service, see the [Azure Cognitive Search service page](/azure/search/search-what-is-azure-search).
+

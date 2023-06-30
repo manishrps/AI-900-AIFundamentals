@@ -1,14 +1,32 @@
-# Explore regression with Azure Machine Learning Designer
+# Module 02a: Explore regression with Azure Machine Learning Designer
 
-In this exercise, you will train a regression model that predicts the price of an automobile based on its characteristics.
+In this lab, you will train a regression model that predicts the price of an automobile based on its characteristics. This includes:
+- Creating a Machine Learning Workspace.
+- Creating a compute and running pipelines by adding data.
+- Deploying and evaluating a model.
 
-## Task 1: Create an Azure Machine Learning workspace  
+## Exercise 1: Create an Azure Machine Learning workspace  
 
-1. Select **+ Create a resource**, search for *Machine Learning*, and create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+### Task 1: Create an Azure Machine Learning workspace  
+
+1. Select **+ Create a resource**, search for Machine Learning.
+
+     ![Picture1](media/ai900mod1img1.png)
+
+1. In the Marketplace page search for **Azure Machine Learning** and Select **Azure Machine Learning**.
+ 
+    ![Picture1](media/ai900mod2cimg1.png)
+
+1. On **Azure Machine Learning** Page Click on **Create**.
+
+    ![Picture1](media/ai900mod2cimg2.png)
+
+1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**..
-    - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />.**
-    - **Region**: Select the same region where your resource group was created.
+    - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**
+    - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**
+    - **Region**: Select <inject key="location" enableCopy="false" />
     - **Storage account**: Note the default new storage account that will be created for your workspace.
     - **Key vault**: Note the default new key vault that will be created for your workspace.
     - **Application insights**: Note the default new application insights resource that will be created for your workspace.
@@ -20,18 +38,32 @@ In this exercise, you will train a regression model that predicts the price of a
 
 1. In Azure Machine Learning studio, you should see your newly created workspace **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and select the one you created for this exercise.
 
-## Task 2: Create compute
+   ![Picture1](media/ai900mod2cimg4.png)
+   
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### Task 2: Create compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
 1. On the **Compute** page, select the **Compute clusters** tab, and add a new compute cluster by selecting **+ New**, and with the following settings to train a machine learning model:
-    - **Location**: Select the same region where your resource group was created.
+
+      ![Picture1](media/ai900mod2cimg5.png)
+          
+    - **Location**: Select <inject key="location" enableCopy="false" />
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
     - **Virtual machine size**:
         - Choose **Select from all options**
         - Search for and select **Standard_DS11_v2**
     - Select **Next**
+    
+       ![Picture1](media/ai900mod2cimg6.png)
 
     - **Compute name**: Enter **ai900compute-<inject key="DeploymentID" enableCopy="false"/>**
     - **Minimum number of nodes**: 0
@@ -40,14 +72,25 @@ In this exercise, you will train a regression model that predicts the price of a
     - **Enable SSH access**: Leave as default
     - Select **Create**
 
+        ![Picture1](media/ai900mod2cimg7.png)
+        
 > **Note :**
 > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
-The compute cluster will take some time to be created. You can move onto the next step while you wait.
+The compute cluster will take some time to be created. You can move onto the next task while it's being created.
 
-## Task 3: Create a pipeline in Designer 
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### Task 3: Create a pipeline in Designer 
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), expand the left pane by selecting the menu icon at the top left of the screen. View the **Designer** page (under **Authoring**), and select **+ to create a new pipeline.**
+
+    ![Picture1](media/ai900mod2cimg8.png)
 
 1. At the top right-hand side of the screen, select **Settings**. If the **Settings** pane is not visible, select the wheel icon next to the pipeline name at the top.
 
@@ -57,9 +100,9 @@ The compute cluster will take some time to be created. You can move onto the nex
 
 1. Select the *close* icon on the top right of the **Settings** pane to close the pane. 
 
-![Screenshot of the Machine Learning Studio Settings pane.](media/create-pipeline-help-2c.png)
+    ![Picture1](media/ai900mod2aimg1.png)
 
-## Task 4: Add and explore a dataset
+### Task 4: Add and explore a dataset
 
 Azure Machine Learning includes a sample dataset that you can use for your regression model.
 
@@ -69,7 +112,7 @@ Azure Machine Learning includes a sample dataset that you can use for your regre
 
 1. Click on **Component**. Search for and place the **Automobile price data (Raw)** dataset onto the canvas.
 
-1. click on the **Automobile price data (Raw)** dataset on the canvas, and click on **Use Data**.
+1. Hover the mouse on **Automobile price data (Raw)** dataset on the canvas, and click on **Use Data** on pop-up.
 
 1. Review the **Dataset output** schema of the data, noting that you can see the distributions of the various columns as histograms.
 
@@ -77,11 +120,13 @@ Azure Machine Learning includes a sample dataset that you can use for your regre
 
 1. Right- Click on the **Automobile price data (raw**) under **Auto Price Training** and select **Preview data.** click on the **normalized-losses** column header. Then review the statistics for this column. Note there are quite a few missing values in this column. Missing values  limit the column's usefulness for predicting the **price** label so you might want to exclude it from training.
 
+    ![Picture1](media/ai900lab2aimg2.png)
+
 1. Close the **Automobile price data (Raw) result visualization** window so that you can see the dataset on the canvas like this:
 
     ![Screenshot of the Automobile price data dataset on the designer canvas.](media/dataset-2a.png)
 
-## Task 5: Add data transformations
+### Task 5: Add data transformations
 
 You typically apply data transformations to prepare the data for modeling. In the case of the automobile price data, you add transformations to address the issues you identified when you explored the data.
 
@@ -91,13 +136,13 @@ You typically apply data transformations to prepare the data for modeling. In th
 
     ![Screenshot of the Automobile price data dataset connected to the Select Columns in Dataset module.](media/dataset-select-columns-2a.png)
 
-3. Double click on the **Select Columns in Dataset** module to access a settings pane on the right. Select **Edit column**. Then in the **Select columns** window, select **By name** and **Add all** to add all the columns. Then remove **normalized-losses**, so your final column selection looks like this:
+3. Double click on the **Select Columns in Dataset** module to access a settings pane on the right. Select **Edit column**. Then in the **Select columns** window, select **By name** and click on **Add all** to add all the columns. Then remove **normalized-losses**, so your final column selection looks like this:
 
     ![Screenshot of all columns other than normalized_losses.](media/select-columns-2a.png)
 
 4. Click on the **Save** button then **close** Select Columns in Dataset pane.
 
-In the rest of this exercise, you go through steps to create a pipeline that looks like this:
+    In the rest of this exercise, you go through steps to create a pipeline that looks like this:
 
    ![Screenshot of the Automobile price data dataset with Normalize Data module.](media/data-transforms-2a.png)
 
@@ -105,7 +150,12 @@ Follow the remaining steps, use the image for reference as you add and configure
 
 5. In the **Asset library**, search for a **Clean Missing Data** module and place it under the **Select Columns in Dataset** module on the canvas. Then connect the output from the **Select Columns in Dataset** module to the input of the **Clean Missing Data** module.
 
-6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower** like this:
+6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower**. Then, click on **Save**. The below screenshot has been provided for your reference: 
+
+
+      ![Picture1](media/ai900lab2aimg3.png)
+
+    > 💡 **Note:** After typing the word click in empty area to insert the word.
 
     ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
 
@@ -119,7 +169,7 @@ Follow the remaining steps, use the image for reference as you add and configure
 
 8. In the **Asset library**, search for a **Normalize Data** module and place it on the canvas, below the **Clean Missing Data** module. Then connect the left-most output from the **Clean Missing Data** module to the input of the **Normalize Data** module.
 
-9. Double click on the **Normalize Data** module to view its parameters pane. You will need to specify the transformation method and the columns to be transformed. Set the transformation method to **MinMax**. Apply a rule by selecting **Edit column** to include the following **Column names**:
+9. Double click on the **Normalize Data** module to view its parameters pane. You will need to specify the transformation method and the columns to be transformed. Set the transformation method to **MinMax**. Apply a rule by selecting **Edit column** to include the following **Column names** and then click on **Save**.
     - **symboling**
     - **wheel-base**
     - **length**
@@ -140,7 +190,7 @@ Follow the remaining steps, use the image for reference as you add and configure
     >**Tip :**
     >If you compare the values in the **stroke**, **peak-rpm**, and **city-mpg** columns, they are all measured in different scales, and it is possible that the larger values for **peak-rpm** might bias the training algorithm and create an over-dependency on this column compared to columns with lower values, such as **stroke**. Typically, data scientists mitigate this possible bias by *normalizing* the numeric columns so they're on the similar scales.
 
-## Task 6: Run the pipeline
+### Task 6: Run the pipeline
 
 To apply your data transformations, you must run the pipeline.
 
@@ -162,7 +212,7 @@ To apply your data transformations, you must run the pipeline.
 
 The dataset is now prepared for model training. Close the Job detail tab to return to the pipeline.
 
-## Task 7: Create training pipeline
+### Task 7: Create training pipeline
 
 After you've used data transformations to prepare the data, you can use it to train a machine learning model. Work through the following steps to extend the **Auto Price Training** pipeline.
 
@@ -182,9 +232,11 @@ After you've used data transformations to prepare the data, you can use it to tr
 
 1. In the **Asset library**, search for and place a **Train Model** module to the canvas, under the **Split Data** module. Then connect the *Results dataset1* (left) output of the **Split Data** module to the *Dataset* (right) input of the **Train Model** module.
 
-1. The model you are training will predict the **price** value, so select the **Train Model** module and modify its settings to set the **Label column** to  **price** (matching the case and spelling exactly!)
+1. The model you are training will predict the **price** value, so select the **Train Model** module and modify its settings to set the **Label column** to  **price** (matching the case and spelling exactly!) and click on **Save**.
 
-    The **price** label the model will predict is a numeric value, so we need to train the model using a *regression* algorithm.
+      ![Picture1](media/ai900lab2aimg1.png)
+
+    The **price** label model will predict a numeric value, so we need to train the model using a *regression* algorithm.
 
 1. In the **Asset library**, search for and place a **Linear Regression** module to the canvas, to the left of the **Split Data** module and above the **Train Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Model** module.
 
@@ -199,7 +251,7 @@ After you've used data transformations to prepare the data, you can use it to tr
 
     ![Screenshot of how to split data, then train with linear regression and score.](media/train-score-2a.png)
 
-## Task 8: Run the training pipeline
+### Task 8: Run the training pipeline
 
 Now you're ready to run the training pipeline and train the model.
 
@@ -215,7 +267,7 @@ Now you're ready to run the training pipeline and train the model.
 
 The model is predicting values for the **price** label, but how reliable are its predictions? To assess that, you need to evaluate the model.
 
-## Task 9: Evaluate model
+### Task 9: Evaluate model
 
 One way to evaluate a regression model is to compare the predicted labels to the actual labels in the validation dataset to held back during training. Another way is to compare the performance of multiple models.
 
@@ -248,7 +300,7 @@ One way to evaluate a regression model is to compare the predicted labels to the
 
 When you've identified a model with evaluation metrics that meet your needs, you can prepare to use that model with new data.
 
-## Task 10: Create and run an inference pipeline
+### Task 10: Create and run an inference pipeline
 
 1. In Azure Machine Learning studio, expand the left-hand pane by selecting the menu icon at the top left of the screen. Click on **Jobs** (under **Assets**) to view all of the jobs you have run. Select the experiment **mslearn-auto-training**, then select the **Auto Price Training** pipeline. 
 
@@ -272,7 +324,7 @@ When you've identified a model with evaluation metrics that meet your needs, you
 
 1. The inference pipeline assumes that new data will match the schema of the original training data, so the **Automobile price data (Raw)** dataset from the training pipeline is included. However, this input data includes the **price** label that the model predicts, which is unintuitive to include in new car data for which a price prediction hasn't yet been made. Delete this module and replace it with an **Enter Data Manually** module from the **Data Input and Output** section, containing the following CSV data, which includes feature values without labels for three cars (copy and paste the entire block of text):
 
-    ```CSV
+   ```CSV
     symboling,normalized-losses,make,fuel-type,aspiration,num-of-doors,body-style,drive-wheels,engine-location,wheel-base,length,width,height,curb-weight,engine-type,num-of-cylinders,engine-size,fuel-system,bore,stroke,compression-ratio,horsepower,peak-rpm,city-mpg,highway-mpg
     3,NaN,alfa-romero,gas,std,two,convertible,rwd,front,88.6,168.8,64.1,48.8,2548,dohc,four,130,mpfi,3.47,2.68,9,111,5000,21,27
     3,NaN,alfa-romero,gas,std,two,convertible,rwd,front,88.6,168.8,64.1,48.8,2548,dohc,four,130,mpfi,3.47,2.68,9,111,5000,21,27
@@ -289,16 +341,16 @@ When you've identified a model with evaluation metrics that meet your needs, you
     - Delete the connection between the **Score Model** module and the **Web Service Output**.
     - Add an **Execute Python Script** module from the **Python Language** section, replacing all of the default python script with the following code (which selects only the **Scored Labels** column and renames it to **predicted_price**):
 
-```Python
-import pandas as pd
+        ```Python
+        import pandas as pd
 
-def azureml_main(dataframe1 = None, dataframe2 = None):
+        def azureml_main(dataframe1 = None, dataframe2 = None):
 
-    scored_results = dataframe1[['Scored Labels']]
-    scored_results.rename(columns={'Scored Labels':'predicted_price'},
-                        inplace=True)
-    return scored_results
-```
+            scored_results = dataframe1[['Scored Labels']]
+            scored_results.rename(columns={'Scored Labels':'predicted_price'},
+                                inplace=True)
+            return scored_results
+        ```
 
 1. Connect the output from the **Score Model** module to the **Dataset1** (left-most) input of the **Execute Python Script**, and connect the left output(Result Dataset) of the **Execute Python Script** module to the (outpout data) of the **Web Service Output**.
 
@@ -313,41 +365,51 @@ def azureml_main(dataframe1 = None, dataframe2 = None):
 1. Close the visualization tab.
 
 Your inference pipeline predicts prices for cars based on their features. Now you're ready to publish the pipeline so that client applications can use it.
+> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task.
 
-## Task 11: Deploy model
+
+  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+
+### Task 11: Deploy model
 
 After you've created and tested an inference pipeline for real-time inferencing, you can publish it as a service for client applications to use.
 
 > **Note**
-> In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an *inference cluster*, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
+> In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically and is useful for development and testing. For production, you should create an *inference cluster*, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
-## Task 12: Deploy a service
+### Task 12: Deploy a service
 
 1. View the **Predict Auto Price** inference pipeline you created in the previous unit.
 
-1. Select **Job detail** on the left hand pane, which will open a new tab.
+1. Select **Job detail** on the left-hand pane, which will open a new tab.
 
-    ![Screenshot of job details next to the completed job. ](media/completed-job-inference-2a.png)
+    ![Screenshot of job details next to the completed job. ](media/ai900_mod02a_t12_s2.png)
 
 1. In the new tab, select **Deploy**.
 
-    ![Screenshot of the deploy button for your Predict Auto Price inference pipeline.](media/deploy-2c.png)
+    ![Screenshot of the deploy button for your Predict Auto Price inference pipeline.](media/ai900_mod02a_t12_s3.png)
 
-1. In the configuration screen, select **Deploy a new real-time endpoint**, using the following settings:
+1. In the configuration screen, select **Deploy a new real-time endpoint** and then click on **Deploy**, using the following settings:
     -  **Name**: predict-auto-price
     -  **Description**: Auto price regression
     - **Compute type**: Azure Container Instance
 
-Wait for the web service to be deployed - this can take several minutes. The deployment status is shown at the top left Notifications of the Microsoft Azure Machine Learning Studio.
+1. Wait for the service to be deployed - this can take upto **30 minutes** to get the deployment state to **Healthy**. The deployment status is shown at the top left of the designer interface.
 
-## Task 13: Test the service
+### Task 13: Test the service
 
 1. On the **Endpoints** page, open the **predict-auto-price** real-time endpoint.
 
     ![Screenshot of the location of the Endpoints option on the left-hand pane.](media/endpoints-lab-2a.png)
     
     >**Note:**
-    > You have to Wait for 15-20 to to reflect the Test code which is in the json formate.
+    > You have to Wait for 15-20 minutes for the test code to reflect which can be seen in JSON format.
 
 1. When the **predict-auto-price** endpoint opens, select the **Test** tab. We will use it to test our model with new data. Delete the current data under **Input data to test real-time endpoint**. Copy and paste the below data into the data section:  
 
@@ -391,17 +453,15 @@ Wait for the web service to be deployed - this can take several minutes. The dep
 
 1. Select **Test**. On the right hand of the screen, you should see the output **'predicted_price'**. The output is the predicted price for a vehicle with the particular input features specified in the data. 
 
-    ![Screenshot of the Test pane.](media/test-interface2a.png)
+    ![Picture1](media/ai900lab2aimg4.png)
 
 Let's review what you have done. You cleaned and transformed a dataset of automobile data, then used the car *features* to train a model. The model predicts the price of an automobile, which is the *label*.
 
 You also tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
 
-> **Note**: **Congratulations!** You have successfully completed this exercise. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+ **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.

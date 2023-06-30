@@ -14,24 +14,20 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
 1. In the Azure Portal, Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Retain the Existing Subscription*.
-    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Region**: *Select the same region where your resource group got deployed.*.
-    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
+    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Region**: Select **<inject key="location" enableCopy="false"/>**
+    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
-    
-      ![](media/read-text-computer-vision/lab3d-1.png)
-    
-      ![](media/read-text-computer-vision/lab3d-2.png)
-    
-      ![](media/read-text-computer-vision/lab3d-3.png)
+
     
 1. Click on **Review + Create** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+   
+     ![](media/read-text-computer-vision/lab3d-3.png)
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
-> **Note:**
-> To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
+> **Note:** To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
 
 ## Task-2: Run Cloud Shell
 
@@ -43,7 +39,7 @@ To test the capabilities of the Translation service, we'll use a simple command-
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
 
-1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **show advanced settings**. Please make sure you have selected your resource group **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="true"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="true"/>** For the **File share name**, then click on **Create Storage**.
+1. If you are prompted to create storage for your Cloud Shell, ensure your subscription is selected and click on **show advanced settings**. Please make sure you have selected your resource group **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, then click on **Create Storage**.
 
     ![Create storage by clicking confirm.](media/translate-text-and-speech/create-a-storage.png)
 
@@ -55,7 +51,7 @@ To test the capabilities of the Translation service, we'll use a simple command-
 
     ![Wait for PowerShell to start.](media/powershell-prompt.png)
 
-## Configure and run a client application
+## Task-3: Configure and run a client application
 
 Now that you have a custom model, you can run a simple client application that uses the Translation service.
 
@@ -79,16 +75,10 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to use the Translator service](media/translate-code-4b.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the region/location and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_LOCATION** placeholder values respectively.
-
+1. Don't worry too much about the details of the code, the important thing is that it needs the region/location and either of the keys for your Cognitive Services resource. Copy the values of **KEY 1** and **Location/Region** value from *Keys and Endpoints* page for your resource from the Azure portal and paste them into the code editor.
      ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/lab4b-1.png)
 
-    After pasting the key and location values, the first lines of code should look similar to this:
-
-    ```PowerShell
-    $key="1a2b3c4d5e6f7g8h9i0j...."
-    $location="somelocation"
-    ```
+> **Note:** The Translator service does not require the use of the Cognitive Service endpoint, so there is no need to modify the Translator service endpoint. Instead, a dedicated global endpoint is available specifically for the Translator service. 
 
 1. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
@@ -96,11 +86,13 @@ Now that you have a custom model, you can run a simple client application that u
     - Translate text from English into French, Italian, and Chinese.
     - Translate audio from English into text in French
 
-    Use the video player below to hear the input audio the application will process:
+    Use the below link to hear the input audio which will be processed by this application and translates:
+   
+       https://www.microsoft.com/videoplayer/embed/RWORN0
 
-     <div class="embeddedvideo"><iframe src="https://www.microsoft.com/videoplayer/embed/RWORN0" frameborder="0" allowfullscreen="true" data-linktype="external"></iframe></div>
+    >**Note**: Copy the above link to your browser, to listen the audio file. Do not use the Lab VM browser.
 
-    > **Note**: A real application could accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file.
+    >**Note**: A real application could accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file.
     
 1. In the Cloud Shell pane, enter the following command to run the code:
 
@@ -111,11 +103,10 @@ Now that you have a custom model, you can run a simple client application that u
 
 1. Review the output. Did you see the translation from text in English to French, Italian, and Chinese?  Did you see the English audio "hello" translated into text in French?
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Click on the **Lab Validation** tab located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
    - Hit the **Validate** button for the corresponding task.
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.

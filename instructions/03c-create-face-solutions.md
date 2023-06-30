@@ -1,28 +1,29 @@
-# Explore face recognition
+# Module 03c: Explore face recognition
 
 Computer vision solutions often require an artificial intelligence (AI) solution to be able to detect human faces. For example, suppose the retail company Northwind Traders wants to locate where customers are standing in a store to best assist them. One way to accomplish this is to determine if there are any faces in the images, and if so, to identify the bounding box coordinates around the faces.
 
 To test the capabilities of the Face service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Task 1 : Create a *Cognitive Services* resource
+In this lab, you will:
+- Create a Face API resource and a Azure Storage Account.
+- Configure and run a client application.
 
-You can use the Face service by creating either a **Face** resource or a **Cognitive Services** resource.
+## Task 1 : Create a *Face API* resource
 
-If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
+You can use the Face service by creating a **Face** resource. (Face API is no longer available in Cognitive Services)
 
-1. In another browser tab, open the Azure portal at [https://portal.azure.com](https://portal.azure.com?azure-portal=true), signing in with your Microsoft account.
+If you haven't already done so, create a **Face API** resource in your Azure subscription.
 
-1. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
+1. Click the **&#65291;Create a resource** button, search for *Face*, and create a **Face** resource with the following settings:
     - **Subscription**: *Use existing Azure subscription*.
-    - **Resource group**: **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" />**.
-    - **Region**: *Select the same region where your resource group was created*.
-    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**.
-    - **Pricing tier**: Standard S0
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected.
+    - **Resource group**: **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" />**
+    - **Region**: Select **<inject key="location" enableCopy="false"/>**
+    - **Name**: Enter **ai900face-<inject key="DeploymentID" enableCopy="false"/>**
+    - **Pricing tier**: Free F0
 
 1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
 
-1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications thus, copy the same over to a notepad.
+1. View the **Keys and Endpoint** page for your Face resource. click on Show keys, you will need the endpoint and keys to connect from client applications thus, copy the same over to a notepad.
 
 ## Task 2: Run Cloud Shell
 
@@ -70,10 +71,9 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to detect faces in an image](media/create-face-solutions/ai900_03c-6.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
+1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Face resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
 
-    > **Tip**
-    > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
+    > **Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
     After pasting the key and endpoint values, the first two lines of code should look similar to this:
 
@@ -96,9 +96,9 @@ Now that you have a custom model, you can run a simple client application that u
     ```
 
 1. Review the returned information, which includes the location of the face in the image. The location of a face is indicated by the top-left coordinates, and the width and height of a *bounding box*, as shown here:
-
+    
     ![An image of a person with their face outlined](media/create-face-solutions/ai900_03c-8.jpg)
-
+    ![An image of a person with their face outlined](media/resultai-9003c.png)
     >**Note :**
     >Face service capabilities that return personally identifiable features are restricted. See https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/ for details.
 
@@ -126,11 +126,9 @@ Now that you have a custom model, you can run a simple client application that u
 
 1. Review the results of the face analysis for the third image.
 
-> **Note**: **Congratulations!** You have successfully completed this task. Please validate your progress by clicking on **(...) icon** from upper right corner of lab guide section and switch to **Lab Validation** tab and then click on **Validate** button for the respective task.
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-1. **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-
-   - Click the **(...) icon** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
+   - Click on the **Lab Validation tab** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
    - Hit the **Validate** button for the corresponding task.
    - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
