@@ -24,8 +24,8 @@ In this lab, you will train a regression model that predicts the price of an aut
 1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
     - **Subscription**: Use exiting Azure subscription.
-    - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**.
-    - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />.**
+    - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**
+    - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**
     - **Region**: Select <inject key="location" enableCopy="false" />
     - **Storage account**: Note the default new storage account that will be created for your workspace.
     - **Key vault**: Note the default new key vault that will be created for your workspace.
@@ -55,7 +55,7 @@ In this lab, you will train a regression model that predicts the price of an aut
 
       ![Picture1](media/ai900mod2cimg5.png)
           
-    - **Location**: Select <inject key="location" enableCopy="false" />.
+    - **Location**: Select <inject key="location" enableCopy="false" />
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
     - **Virtual machine size**:
