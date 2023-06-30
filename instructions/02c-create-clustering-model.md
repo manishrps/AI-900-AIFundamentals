@@ -22,7 +22,7 @@
     - **Subscription**: Use existing Azure subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-02c-<inject key="DeploymentID" enableCopy="false" /> (2)**
     - **Workspace name**: Give name **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" /> (3)**
-    - **Region**: Select <inject key="location" enableCopy="false" />. **(4)**
+    - **Region**: Select <inject key="location" enableCopy="false" /> **(4)**
     - **Storage account**: Note the default new storage account that will be created for your workspace. **(5)**
     - **Key vault**: Note the default new key vault that will be created for your workspace. **(6)**
     - **Application insights**: Note the default new application insights resource that will be created for your workspace. **(7)**
@@ -55,7 +55,7 @@
 
       ![Picture1](media/ai900mod2cimg5.png)
 
-    - **Location**: Select <inject key="location" enableCopy="false" />.
+    - **Location**: Select <inject key="location" enableCopy="false" />
     - **Virtual machine tier**: Dedicated
     - **Virtual machine type**: CPU
     - **Virtual machine size**:
