@@ -18,11 +18,11 @@ To test the capabilities of the Speech service, we'll use a simple command-line 
 
 1.  Click on **Review and create**.
    
-1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.  
-
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 ### Get the Key and Location for your Cognitive Services resource
 
 1. Wait for deployment to complete. Then go to your Cognitive Services resource, and on the **Overview** page, click the link to manage the keys for the service. You will need the endpoint and keys to connect to your Cognitive Services resource from client applications.
+
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
