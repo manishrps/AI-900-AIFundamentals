@@ -28,9 +28,11 @@
     - **Application insights**: Note the default new application insights resource that will be created for your workspace. **(7)**
     - **Container registry**: None (one will be created automatically the first time you deploy a model to a container) **(8)**
 
-1. Select **Review + create (9)**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
+1. Select **Review + create (9)**.
   
     ![Picture1](media/ai900mod2cimg3.png)
+
+1. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
