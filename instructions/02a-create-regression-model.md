@@ -34,7 +34,9 @@ In this lab, you will train a regression model that predicts the price of an aut
 
 1. Select **Review + create**.
    
-1. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
+1. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.
+
+   > **Note:** Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your  your workspace resource.
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
