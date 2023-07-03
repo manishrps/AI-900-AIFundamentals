@@ -22,11 +22,15 @@ If you haven't already done so, create a **Face API** resource in your Azure sub
     - **Pricing tier**: Free F0
 
 1.  Click on **Review and create**.
-1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page. the resource, and wait for deployment to complete. Then go to the deployed resource.
    
-  > **Note:** Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Face API.
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+   
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Face API.
 
-1. View the **Keys and Endpoint** page for your Face resource. click on Show keys, you will need the endpoint and keys to connect from client applications thus, Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications.
+1. View the **Keys and Endpoint** page for your Face resource. click on Show keys, you will need the endpoint and keys to connect from client applications.
+
+      >**Note :** 
+      > Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications. 
 
 
 ## Task 2: Run Cloud Shell
@@ -75,7 +79,7 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to detect faces in an image](media/create-face-solutions/ai900_03c-6.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Face resource. Copy these from the **Keys and Endpoints** page for your resource (Task 1, Step 4) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
+1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Face resource. Copy these from the **Keys and Endpoints** page for your resource (Task 1, Step 5) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
 
     > **Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
