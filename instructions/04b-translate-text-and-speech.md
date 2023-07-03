@@ -37,7 +37,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
    
      ![](media/ai900mod4img2.png)
    
-1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
