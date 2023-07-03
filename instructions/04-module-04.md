@@ -37,9 +37,11 @@ If you haven't already done so, create a **Cognitive Services** resource in your
     - **Pricing tier**: Standard S0 **(5)**
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox. **(6)**
     
-1. Click on **Review + Create (7)** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+1. Click on **Review + Create (7)**.
 
       ![](media/ai900mod4img2.png)
+   
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
 
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
