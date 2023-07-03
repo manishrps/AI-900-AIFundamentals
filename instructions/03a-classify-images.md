@@ -23,7 +23,8 @@ Create a **Cognitive Services** resource in your Azure subscription.
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
 
-1. Review and create  and Click on Create, the resource, and wait for deployment to complete. Then go to the deployed resource.
+1.  Click on **Review and create**. 
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
 ## Task 2: Create a Custom Vision project
 
