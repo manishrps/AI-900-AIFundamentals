@@ -23,6 +23,8 @@ If you haven't already done so, create a **Face API** resource in your Azure sub
 
 1.  Click on **Review and create**.
 1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page. the resource, and wait for deployment to complete. Then go to the deployed resource.
+   
+  > **Note:** Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Face API.
 
 1. View the **Keys and Endpoint** page for your Face resource. click on Show keys, you will need the endpoint and keys to connect from client applications thus, Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications.
 
