@@ -43,7 +43,6 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
-> **Note:** To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
 
 ## Task-2: Run Cloud Shell
 
