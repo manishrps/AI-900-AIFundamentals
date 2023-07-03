@@ -116,6 +116,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
     
      > $key="1a2b3c4d5e6f7g8h9i0j...."    
      > $endpoint="https..."
+
    
     
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img12.png)
