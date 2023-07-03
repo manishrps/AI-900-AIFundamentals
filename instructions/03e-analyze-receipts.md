@@ -83,10 +83,9 @@ Now that you have a custom model, you can run a simple client application that u
     After pasting the key and endpoint values, the first two lines of code should look similar to this:
 
     
-    > $key="1a2b3c4d5e6f7g8h9i0j...."    
-    > $endpoint="https..."
+     > $key="1a2b3c4d5e6f7g8h9i0j...."    
+     > $endpoint="https..."
     
-
 
 1.  After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor. Now that you've set up the key and endpoint, you can use your resource to analyze fields from a receipt. In this case, you'll use the Form Recognizer's built-in model to analyze a receipt for the fictional Northwind Traders retail company.
 
