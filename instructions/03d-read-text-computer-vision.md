@@ -41,7 +41,8 @@ You can use the Computer Vision service by creating either a **Computer Vision**
     
 1. Click on **Review + Create**.
 
-     ![](media/read-text-computer-vision/lab3d-3.png)
+      ![](media/read-text-computer-vision/lab3d-3.png)
+   
 
 1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
