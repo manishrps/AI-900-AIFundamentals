@@ -37,6 +37,8 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
     - Click **Review + create (6)** 
 
        ![Picture1](media/ai900mod1img4.png)
+      
+1. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.
    
    >**Note:** Wait for deployment to complete, and then click on the **Go to resource** button, this will take you to your Anomaly Detector resource.
 
@@ -102,7 +104,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img11.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Anomaly Detector resource. Copy these from the **Keys and Endpoints** page for your resource (Exercise 1, Task 1, Step 5) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
+1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Anomaly Detector resource. Copy these from the **Keys and Endpoints** page for your resource (Exercise 1, Task 1, Step 6) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
 
     > **Tip :**
     > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
