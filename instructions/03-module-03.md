@@ -24,7 +24,7 @@ You can use the Computer Vision service by creating either a **Computer Vision**
    
 1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
    
-    > **Note:** Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Services.
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Services.
 
 1. View the **Keys and Endpoint** page from the left pane under Resource Management for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
