@@ -44,7 +44,7 @@ You can use the Computer Vision service by creating either a **Computer Vision**
 
     ![](media/read-text-computer-vision/lab3d-3.png)
 
-1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.
 
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications. 
 
