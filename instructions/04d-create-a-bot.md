@@ -42,7 +42,7 @@ The Language service's custom question-answering feature enables you to quickly 
 
       ![](media/ai900mod4dimg4.png)
 
-1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.and Click on **Create**, Wait for the deployment of the Language service that will support your custom question-answering knowledge base.
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, Wait for the deployment of the Language service that will support your custom question-answering knowledge base.
 
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true).
 
