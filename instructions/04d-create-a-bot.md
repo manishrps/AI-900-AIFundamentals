@@ -38,7 +38,7 @@ The Language service's custom question-answering feature enables you to quickly 
     
       >**Note:** If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In this case, select a tier other than **Free F(3 Indexes)**.
 
-1. Click **Review and Create** and then click **Create**.
+1. Click **Review and Create**.
 
       ![](media/ai900mod4dimg4.png)
 
