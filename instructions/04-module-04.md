@@ -107,14 +107,14 @@ Now that you have a custom model, you can run a simple client application that u
 1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource (Excersise1,Task 1, Step 8) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
 
 
-    > **Tip:** You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
+    > **Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
-    > After pasting the key and endpoint values, the first two lines of code should look similar to this:
+    After pasting the key and endpoint values, the first two lines of code should look similar to this:
 
     
-     > $key="1a2b3c4d5e6f7g8h9i0j...."    
-     > $endpoint="https..."
-   
+    > $key="1a2b3c4d5e6f7g8h9i0j...."    
+    > $endpoint="https..."
+    
 
 1. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
