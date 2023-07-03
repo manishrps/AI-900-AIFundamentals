@@ -20,7 +20,7 @@ You can use the Computer Vision service by creating either a **Computer Vision**
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
 
-1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
+1. Review and create  and Click on Create, the resource, and wait for deployment to complete. Then go to the deployed resource.
 
 1. View the **Keys and Endpoint** page from the left pane under Resource Management for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
