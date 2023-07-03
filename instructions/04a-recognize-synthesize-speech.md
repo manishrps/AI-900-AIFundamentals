@@ -23,7 +23,6 @@ To test the capabilities of the Speech service, we'll use a simple command-line 
 
 1. Wait for deployment to complete. Then go to your Cognitive Services resource, and on the **Overview** page, click the link to manage the keys for the service. You will need the endpoint and keys to connect to your Cognitive Services resource from client applications.
 
-
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
 ## Task 2: Run Cloud Shell
