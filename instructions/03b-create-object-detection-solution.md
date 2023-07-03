@@ -44,7 +44,7 @@ Create a **Cognitive Services** resource in your Azure subscription.
 
 1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
-   > **Note:** Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Services.
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Services.
  
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
    
@@ -216,7 +216,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your Custom Vision project. You need the versions to be used *if you have an image URL*.
 
-    Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY**placeholders in the code file.
+    Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** placeholders in the code file.
     After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
 
     
