@@ -105,6 +105,9 @@ Now that you have a custom model, you can run a simple client application that u
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     ./speaking-clock.ps1
     ```
 
