@@ -22,7 +22,7 @@ You can use the Computer Vision service by creating either a **Computer Vision**
 
 1. Click **Review + create** 
    
-1. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
 1. View the **Keys and Endpoint** page from the left pane under Resource Management for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
