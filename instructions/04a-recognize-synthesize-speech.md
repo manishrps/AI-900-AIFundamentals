@@ -18,7 +18,7 @@ To test the capabilities of the Speech service, we'll use a simple command-line 
 
 1.  Click on **Review and create**.
    
-1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.  
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.  
 
 ### Get the Key and Location for your Cognitive Services resource
 
