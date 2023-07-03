@@ -23,7 +23,7 @@ You can use the Conversational Language Understanding service by creating a **La
 
 1. Click on **Review and create**.
    
-1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.
 
 ### Task 1: Create a Conversational Language Understanding App
 
