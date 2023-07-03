@@ -43,6 +43,9 @@ Create a **Cognitive Services** resource in your Azure subscription.
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg3.png)
  
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
+   
+   >**Note :** 
+      > Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications. 
 
 ### Task 2: Create a Custom Vision project
 
@@ -210,9 +213,17 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
     Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your Custom Vision project. You need the versions to be used *if you have an image URL*.
 
     Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY**placeholders in the code file.
+    After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
+
+    
+     > $predictionUrl="https..."   
+       $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
+
+   
+       
 
 
-5. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
+6. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
 ### Task 7: Test the client application
 
