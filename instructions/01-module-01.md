@@ -38,7 +38,7 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
 
        ![Picture1](media/ai900mod1img4.png)
    
-   >**Note:** Wait for deployment to complete, and then go to the deployed resource.
+   >**Note:** Wait for deployment to complete, and then go to resource button.
 
 1. View the **Keys and Endpoint** page for your Anomaly Detector resource. 
    
