@@ -230,11 +230,12 @@ Now let's open and edit a pre-written script, which will run the client applicat
 1. Copy the endpoint value, then switch back to the browser tab containing the Cloud Shell and paste it into the code editor, replacing **YOUR_ENDPOINT** (within the quotation marks). The repeat that process for the key, replacing **YOUR_KEY**.
 
 1. Next, replace **YOUR_PROJECT_NAME** with the name of your project, and replace **YOUR_DEPLOYMENT_NAME** with the name of your deployed model. The first lines of code should look similar to what you see below:
+
    
    > $endpointUrl="https://some-name.cognitiveservices.azure.com/language/..."
-     $key = "0ab1c23de4f56gh7i8901234jkl567m8"
-     $projectName = "name"
-     $deploymentName = "name"
+   > $key = "0ab1c23de4f56gh7i8901234jkl567m8"
+   > $projectName = "name"
+   > $deploymentName = "name"
    
     
 1. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
