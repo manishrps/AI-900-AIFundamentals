@@ -221,10 +221,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     
      > $predictionUrl="https..."   
-       $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
-
-   
-       
+     > $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
 
 
 6. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
