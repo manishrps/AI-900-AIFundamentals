@@ -16,7 +16,9 @@ To test the capabilities of the Speech service, we'll use a simple command-line 
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected.
 
-1. Review and create the resource.
+1.  Click on **Review and create**.
+   
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.  
 
 ### Get the Key and Location for your Cognitive Services resource
 
