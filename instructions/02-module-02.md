@@ -32,7 +32,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 1. Select **Review + create**.
 1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
    
-   > **Note:** Wait for deployment to complete, and then click on the **Go to resource** button, this will take you to your workspace resource.
+1. Wait for deployment to complete, and then click on the **Go to resource** button, this will take you to your workspace resource.
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
