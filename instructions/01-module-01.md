@@ -38,14 +38,14 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
 
        ![Picture1](media/ai900mod1img4.png)
    
-   >**Note:** Wait for deployment to complete, and then go to resource button.
+   >**Note:** Wait for deployment to complete, and then click on the **Go to resource** button, this is take you to your Anomaly Detector resource.
 
 1. View the **Keys and Endpoint** page for your Anomaly Detector resource. 
    
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img5.png)
    
       >**Note :** 
-      >You will need the endpoint and keys to connect from client applications. 
+      > Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications. 
 
 ### Task 2: Run Cloud Shell
 
@@ -102,7 +102,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img11.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Anomaly Detector resource. Copy these from the **Keys and Endpoints** page for your resource (which should still be in the top area of the browser) and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values, respectively.
+1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Anomaly Detector resource. Copy these from the **Keys and Endpoints** page for your resource (Exercise 1, Task 1, Step 5) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
 
     > **Tip :**
     > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
@@ -111,10 +111,10 @@ Now that you have a Cloud Shell environment, you can run a simple application th
   
     After pasting the key and endpoint values, the first two lines of code should look similar to this:
 
-    ```PowerShell
-    $key="1a2b3c4d5e6f7g8h9i0j...."    
-    $endpoint="https..."
-    ```
+    
+     > $key="1a2b3c4d5e6f7g8h9i0j...."    
+       $endpoint="https..."
+   
     
     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img12.png)
 
@@ -122,7 +122,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
       ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img13.png)
       
-      >**Note**: If you will be not able to find this option, you can use also Shortcut Keys **ctrl + S** to save and **ctrl + Q** to close the editor.
+      >**Note**: If you will be not able to find this option, you can use also Shortcut Keys **Ctrl + S** to save and **Ctrl + Q** to close the editor.
       
     Remember, anomaly detection is an artificial intelligence technique used to determine whether values in a series are within expected parameters. The sample client application will use your Anomaly Detector service to analyze a file containing a series of date/times and numeric values. The application should return results indicating at each time point, whether the numeric value is within expected parameters.
 
@@ -149,4 +149,4 @@ Now that you have a Cloud Shell environment, you can run a simple application th
 
 ## Learn more
 
-This simple app shows only some of the capabilities of the Anomaly Detector service. To learn more about what you can do with this service, see the [Anomaly Detector page](https://azure.microsoft.com/services/cognitive-services/anomaly-detector/).
+This simple app shows only some of the capabilities of the Anomaly Detector service. To learn more about what you can do with this service, see the [Anomaly Detector page](https://learn.microsoft.com/en-us/azure/cognitive-services/anomaly-detector/overview).
