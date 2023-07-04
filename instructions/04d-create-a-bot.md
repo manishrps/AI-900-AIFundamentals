@@ -3,7 +3,7 @@ For customer support scenarios, it's common to create a bot that can interpret a
 
 ## Exercise 1: Create a custom question-answering knowledge base
 
-## Task 1: Create a custom question-answering knowledge base
+### Task 1: Create a custom question-answering knowledge base
 
 The Language service's custom question-answering feature enables you to quickly create a knowledge base, either by entering question-and-answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
