@@ -1,9 +1,9 @@
-# Module 04d : Explore question answering 
+# Module 04d: Explore question answering 
 For customer support scenarios, it's common to create a bot that can interpret and answer frequently asked questions through a website chat window, email, or voice interface. Underlying the bot interface is a knowledge base of questions and appropriate answers that the bot can search for suitable responses.
 
 ## Exercise 1: Create a custom question-answering knowledge base
 
-## Task 1: Create a custom question-answering knowledge base
+### Task 1: Create a custom question-answering knowledge base
 
 The Language service's custom question-answering feature enables you to quickly create a knowledge base, either by entering question-and-answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
@@ -38,9 +38,11 @@ The Language service's custom question-answering feature enables you to quickly 
     
       >**Note:** If you have already provisioned a free-tier **Azure Cognitive Search** resource, your quota may not allow you to create another one. In this case, select a tier other than **Free F(3 Indexes)**.
 
-1. Click **Review and Create** and then click **Create**. Wait for the deployment of the Language service that will support your custom question-answering knowledge base.
+1. Click **Review and Create**.
 
       ![](media/ai900mod4dimg4.png)
+
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, Wait for the deployment of the Language service that will support your custom question-answering knowledge base.
 
 1. In a new browser tab, open the Language Studio portal at [https://language.azure.com](https://language.azure.com?azure-portal=true).
 
@@ -241,6 +243,8 @@ Experiment with the bot. You'll probably find that it can answer questions from 
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### You have successfully completed this lab.
 
 ### Learn more
 

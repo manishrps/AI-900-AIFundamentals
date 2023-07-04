@@ -22,7 +22,8 @@ Create a **Cognitive Services** resource in your Azure subscription.
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected
 
-1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
+1.  Click on **Review and create**. 
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
 
 ## Task 2: Create a Custom Vision project
 
@@ -96,7 +97,7 @@ Now you're ready to publish your trained model and use it from a client applicat
 
     ![Screenshot of the Quick Test interface.](media/create-image-classification-system/prediction.png)
 
-   >**Note**:Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
+   >**Note**: Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
 
    > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
@@ -130,6 +131,9 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     ```PowerShell
     rm -r ai-900 -f
+    ```
+
+    ```PowerShell
     git clone https://github.com/MicrosoftLearning/AI-900-AIFundamentals ai-900
     ```
 
@@ -137,6 +141,9 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     code classify-image.ps1
     ```
 
@@ -154,12 +161,12 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
 
-    ```PowerShell
-    $predictionUrl="https..."
-    $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
-    ```
+    
+     > $predictionUrl="https..."   
+     > $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
 
 7. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
+
 
 ## Task 6: Test the client application
 

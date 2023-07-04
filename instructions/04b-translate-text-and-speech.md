@@ -1,35 +1,53 @@
-# Explore translation
 
-One of the driving forces that has enabled human civilization to develop is the ability to communicate with one another. In most human endeavours, communication is key.
+# Module 04b: Explore translation
+
+One of the driving forces that has enabled human civilization to develop is the ability to communicate with one another. In most human endeavors, communication is key.
 
 Artificial Intelligence (AI) can help simplify communication by translating text or speech between languages, helping to remove barriers to communication across countries and cultures.
 
-To test the capabilities of the Translator service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
+To test the capabilities of the Translator service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply to real-world solutions, such as websites or phone apps.
 
-## Task-1: Create a *Cognitive Services* resource
+## Exercise 1:Create a *Cognitive Services* resource
+
+### Task-1: Create a *Cognitive Services* resource
 
 You can use the Computer Vision service by creating either a **Translator** resource or a **Cognitive Services** resource.
 
 If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
-1. In the Azure Portal, Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
-    - **Subscription**: *Retain the Existing Subscription*.
-    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Region**: Select **<inject key="location" enableCopy="false"/>**
-    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Pricing tier**: Standard S0
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
+1. In the Azure Portal click the **&#65291;Create a resource** button.
 
-    
-1. Click on **Review + Create** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
-     ![](media/read-text-computer-vision/lab3d-3.png)
+1. In the Marketplace page search for **Cognitive Services** and Select **Cognitive Services** 
+
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
+     
+1. On Cognitive Services Page Click on **Create**. 
+     
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg2.png)
+
+1. Create a **Cognitive Services** resource with the following settings:
+
+    - **Subscription**: Retain the Existing Subscription **(1)**.
+    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/> (2)**
+    - **Region**: Select **<inject key="location" enableCopy="false"/> (3)**
+    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/> (4)**
+    - **Pricing tier**: Standard S0 **(5)**
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox. **(6)**
+
+1. Click on **Review + Create (7)**.
+   
+     ![](media/ai900mod4img2.png)
+   
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.
+   
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Service.
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
-> **Note:** To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
 
-## Task-2: Run Cloud Shell
+### Task-2: Run Cloud Shell
 
 To test the capabilities of the Translation service, we'll use a simple command-line application that runs in the Cloud Shell on Azure. 
 
@@ -51,7 +69,7 @@ To test the capabilities of the Translation service, we'll use a simple command-
 
     ![Wait for PowerShell to start.](media/powershell-prompt.png)
 
-## Task-3: Configure and run a client application
+### Task-3: Configure and run a client application
 
 Now that you have a custom model, you can run a simple client application that uses the Translation service.
 
@@ -90,7 +108,7 @@ Now that you have a custom model, you can run a simple client application that u
    
        https://www.microsoft.com/videoplayer/embed/RWORN0
 
-    >**Note**: Copy the above link to your browser, to listen the audio file. Do not use the Lab VM browser.
+    >**Note**: Copy the above link to your browser, and listen to the audio file. Do not use the Lab VM browser.
 
     >**Note**: A real application could accept the input from a microphone and send the response to a speaker, but in this simple example, we'll use pre-recorded input in an audio file.
     
@@ -101,15 +119,16 @@ Now that you have a custom model, you can run a simple client application that u
     ./translator.ps1
     ```
 
-1. Review the output. Did you see the translation from text in English to French, Italian, and Chinese?  Did you see the English audio "hello" translated into text in French?
-
+1. Review the output. Did you see the translation from the text in English to French, Italian, and Chinese?  Did you see the English audio "hello" translated into text in French?
 
 **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-   - Click on the **Lab Validation** tab located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### You have successfully completed this lab.
 
 ## Learn more
 

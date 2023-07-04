@@ -20,7 +20,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
-1. In the Marketplace page search for **Cognitave Services** and Select **Cognitive Services** 
+1. In the Marketplace page search for **Cognitive Services** and Select **Cognitive Services** 
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
      
@@ -28,7 +28,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
      
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg2.png)
     
-3. Create a **Cognitive Services** resource with the following settings:
+1. Create a **Cognitive Services** resource with the following settings:
 
     - **Subscription**: Use existing subscription. **(1)**
     - **Resource group**: Select **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/> (2)**
@@ -37,13 +37,20 @@ If you haven't already done so, create a **Cognitive Services** resource in your
     - **Pricing tier**: Standard S0 **(5)**
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox. **(6)**
     
-1. Click on **Review + Create (7)** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+1. Click on **Review + Create (7)**.
 
       ![](media/ai900mod4img2.png)
+   
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Service.
 
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
 
       ![](media/cogendpoint.png)
+
+   >**Note :** 
+   > Copy and save the **KEY 1** and **Endpoint** values to NotePad for future reference to connect from client applications.
 
 ### Task 2: Run Cloud Shell
 
@@ -61,11 +68,11 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
   
    ![Create storage by clicking confirm.](media/ai900mod1img7.png)
    
-1.  Please make sure you have selected your resource group **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/>** and enter **blob<inject key="DeploymentID" enableCopy="false"/>** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/>** For the **File share name**, then click on **Create Storage**.
+1.  Please make sure you have selected your resource group **AI-900-Module-04-<inject key="DeploymentID" enableCopy="false"/> (1)** and enter **blob<inject key="DeploymentID" enableCopy="false"/> (2)** for the **Storage account name** and enter **blobfileshare<inject key="DeploymentID" enableCopy="false"/> (3)** For the **File share name**, then click on **Create Storage (4)**.
 
     ![Create storage by clicking confirm.](media/ai900mod1img8.png)
 
-1. Make sure the the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
     ![How to find the left hand drop down menu to switch to PowerShell](media/ai900mod1img9.png) 
 
@@ -97,18 +104,20 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to use the Language service](media/ai900mod4img1.png)
 
-1. Don't worry too much about the details of the code. In the Azure portal, navigate to your Cognitive Services resource. Then select the **Keys and Endpoints** page on the left hand pane. Copy the key and endpoint from the page and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
+
+1. Don't worry too much about the details of the code. In the Azure portal, navigate to your Cognitive Services resource. Then select the **Keys and Endpoints** page on the left-hand pane. Copy the key and endpoint from the page and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
 
     > **Tip:** You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
-    ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/cogendpoint.png)
 
-    After replacing the key and endpoint values, the first lines of code should look similar to this:
+    > **Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
-    ```PowerShell
-    $key="1a2b3c4d5e6f7g8h9i0j...."
-    $endpoint="https..."
-    ```
+    After pasting the key and endpoint values, the first two lines of code should look similar to this:
+
+    
+     > $key="1a2b3c4d5e6f7g8h9i0j...."    
+     > $endpoint="https..."
+    
 
 1. At the top right of the editor pane, use the **...** button to open the menu and select **Save** to save your changes. Then open the menu again and select **Close Editor**.
 
@@ -118,6 +127,9 @@ Now that you have a custom model, you can run a simple client application that u
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     ./analyze-text.ps1 review1.txt
     ```
 
@@ -190,6 +202,8 @@ Now that you have a custom model, you can run a simple client application that u
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### You have successfully completed this lab.
 
 ## Learn more
 
