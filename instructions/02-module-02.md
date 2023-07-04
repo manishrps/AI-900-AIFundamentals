@@ -18,7 +18,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
    ![Picture1](media/ai900mod2cimg2.png)
    
-1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+1. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
     - **Subscription**: *Use the existing Azure subscription*
     - **Resource group**: Select **AI-900-Module-02-<inject key="DeploymentID" enableCopy="false"/>**
@@ -37,7 +37,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 1. In Azure Machine Learning studio, you should see your newly created workspace. If that is not the case, select your Azure directory in the left-hand menu. Then from the new left-hand menu select **Workspaces**, where all the workspaces associated to your directory are listed, and **select the one you created for this exercise**.
 
-## Task 2: Create compute
+## Task 2: Create Compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select **Compute**(under **Manage**).
 
