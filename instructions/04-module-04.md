@@ -49,9 +49,9 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
       ![](media/cogendpoint.png)
 
-      >**Note :** 
-      > Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications.
-      
+   >**Note :** 
+   > Copy and save the **KEY 1** and **Endpoint** values to NotePad for future reference to connect from client applications.
+
 ### Task 2: Run Cloud Shell
 
 To test the capabilities of the Custom Vision service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
@@ -104,7 +104,11 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to use the Language service](media/ai900mod4img1.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource (Excersise1,Task 1, Step 8) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
+
+1. Don't worry too much about the details of the code. In the Azure portal, navigate to your Cognitive Services resource. Then select the **Keys and Endpoints** page on the left-hand pane. Copy the key and endpoint from the page and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
+
+    > **Tip:** You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
+
 
     > **Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
@@ -198,6 +202,8 @@ Now that you have a custom model, you can run a simple client application that u
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### You have successfully completed this lab.
 
 ## Learn more
 

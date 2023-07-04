@@ -1,8 +1,8 @@
 # Module 04c: Explore language understanding
 
-Increasingly, we expect computers to be able to use AI in order to understand spoken or typed commands in natural language. For example, you might want to implement a home automation system that enables you to control devices in your home by using voice commands such as "switch on the light" or "put the fan on", and have an AI-powered device understand the command and take appropriate action.
+Increasingly, we expect computers to be able to use AI to understand spoken or typed commands in natural language. For example, you might want to implement a home automation system that enables you to control devices in your home by using voice commands such as "switch on the light" or "put the fan on", and have an AI-powered device understand the command and take appropriate action.
 
-To test the capabilities of the Conversational Language Understanding service, we'll use a command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
+To test the capabilities of the Conversational Language Understanding service, we'll use a command-line application that runs in the Cloud Shell. The same principles and functionality apply to real-world solutions, such as websites or phone apps.
 
 In this lab, you will: 
 - Create and use a Language Service resource.
@@ -27,6 +27,7 @@ You can use the Conversational Language Understanding service by creating a **La
    
 1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Service.
 
+
 ### Task 1: Create a Conversational Language Understanding App
 
 To implement natural language understanding with Conversational Language Understanding, you create an app; and then add entities, intents, and utterances to define the commands you want the app to execute.
@@ -41,7 +42,7 @@ To implement natural language understanding with Conversational Language Underst
     
     >**Tip :**
     >If you are ***not*** prompted to choose a language resource, it may be because you have multiple Language resources in your subscription; in which case:
-    >1. On the bar at the top if the page, click the **Settings (&#9881;)** button.
+    >1. On the bar at the top of the page, click the **Settings (&#9881;)** button.
     >1. On the **Settings** page, view the **Resources** tab.
     >1. Select your language resource, and click **Switch resource**.
     >1. At the top of the page, click **Language Studio** to return to the Language Studio home page.
@@ -64,7 +65,7 @@ To implement natural language understanding with Conversational Language Underst
 
 ### Task 2: Create intents, utterances, and entities
 
-An **intent** is an action you want to perform - for example, you might want to switch on a light, or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
+An **intent** is an action you want to perform - for example, you might want to switch on a light or turn off a fan. In this case, you'll define two intents: one to switch on a device, and another to switch off a device. For each intent, you'll specify sample *utterances* that indicate the kind of language used to indicate the intent.
 
 1. In the **Schema definition** pane, ensure that **Intents** is selected Then click **Add**, and add an intent with the name **switch_on** (in lower-case) and click **Add intent**.
 
@@ -72,7 +73,7 @@ An **intent** is an action you want to perform - for example, you might want to 
     
     ![Add the switch_on intent then select Add intent.](media/ai900_mod04c_t2_s1-a.png)
 
-1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop down, select **switch_on**. Next to the **switch_on** intent, type the utterance **turn the light on** and press **Enter** to submit this utterance to the list.
+1. Select the **switch_on** intent. It will take you to the **Data labeling** page. In the **Intent** drop-down, select **switch_on**. Next to the **switch_on** intent, type the utterance **turn the light on** and press **Enter** to submit this utterance to the list.
 
     ![Add an utterance to the training set by typing in "turn the light on" under Utterance.](media/ai900_mod04c_t2_s2.png)
 
@@ -264,6 +265,8 @@ Now let's open and edit a pre-written script, which will run the client applicat
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
+### You have successfully completed this lab.
 
 ## Learn more
 

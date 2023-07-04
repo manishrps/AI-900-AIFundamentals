@@ -8,7 +8,7 @@ In this lab, you will:
 - Create an Azure Cognitive Service and Azure Storage Account.
 - Configure and run a client application.
 
-## Use the Computer Vision Service to Read Text in an Image
+## Exercise 01: Use the Computer Vision Service to Read Text in an Image
 
 The **Computer Vision** cognitive service provides support for OCR tasks, including:
 
@@ -152,6 +152,8 @@ Now that you have a custom model, you can run a simple client application that u
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
+### You have successfully completed this lab.
 
 ## Learn more
 
