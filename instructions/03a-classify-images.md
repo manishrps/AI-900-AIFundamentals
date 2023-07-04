@@ -148,7 +148,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 4. Don't worry too much about the details of the code. The important thing is that it starts with some code to specify the prediction URL and key for your Custom Vision model. You'll need to update these so that the rest of the code uses your model.
 
-5.  Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your **Custom Vision project**(Task 4). You need the versions to be used *if you have an image URL*.
+5.  Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your **Custom Vision project**(Task 4,Step 2). You need the versions to be used *if you have an image URL*.
 
 6. Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** place holders in the code file.
 
