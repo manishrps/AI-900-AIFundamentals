@@ -45,6 +45,9 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
       ![](media/cogendpoint.png)
 
+   >**Note :** 
+   > Copy and save the **KEY 1** and **Endpoint** values to NotePad for future reference to connect from client applications.
+
 ### Task 2: Run Cloud Shell
 
 To test the capabilities of the Custom Vision service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
@@ -65,7 +68,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     ![Create storage by clicking confirm.](media/ai900mod1img8.png)
 
-1. Make sure the the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
     ![How to find the left hand drop down menu to switch to PowerShell](media/ai900mod1img9.png) 
 
@@ -97,7 +100,7 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to use the Language service](media/ai900mod4img1.png)
 
-1. Don't worry too much about the details of the code. In the Azure portal, navigate to your Cognitive Services resource. Then select the **Keys and Endpoints** page on the left hand pane. Copy the key and endpoint from the page and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
+1. Don't worry too much about the details of the code. In the Azure portal, navigate to your Cognitive Services resource. Then select the **Keys and Endpoints** page on the left-hand pane. Copy the key and endpoint from the page and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
 
     > **Tip:** You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
@@ -190,6 +193,8 @@ Now that you have a custom model, you can run a simple client application that u
    > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### You have successfully completed this lab.
 
 ## Learn more
 
