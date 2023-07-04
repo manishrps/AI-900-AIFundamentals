@@ -1,9 +1,9 @@
-# Module 04d : Explore question answering 
+# Module 04d: Explore question answering 
 For customer support scenarios, it's common to create a bot that can interpret and answer frequently asked questions through a website chat window, email, or voice interface. Underlying the bot interface is a knowledge base of questions and appropriate answers that the bot can search for suitable responses.
 
 ## Exercise 1: Create a custom question-answering knowledge base
 
-## Task 1: Create a custom question-answering knowledge base
+### Task 1: Create a custom question-answering knowledge base
 
 The Language service's custom question-answering feature enables you to quickly create a knowledge base, either by entering question-and-answer pairs or from an existing document or web page. It can then use some built-in natural language processing capabilities to interpret questions and find appropriate answers.
 
@@ -241,6 +241,8 @@ Experiment with the bot. You'll probably find that it can answer questions from 
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### You have successfully completed this lab.
 
 ### Learn more
 

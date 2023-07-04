@@ -1,12 +1,12 @@
-# Module 4a: Explore Speech
+# Module 04a: Explore Speech
 
 To build software that can interpret audible speech and respond appropriately, you can use the **Speech** cognitive service, which provides a simple way to transcribe spoken language into text and vice-versa.
 
 For example, suppose you want to create a smart device that can respond verbally to spoken questions, such as "What time is it?" The response should be the local time.
 
-To test the capabilities of the Speech service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
+To test the capabilities of the Speech service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as websites or phone apps.
 
-## Task 1: Create a Cognitive Services resource
+### Task 1: Create a Cognitive Services resource
 
 1. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Your Azure subscription*.
@@ -18,13 +18,13 @@ To test the capabilities of the Speech service, we'll use a simple command-line 
 
 1. Review and create the resource.
 
-### Get the Key and Location for your Cognitive Services resource
+## Exercise 01: Get the Key and Location for your Cognitive Services resource
 
 1. Wait for deployment to complete. Then go to your Cognitive Services resource, and on the **Overview** page, click the link to manage the keys for the service. You will need the endpoint and keys to connect to your Cognitive Services resource from client applications.
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
-## Task 2: Run Cloud Shell
+### Task 2: Run Cloud Shell
 
 To test the capabilities of the Speech service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
 
@@ -38,7 +38,7 @@ To test the capabilities of the Speech service, we'll use a simple command-line 
     
     ![Screenshot of the cloud shell in the Azure portal.](media/stoarge-up.png)
    
-1. Make sure the the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
+1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
     ![How to find the left hand drop down menu to switch to PowerShell](media/analyze-receipts/powershell-portal-guide-03.png)
 
@@ -46,7 +46,7 @@ To test the capabilities of the Speech service, we'll use a simple command-line 
 
     ![Wait for PowerShell to start.](media/analyze-receipts/powershell-prompt05.png)
 
-## Task 3: Configure and run a client application
+### Task 3: Configure and run a client application
 
 Now that you have a custom model, you can run a simple client application that uses the Speech service.
 
@@ -110,15 +110,15 @@ Now that you have a custom model, you can run a simple client application that u
    
         https://www.microsoft.com/videoplayer/embed/RWMSIU
        
+**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-    **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-    > - Hit the Validate button for the corresponding task.  
-    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
+### You have successfully completed this lab.
 
 ## Learn more
 
 This simple app shows only some of the capabilities of the Speech service. To learn more about what you can do with this service, see the [Speech page](https://azure.microsoft.com/services/cognitive-services/speech-services/).
-
-### You have successfully completed this lab.
