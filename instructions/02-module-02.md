@@ -179,11 +179,9 @@ Follow the next steps to run a job that uses automated machine learning to train
 
     ![Screenshot of how to locate view all other metrics on the Model tab.](media/use-automated-machine-learning/ai-900-overview-02.png)
 
-1. Select the **Metrics** tab, use the arrows icon to expand the panel if it is not already expanded and select the **residuals** and **predicted_true** charts if they are not already selected. 
+1. Select the **Metrics** tab, use the arrows icon to expand the panel if it is not already expanded and select the **residuals** and **predicted_true** charts if they are not already selected. Scroll down and review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
 
-    ![Screenshot of the metrics tab with the residuals and predicted_true charts selected.](media/use-automated-machine-learning/ai-900-matrix1.png)
-
-    Scroll down and review the charts which show the performance of the model. The first chart shows the *residuals*, the differences between predicted and actual values, as a histogram, the second chart compares the predicted values against the true values.
+   ![Screenshot of the metrics tab with the residuals and predicted_true charts selected.](media/use-automated-machine-learning/ai-900-matrix1.png)
 
 1. Select the **Explanations(preview)** tab. Select an Explanation ID and then select **Aggregate feature importance** tab. This chart shows how much each feature in the dataset influences the label prediction, like this:
 
@@ -201,13 +199,14 @@ Follow the next steps to run a job that uses automated machine learning to train
 
       ![Picture1](media/ai900lab2img2.png)
       
-3. To deploy the model with the following settings and then click on **Deploy**.
-    - **Name**: predict-rentals
-    - **Description**: Predict cycle rentals
-    - **Compute type**: Azure Container Instance
-    - **Enable authentication**: Selected
+3. To deploy the model with the following settings and then
+    - **Name**: predict-rentals (1)
+    - **Description**: Predict cycle rentals (2)
+    - **Compute type**: Azure Container Instance (3)
+    - **Enable authentication**: Selected (4)
+    - Click on **Deploy** (5) 
 
-       ![Picture1](media/ai900lab2img1.png)
+       ![Picture1](media/ai900lab2img1-edited.png)
 
 1. Wait for the deployment to start - this may take a few seconds. Then, in the **Model summary** section, observe the **Deploy status** for the **predict-rentals** service, which should be **Running**. Wait for this status to change to **Succeeded**, which may take some time. You may need to select **Refresh** periodically.
 
