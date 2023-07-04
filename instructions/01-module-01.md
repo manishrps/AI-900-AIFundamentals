@@ -146,6 +146,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+### You have successfully completed the lab.
 
 ## Learn more
 
