@@ -242,6 +242,8 @@ Experiment with the bot. You'll probably find that it can answer questions from 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+### You have successfully completed this lab.
+
 ### Learn more
 
 - To learn more about the Question Answering service, view [the documentation](https://docs.microsoft.com/azure/cognitive-services/language-service/question-answering/overview).
