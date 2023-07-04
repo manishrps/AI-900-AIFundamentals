@@ -21,9 +21,9 @@ In this lab, you will train a regression model that predicts the price of an aut
 
     ![Picture1](media/ai900mod2cimg2.png)
 
-1. create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
+1. Create a new **Azure Machine Learning** resource with an *Azure Machine Learning* plan. Use the following settings:
 
-    - **Subscription**: Use exiting Azure subscription.
+    - **Subscription**: Use existing Azure subscription.
     - **Resource group**: Select **AI-900-Module-02a-<inject key="DeploymentID" enableCopy="false" />**
     - **Workspace name**: **AI-900-Workspace-<inject key="DeploymentID" enableCopy="false" />**
     - **Region**: Select <inject key="location" enableCopy="false" />
@@ -47,7 +47,7 @@ In this lab, you will train a regression model that predicts the price of an aut
    > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-### Task 2: Create compute
+### Task 2: Create Compute
 
 1. In [Azure Machine Learning studio](https://ml.azure.com?azure-portal=true), select the **&#8801;** icon (a menu icon that looks like a stack of three lines) at the top left to view the various pages in the interface (you may need to maximize the size of your screen). You can use these pages in the left hand pane to manage the resources in your workspace. Select the **Compute** page (under **Manage**).
 
@@ -77,7 +77,7 @@ In this lab, you will train a regression model that predicts the price of an aut
 > **Note :**
 > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
-The compute cluster will take some time to be created. You can move onto the next task while it's being created.
+> **Note**: The compute cluster will take some time to be created. You can move onto the next task while it's being created.
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -118,7 +118,7 @@ Azure Machine Learning includes a sample dataset that you can use for your regre
 
 1. Scroll to the right of the dataset until you see the **Automobile price data (Raw)** column, which is the label that your model predicts.
 
-1. Right- Click on the **Automobile price data (raw**) under **Auto Price Training** and select **Preview data.** click on the **normalized-losses** column header. Then review the statistics for this column. Note there are quite a few missing values in this column. Missing values  limit the column's usefulness for predicting the **price** label so you might want to exclude it from training.
+1. Right- Click on the **Automobile price data (raw**) under **Auto Price Training** and select **Preview data.** Click on the **normalized-losses** column header. Then review the statistics for this column. Note there are quite a few missing values in this column. Missing values  limit the column's usefulness for predicting the **price** label so you might want to exclude it from training.
 
     ![Picture1](media/ai900lab2aimg2.png)
 
@@ -200,17 +200,15 @@ To apply your data transformations, you must run the pipeline.
 
 1. Select **Submit**, and create a new experiment named **mslearn-auto-training** on your compute cluster.
 
-1. Wait for the run to finish, which might take 5 minutes or more.
+1. Wait for the run to finish, which might take 5 minutes or more.Notice that the left hand panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**. 
 
     ![Screenshot of designer asset library with the completed job and job details button below.](media/completed-job-2c.png)
-
-    Notice that the left hand panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**. 
-
+    
 1. When the run has completed, click on **Job detail**. A new tab will open, and you will see the components that have completed with check marks like this:
 
     ![Screenshot of dataset with modules in completed job state.](media/normalize-complete-2a.png)
 
-The dataset is now prepared for model training. Close the Job detail tab to return to the pipeline.
+1. The dataset is now prepared for model training. Close the Job detail tab to return to the pipeline.
 
 ### Task 7: Create training pipeline
 
@@ -236,14 +234,14 @@ After you've used data transformations to prepare the data, you can use it to tr
 
       ![Picture1](media/ai900lab2aimg1.png)
 
-    The **price** label model will predict a numeric value, so we need to train the model using a *regression* algorithm.
+   > **Note**:The **price** label model will predict a numeric value, so we need to train the model using a *regression* algorithm.
 
 1. In the **Asset library**, search for and place a **Linear Regression** module to the canvas, to the left of the **Split Data** module and above the **Train Model** module. Then connect its output to the **Untrained model** (left) input of the **Train Model** module.
 
     > **Note :**
     > There are multiple algorithms you can use to train a regression model. For help choosing one, take a look at the [Machine Learning Algorithm Cheat Sheet for Azure Machine Learning designer](https://aka.ms/mlcheatsheet?azure-portal=true).
 
-    To test the trained model, we need to use it to *score* the validation dataset we held back when we split the original data - in other words, predict labels for the features in the validation dataset.
+1. To test the trained model, we need to use it to *score* the validation dataset we held back when we split the original data - in other words, predict labels for the features in the validation dataset.
  
 1. In the **Asset library**, search for and place a **Score Model** module to the canvas, below the **Train Model** module. Then connect the output of the **Train Model** module to the **Trained model** (left) input of the **Score Model** module; and drag the **Results dataset2** (right) output of the **Split Data** module to the **Dataset** (right) input of the **Score Model** module.
 
@@ -465,3 +463,5 @@ You also tested a service that is ready to be connected to a client application 
   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
+### You have successfully completed this lab.
