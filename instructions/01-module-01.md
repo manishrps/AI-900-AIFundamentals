@@ -38,7 +38,7 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
 
        ![Picture1](media/ai900mod1img4.png)
    
-   >**Note:** Wait for deployment to complete, and then go to the deployed resource.
+       >**Note:** Wait for deployment to complete, and then go to the deployed resource.
 
 1. View the **Keys and Endpoint** page for your Anomaly Detector resource. 
    
@@ -55,7 +55,7 @@ To test the capabilities of the Anomaly Detector service, we'll use a simple com
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/powershell-portal-guide-1.png)
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.   
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img6.png)
  
