@@ -38,11 +38,18 @@ Create a **Cognitive Services** resource in your Azure subscription.
     - **Name**: Enter **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (4)**
     - **Pricing tier**: Standard S0 **(5)**
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Check the box. **(6)**
-    -  Click **Review + Create (7)** 
+    -  Click **Review + Create (7)**
     
-       ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg3.png)
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg3.png)
+
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Services.
  
 1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
+   
+   >**Note :** 
+      > Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications. 
 
 ### Task 2: Create a Custom Vision project
 
@@ -144,9 +151,10 @@ Now you're ready to publish your trained model and use it from a client applicat
 
    ![Photograph of a group of pedestrians.](media/ai900mod3bimg10.png)
  
-1. to publish the trained model with the following settings:
-    - **Model name**: traffic-safety
-    - **Prediction resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/>**
+1. To publish the trained model with the following settings:
+    - **Model name**: traffic-safety **(1)**
+    - **Prediction resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (2)**
+    - Click **Publish (3)**
 
 1. After publishing, click the *Prediction URL* (&#127760;) icon to see the information required to use the published model.
 
@@ -208,16 +216,15 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your Custom Vision project. You need the versions to be used *if you have an image URL*.
 
-    Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY**placeholders in the code file.
-
+    Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** placeholders in the code file.
     After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
 
-    ```PowerShell
-    $predictionUrl="https..."
-    $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
-    ```
+    
+     > $predictionUrl="https..."   
+     > $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
 
-5. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
+
+6. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
 ### Task 7: Test the client application
 

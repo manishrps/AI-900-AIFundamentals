@@ -1,3 +1,4 @@
+
 # Module 03e: Explore form recognition
 
 In the artificial intelligence (AI) field of computer vision, optical character recognition (OCR) is commonly used to read printed or handwritten documents. Often, the text is simply extracted from the documents into a format that can be used for further processing or analysis.
@@ -8,9 +9,8 @@ Form Recognizer uses machine learning models trained to extract text from images
 
 To test the capabilities of the Form Recognizer service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply in real-world solutions, such as web sites or phone apps.
 
-## Exercise 1: Create a *Cognitive Services* resource
 
-### Task 1: Create a *Cognitive Services* resource
+## Exercise 1: Create a *Cognitive Services* resource
 
 You can use the Form Recognizer service by creating either a **Form Recognizer** resource or a **Cognitive Services** resource.
 
@@ -24,9 +24,13 @@ If you haven't already done so, create a **Cognitive Services** resource in your
     - **Pricing tier**: Standard S0
     - **By checking this box I acknowledge that I have read and understood all the terms below**: Selected.
 
-1. Review and create the resource, and wait for deployment to complete. Then go to the deployed resource.
+1. Click on **Review and create**.
+   
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+   
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Service.
 
-1. View the **Keys and Endpoint** page for your Cognitive Services resource. You will need the endpoint and keys to connect from client applications.
+1. View the **Keys and Endpoint** page for your Cognitive Services resource. Copy and save the **KEY 1** and **Enpoint** value to NotePad for future reference to connect from client applications. 
 
 ### Task 2: Run Cloud Shell
 
@@ -74,17 +78,16 @@ Now that you have a custom model, you can run a simple client application that u
 
     ![The editor containing code to analyze fields in a receipt.](media/analyze-receipts/recognize-receipt-code06.png)
 
-1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource. Copy these from the **Keys and Endpoints** page for your resource from the Azure portal and paste them into the code editor, replacing the **YOUR_KEY** and **YOUR_ENDPOINT** placeholder values respectively.
+1. Don't worry too much about the details of the code, the important thing is that it needs the endpoint URL and either of the keys for your Cognitive Services resource.  Copy these from the **Keys and Endpoints** page for your resource (Task 1, Step 5) and paste them into the code editor, replacing the **YOUR_KEY** with *KEY 1* and **YOUR_ENDPOINT** with *Enpoint* placeholder values, respectively.
 
-    > **Tip**
-    > You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
+    > **Tip**: You may need to use the separator bar to adjust the screen area as you work with the **Keys and Endpoint** and **Editor** panes.
 
     After pasting the key and endpoint values, the first two lines of code should look similar to this:
 
-    ```PowerShell
-    $key="1a2b3c4d5e6f7g8h9i0j...."    
-    $endpoint="https..."
-    ```
+    
+     > $key="1a2b3c4d5e6f7g8h9i0j...."    
+     > $endpoint="https..."
+    
 
 1.  After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor. Now that you've set up the key and endpoint, you can use your resource to analyze fields from a receipt. In this case, you'll use the Form Recognizer's built-in model to analyze a receipt for the fictional Northwind Traders retail company.
 
@@ -96,6 +99,9 @@ Now that you have a custom model, you can run a simple client application that u
 
     ```PowerShell
     cd ai-900
+    ```
+    
+    ```PowerShell
     ./form-recognizer.ps1
     ```
 

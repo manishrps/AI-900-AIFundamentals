@@ -32,7 +32,11 @@ In this lab, you will train a regression model that predicts the price of an aut
     - **Application insights**: Note the default new application insights resource that will be created for your workspace.
     - **Container registry**: None (one will be created automatically the first time you deploy a model to a container)
 
-1. Select **Review + create**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
+1. Select **Review + create**.
+   
+1. After successfully completing the validation process, click on the "Create" button located in the lower left corner of the page.
+
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
@@ -152,19 +156,16 @@ Follow the remaining steps, use the image for reference as you add and configure
 
 6. Double click the **Clean Missing Data** module, and in the pane on the right, click **Edit column**. Then in the **Columns to be cleaned** window, select **With rules**, in the **Include** list select **Column names**, in the box of column names enter **bore**, **stroke**, and **horsepower**. Then, click on **Save**. The below screenshot has been provided for your reference: 
 
-
       ![Picture1](media/ai900lab2aimg3.png)
 
-    > 💡 **Note:** After typing the word click in empty area to insert the word.
-
-    ![Screenshot of how bore, stroke, and horsepower columns are selected.](media/clean-missing-values-2a.png)
+    > **Note:** After typing the word click in empty area to insert the word.
 
 7. With the **Clean Missing Data** module still selected, in the pane on the right, set the following configuration settings:
     - **Minimum missing value ratio**: 0.0
     - **Maximum missing value ratio**: 1.0
     - **Cleaning mode**: Remove entire row
 
-    >**Tip**
+    >**Tip :**
     >If you view the statistics for the **bore**, **stroke**, and **horsepower** columns, you'll see a number of missing values. These columns have fewer missing values than **normalized-losses**, so they might still be useful in predicting **price** once you exclude the rows where the values are missing from training.
 
 8. In the **Asset library**, search for a **Normalize Data** module and place it on the canvas, below the **Clean Missing Data** module. Then connect the left-most output from the **Clean Missing Data** module to the input of the **Normalize Data** module.
@@ -296,6 +297,7 @@ One way to evaluate a regression model is to compare the predicted labels to the
     - **Relative Absolute Error (RAE)**
     - **Coefficient of Determination (R<sup>2</sup>)**
     
+     >**Note:** If you can't see all regression performance metrics it is because screen is 100% zoom in if have to zoom out the screen until you see all regression performance metrics .
 1. Close the *Evaluation_results* pane.
 
 When you've identified a model with evaluation metrics that meet your needs, you can prepare to use that model with new data.
@@ -330,6 +332,8 @@ When you've identified a model with evaluation metrics that meet your needs, you
     3,NaN,alfa-romero,gas,std,two,convertible,rwd,front,88.6,168.8,64.1,48.8,2548,dohc,four,130,mpfi,3.47,2.68,9,111,5000,21,27
     1,NaN,alfa-romero,gas,std,two,hatchback,rwd,front,94.5,171.2,65.5,52.4,2823,ohcv,six,152,mpfi,2.68,3.47,9,154,5000,19,26
     ```
+
+   > **Note**: Make sure you copy all the data of the CSV data.
 
 1. Connect the new **Enter Data Manually** module to the same **dataset** input of the **Select Columns in Dataset** module as the **Web Service Input**.
 

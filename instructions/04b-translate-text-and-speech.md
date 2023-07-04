@@ -1,3 +1,4 @@
+
 # Module 04b: Explore translation
 
 One of the driving forces that has enabled human civilization to develop is the ability to communicate with one another. In most human endeavors, communication is key.
@@ -14,22 +15,37 @@ You can use the Computer Vision service by creating either a **Translator** reso
 
 If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
-1. In the Azure Portal, Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
-    - **Subscription**: *Retain the Existing Subscription*.
-    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Region**: Select **<inject key="location" enableCopy="false"/>**
-    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Pricing tier**: Standard S0
-    - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox.
+1. In the Azure Portal click the **&#65291;Create a resource** button.
 
-    
-1. Click on **Review + Create** and Click on **Create**, and wait for deployment to complete. Then go to the deployed resource.
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img1.png)
    
-     ![](media/read-text-computer-vision/lab3d-3.png)
+1. In the Marketplace page search for **Cognitive Services** and Select **Cognitive Services** 
+
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg1.png)
+     
+1. On Cognitive Services Page Click on **Create**. 
+     
+     ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg2.png)
+
+1. Create a **Cognitive Services** resource with the following settings:
+
+    - **Subscription**: Retain the Existing Subscription **(1)**.
+    - **Resource group**: Select **AI-900-Module-04b-<inject key="DeploymentID" enableCopy="false"/> (2)**
+    - **Region**: Select **<inject key="location" enableCopy="false"/> (3)**
+    - **Name**: Enter **ai900cognitive-<inject key="DeploymentID" enableCopy="false"/> (4)**
+    - **Pricing tier**: Standard S0 **(5)**
+    - **By checking this box I acknowledge that I have read and understood all the terms below**: Select the checkbox. **(6)**
+
+1. Click on **Review + Create (7)**.
+   
+     ![](media/ai900mod4img2.png)
+   
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.
+   
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your Cognitive Service.
 
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
-> **Note:** To use the Translator service you do not need to use the Cognitive Service endpoint. A global endpoint just for the Translator service is provided. 
 
 ### Task-2: Run Cloud Shell
 

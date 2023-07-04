@@ -27,7 +27,11 @@
     - **Application insights**: *Note the default new application insights resource that will be created for your workspace*
     - **Container registry**: None (*one will be created automatically the first time you deploy a model to a container*)
 
-1. Select **Review + create**, then select **Create**. Wait for your workspace to be created (it can take a few minutes), and then go to the deployed resource.
+1. Select **Review + create**.
+   
+1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
+
+1. Wait for deployment to complete(it can take a few minutes), and then click on the **Go to resource** button, this will take you to your workspace resource.
 
 1. Select **Launch studio** (or open a new browser tab and navigate to [https://ml.azure.com](https://ml.azure.com?azure-portal=true), and sign into Azure Machine Learning studio using your Microsoft account).
 
@@ -195,7 +199,7 @@ To apply your data transformations, you need to run the pipeline as an experimen
     Notice that theleft-handd panel is now on the **Submitted Jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
 >**Note :**
-> if the error occurs and states that the data type is already in the collection, submit the pipeline again and re-run it.
+> If the error occurs and states that the data type is already in the collection, submit the pipeline again and re-run it.
 
 ### Task 8: View the transformed data
 
