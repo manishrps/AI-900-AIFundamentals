@@ -40,12 +40,12 @@
 
    ![Picture1](media/ai900mod2cimg4.png)
 
- **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
-  > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-  > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-  > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-  > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 2: Create compute
 
@@ -74,10 +74,9 @@
    
        ![Picture1](media/ai900mod2cimg7.png)
        
-       > **Note:**
-       > Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
+       > **Note:** Compute instances and clusters are based on standard Azure virtual machine images. For this module, the *Standard_DS11_v2* image is recommended to achieve the optimal balance of cost and performance. If your subscription has a quota that does not include this image, choose an alternative image; but bear in mind that a larger image may incur higher cost and a smaller image may not be sufficient to complete the tasks. Alternatively, ask your Azure administrator to extend your quota.
 
-The compute cluster will take some time to be created. You can move on to the next step while you wait.
+  The compute cluster will take some time to be created. You can move on to the next step while you wait.
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -157,19 +156,19 @@ In Azure Machine Learning, data for model training and other operations are usua
      
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data represents measurements of the culmen (bill) length and depth, flipper length, and body mass for multiple observations of penguins. There are three species of penguin represented in the dataset: *Adelie*, *Gentoo*, and *Chinstrap*.
 
-     > **Note :**
-     > The penguins dataset used in this exercise is a subset of data collected and made available by [Dr. Kristen
+     > **Note :** The penguins dataset used in this exercise is a subset of data collected and made available by [Dr. Kristen
 Gorman](https://www.uaf.edu/cfos/people/faculty/detail/kristen-gorman.php)
 and the [Palmer Station, Antarctica LTER](https://pal.lternet.edu/), a
 member of the [Long Term Ecological Research
 Network](https://lternet.edu/).
 
-  **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
- 
-   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+     **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+     > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+     > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+     > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+     > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
   
 ### Task 5: Load data to a canvas
 
@@ -249,18 +248,16 @@ Network](https://lternet.edu/).
 
 To apply your data transformations, you need to run the pipeline as an experiment.
 
-1. Select **Submit**, and run the pipeline as a new experiment click on **Create New** and named it as **mslearn-penguin-training** on your compute cluster. Click on **Submit**
+1. Select **Submit**, and run the pipeline as a new experiment click on **Create New** and name it as **mslearn-penguin-training** on your compute cluster. Click on **Submit**
 
      >**Note :**
      >If the pipeline failed, then re-submit again.
 
     ![Picture1](media/ai900mod2cimg19.png)
 
-1. Wait for the run to finish. This may take 5 minutes or more.
+1. Wait for the run to finish. This may take 5 minutes or more.Notice that the left-hand panel is now on the **Submitted jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
     ![Screenshot of designer asset library with the completed job and job details button below.](media/create-classification-model/completed-job1.png)
-
-    Notice that theleft-hand panel is now on the **Submitted jobs** pane. You will know when the run is complete because the status of the job will change to **Completed**.
 
 ### Task 8: View the transformed data
 
@@ -276,9 +273,9 @@ To apply your data transformations, you need to run the pipeline as an experimen
 
 1. Close the normalized data result visualization. Return to the previous pipeline tab.
 
-Now that you have selected and prepared the features you want to use from the dataset, you're ready to use them to train a clustering model.
+1. Now that you have selected and prepared the features you want to use from the dataset, you're ready to use them to train a clustering model.
 
-After you've used data transformations to prepare the data, you can use it to train a machine-learning model.
+>**Note**: After you've used data transformations to prepare the data, you can use it to train a machine-learning model.
 
   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 
@@ -327,7 +324,7 @@ Follow the steps below, using the image above for reference as you add and confi
     > 4. Reassigning the points to their closest centroid after the move.
     > 5. Repeating steps 3 and 4 until the cluster allocations stabilize or the specified number of iterations has been completed.
 
-   After using 70% of the data to train the clustering model, you can use the remaining 30% to test it by using the model to assign the data to clusters.
+   >**Note**: After using 70% of the data to train the clustering model, you can use the remaining 30% to test it by using the model to assign the data to clusters.
 
 1. In the **Asset library**, search for and place an **Assign Data to Clusters** module to the canvas, below the **Train Clustering Model** module. Then connect the **Trained model** (left) output of the **Train Clustering Model** module to the **Trained model** (left) input of the **Assign Data to Clusters** module; and connect the **Results dataset2** (right) output of the **Split Data** module to the **Dataset** (right) input of the **Assign Data to Clusters** module.
 
@@ -349,9 +346,9 @@ Now you're ready to run the training pipeline and train the model.
 
 1. Close the **Assign Data to Clusters** visualization. Return to the pipeline tab.
 
-The model is predicting clusters for the penguin observations, but how reliable are its predictions? To assess that, you need to evaluate the model.
+1. The model is predicting clusters for the penguin observations, but how reliable are its predictions? To assess that, you need to evaluate the model.
 
-Evaluating a clustering model is made difficult by the fact that there are no previously known *true* values for the cluster assignments. A successful clustering model is one that achieves a good level of separation between the items in each cluster, so we need metrics to help us measure that separation.
+   >**Note :** Evaluating a clustering model is made difficult by the fact that there are no previously known *true* values for the cluster assignments. A successful clustering model is one that achieves a good level of separation between the items in each cluster, so we need metrics to help us measure that separation.
 
 ### Task 11: Add an Evaluate Model module
 
@@ -376,9 +373,9 @@ Evaluating a clustering model is made difficult by the fact that there are no pr
 
 1. Close the **Evaluate Model result visualization** tab.
 
-Now that you have a working clustering model, you can use it to assign new data to clusters in an *inference pipeline*.
+1. Now that you have a working clustering model, you can use it to assign new data to clusters in an *inference pipeline*.
 
-After creating and running a pipeline to train the clustering model, you can create an *inference pipeline*. The inference pipeline uses the model to assign new data observations to clusters. This model will form the basis for a predictive service that you can publish for applications to use.
+   >**Note :** After creating and running a pipeline to train the clustering model, you can create an *inference pipeline*. The inference pipeline uses the model to assign new data observations to clusters. This model will form the basis for a predictive service that you can publish for applications to use.
 
 ### Task 12: Create an inference pipeline
 
@@ -426,10 +423,9 @@ After creating and running a pipeline to train the clustering model, you can cre
 
 1. When the pipeline has finished, select **Job detail**. In the new tab, right click on **Assign Data to Clusters** module, select **Preview data** and select **Results dataset** to see the predicted cluster assignments and metrics for the three penguin observations in the input data.
 
-Your inference pipeline assigns penguin observations to clusters based on their features. Now you're ready to publish the pipeline so that client applications can use it.
+1. Your inference pipeline assigns penguin observations to clusters based on their features. Now you're ready to publish the pipeline so that client applications can use it.
 
-   >**Note :**
-   >In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an **inference cluster**, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
+    >**Note :** In this exercise, you'll deploy the web service to an Azure Container Instance (ACI). This type of compute is created dynamically, and is useful for development and testing. For production, you should create an **inference cluster**, which provides an Azure Kubernetes Service (AKS) cluster that provides better scalability and security.
 
 ### Task 13: Deploy a service
 
@@ -452,7 +448,7 @@ Your inference pipeline assigns penguin observations to clusters based on their 
 
 1. To view the deployment status, expand the left pane by selecting the menu icon at the top left of the screen. View the **Endpoints** page (under **Assets**) and select **predict-penguin-clusters**. When the deployment has finished, the **Deployment state** will change to **Healthy**.
 
-> **Note**: The real-time endpoint may be in an unhealthy state, wait for another **30-40 minutes** for the endpoint state to change the deployment state to **Healthy**.
+   > **Note**: The real-time endpoint may be in an unhealthy state, wait for another **30-40 minutes** for the endpoint state to change the deployment state to **Healthy**.
 
 ### Task 14: Test the service
 
@@ -488,4 +484,6 @@ Your inference pipeline assigns penguin observations to clusters based on their 
 
     ![Screenshot of the Test pane with sample test result.](media/test-interface-2c.png)
 
-You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
+1. You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
+
+### You have successfully completed this lab.
