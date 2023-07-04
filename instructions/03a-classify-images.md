@@ -10,8 +10,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 You can use the Custom Vision service by creating either a **Custom Vision** resource or a **Cognitive Services** resource.
 
->**Note :**
->Not every resource is available in every region. Whether you create a Custom Vision or Cognitive Services resource, only resources created in [certain regions](https://azure.microsoft.com/global-infrastructure/services/?products=cognitive-services) can be used to access Custom Vision services. For simplicity, a region is pre-selected for you in the configuration instructions below.
+>**Note :** Not every resource is available in every region. Whether you create a Custom Vision or Cognitive Services resource, only resources created in [certain regions](https://azure.microsoft.com/global-infrastructure/services/?products=cognitive-services) can be used to access Custom Vision services. For simplicity, a region is pre-selected for you in the configuration instructions below.
 
 Create a **Cognitive Services** resource in your Azure subscription.
 
@@ -65,7 +64,7 @@ To train an object detection model, you need to create a Custom Vision project b
 
 1. When the model iteration has been trained, review the *Precision*, *Recall*, and *AP* performance metrics - these measure the prediction accuracy of the classification model, and should all be high.
 
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
    > - Hit the Validate button for the corresponding task.  
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -126,7 +125,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     > **Tip**: Ensure that the type of shell indicated on the top left of the Cloud Shell pane is *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
-    Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+    >**Note**: You can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 2. In the command shell, enter the following commands to download the files for this exercise and save them in a folder named **ai-900** (after removing that folder if it already exists)
 
@@ -156,9 +155,9 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 4. Don't worry too much about the details of the code. The important thing is that it starts with some code to specify the prediction URL and key for your Custom Vision model. You'll need to update these so that the rest of the code uses your model.
 
-    Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your **Custom Vision project**. You need the versions to be used *if you have an image URL*.
+5.  Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your **Custom Vision project**(Task 4,Step 2). You need the versions to be used *if you have an image URL*.
 
-    Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** place holders in the code file.
+6. Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** place holders in the code file.
 
     After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
 
@@ -166,10 +165,8 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
      > $predictionUrl="https..."   
      > $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
 
-   
-       
+7. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
-6. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
 ## Task 6: Test the client application
 
@@ -209,18 +206,15 @@ Now you can use the sample client application to classify images based on the an
 
     ![Photograph of a lion.](media/create-image-classification-system/animal-3.jpg)
 
-1. Verify that the model classifies this image as **lion**.
+1. Verify that the model classifies this image as **lion**. Hopefully, your image classification model correctly classified all three images.
 
-Hopefully, your image classification model correctly classified all three images.
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
    > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
    > - Hit the Validate button for the corresponding task.  
    > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
    > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
 ### You have successfully completed this lab.
-
 
 ## Learn more
 

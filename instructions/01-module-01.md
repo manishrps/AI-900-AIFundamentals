@@ -57,7 +57,7 @@ To test the capabilities of the Anomaly Detector service, we'll use a simple com
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/powershell-portal-guide-1.png)
 
-1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**. If you do not see this option, skip the step.  
+1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **PowerShell**.   
 
      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod1img6.png)
  
@@ -149,6 +149,7 @@ Now that you have a Cloud Shell environment, you can run a simple application th
   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
   > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
+### You have successfully completed the lab.
 
 ## Learn more
 

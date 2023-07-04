@@ -92,7 +92,7 @@ To train an object detection model, you need to upload images that contain the c
 
 1. Hold the mouse over any object (cyclist or pedestrian) in the image until an automatically detected region is displayed. Then select the object, and if necessary resize the region to surround it. Alternatively, you can simply drag around the object to create a region.
 
-    When the object is tightly selected within the rectangular region, enter the appropriate tag for the object (*Cyclist* or *Pedestrian*) and use the **Tag region** (**+**) button to add the tag to the project.
+1.  When the object is tightly selected within the rectangular region, enter the appropriate tag for the object (*Cyclist* or *Pedestrian*) and use the **Tag region** (**+**) button to add the tag to the project.
 
      ![Screenshot of an image with a tagged region in the Image Detaol dialog box.](media/tag-image-3b.png)
 
@@ -135,9 +135,9 @@ Now that you've tagged the images in your project, you're ready to train a model
 
       ![Screenshot of performance metrics for a trained model.](media/quicktest-3b.png)
       
-    In the pane on the right, under **Pedictions**, each detected object is listed with its tag and probability. Select each object to see it highlighted in the image.
+5.   In the pane on the right, under **Pedictions**, each detected object is listed with its tag and probability. Select each object to see it highlighted in the image.
 
-    The predicted objects may not all be correct - after all, cyclists and pedestrians share many common features. The predictions that the model is most confident about have the highest probability values. Use the **Threshold Value** slider to eliminate objects with a low probability. You should be able to find a point at which only correct predictions are included (probably at around 85-90%).
+6.  The predicted objects may not all be correct - after all, cyclists and pedestrians share many common features. The predictions that the model is most confident about have the highest probability values. Use the **Threshold Value** slider to eliminate objects with a low probability. You should be able to find a point at which only correct predictions are included (probably at around 85-90%).
 
       ![Screenshot of performance metrics for a trained model.](media/test-detection-3b.png)
 
@@ -151,16 +151,17 @@ Now you're ready to publish your trained model and use it from a client applicat
 
    ![Photograph of a group of pedestrians.](media/ai900mod3bimg10.png)
  
-1. To publish the trained model with the following settings:
+1. To publish the trained model with the following settings
+
     - **Model name**: traffic-safety **(1)**
     - **Prediction resource**: **AI-900-cognitive-<inject key="DeploymentID" enableCopy="false"/> (2)**
     - Click **Publish (3)**
+    
+      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg11.png)
 
 1. After publishing, click the *Prediction URL* (&#127760;) icon to see the information required to use the published model.
 
-      ![Start Cloud Shell by clicking on the icon to the right of the top search box](media/ai900mod3bimg11.png)
-       
-Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
+   > **Note**: Later, you will need the appropriate URL and Prediction-Key values to get a prediction from an Image URL, so keep this dialog box open and carry on to the next task.
 
 ### Task 6: Prepare a client application
 
@@ -186,7 +187,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     > **Tip**: Ensure that the type of shell indicated on the top left of the Cloud Shell pane is *PowerShell*. If it is *Bash*, switch to *PowerShell* by using the drop-down menu.
 
-    Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
+    > **Note :** You can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 2. In the command shell, enter the following commands to download the files for this exercise and save them in a folder named **ai-900** (after removing that folder if it already exists)
 
@@ -206,19 +207,19 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
     code detect-objects.ps1
     ```
 
-    Notice how this opens an editor like the one in the image below:
+4.  Notice how this opens an editor like the one in the image below:
 
       ![Screenshot of the code editor in the cloud shell.](media/code-editor-3b.png)
 
      > **Tip**: You can use the separator bar between the cloud shell command line and the code editor to resize the panes.
 
-4. Don't worry too much about the details of the code. The important thing is that it starts with some code to specify the prediction URL and key for your Custom Vision model. You'll need to update these so that the rest of the code uses your model.
+5. Don't worry too much about the details of the code. The important thing is that it starts with some code to specify the prediction URL and key for your Custom Vision model. You'll need to update these so that the rest of the code uses your model.
 
-    Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your Custom Vision project. You need the versions to be used *if you have an image URL*.
+6. Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your Custom Vision project(Task 5,Step 3). You need the versions to be used *if you have an image URL*.
 
-    Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** placeholders in the code file.
-    After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
+7. Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** placeholders in the code file.
 
+8. After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
     
      > $predictionUrl="https..."   
      > $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
@@ -252,13 +253,22 @@ Now you can use the sample client application to detect cyclists and pedestrians
 
     ![Photograph of a group of pedestrians.](media/create-object-detection-solution/road-safety-2.jpg)
 
- Hopefully, your object detection model did a good job of detecting pedestrians and cyclists in the test images.
+1. Hopefully, your object detection model did a good job of detecting pedestrians and cyclists in the test images.
 
    
-   >**Note**: If you are not able to see the Result in Powershell, then nevigate back to the custom vision portal, go to the **predictions** tab, you see the details of the images as showned below:
+    >**Note**: If you are not able to see the Result in Powershell, then nevigate back to the custom vision portal, go to the **predictions** tab, you see the details of the images as showned below:
 
    ![Photograph of a group of pedestrians.](media/ai900mod3bimg12.png)
 
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+
+   > - Navigate to the Lab Validation tab, from the upper right corner in the lab guide section.
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+
+
+### You have successfully completed this lab.
 
 ## Learn more
 

@@ -10,10 +10,6 @@ In this lab, you will:
 
 ## Task 1 : Create a *Face API* resource
 
-You can use the Face service by creating a **Face** resource. (Face API is no longer available in Cognitive Services)
-
-If you haven't already done so, create a **Face API** resource in your Azure subscription.
-
 1. Click the **&#65291;Create a resource** button, search for *Face*, and create a **Face** resource with the following settings:
     - **Subscription**: *Use existing Azure subscription*.
     - **Resource group**: **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" />**
@@ -137,12 +133,13 @@ Now that you have a custom model, you can run a simple client application that u
 
 1. Review the results of the face analysis for the third image.
 
-**Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
 
-   - Click on the **Lab Validation tab** located at the upper right corner of the lab guide section and navigate to the **Lab Validation** Page.
-   - Hit the **Validate** button for the corresponding task.
-   - If you receive a success message, you can proceed to the next task. If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   - If you need any assistance, please contact us at [labs-support@spektrasystems.com](labs-support@spektrasystems.com).We are available 24/7 to help you out.
+### You have successfully completed this lab.
 
 ## Learn more
 
