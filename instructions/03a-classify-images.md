@@ -148,9 +148,9 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
 4. Don't worry too much about the details of the code. The important thing is that it starts with some code to specify the prediction URL and key for your Custom Vision model. You'll need to update these so that the rest of the code uses your model.
 
-    Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your **Custom Vision project**. You need the versions to be used *if you have an image URL*.
+5.  Get the *prediction URL* and *prediction key* from the dialog box you left open in the browser tab for your **Custom Vision project**(Task 4). You need the versions to be used *if you have an image URL*.
 
-    Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** place holders in the code file.
+6. Use these values to replace the **YOUR_PREDICTION_URL** and **YOUR_PREDICTION_KEY** place holders in the code file.
 
     After pasting the Prediction URL and Prediction Key values, the first two lines of code should look similar to this:
 
@@ -159,7 +159,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
     $predictionKey ="1a2b3c4d5e6f7g8h9i0j...."
     ```
 
-5. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
+7. After making the changes to the variables in the code, press **CTRL+S** to save the file. Then press **CTRL+Q** to close the code editor.
 
 ## Task 6: Test the client application
 
