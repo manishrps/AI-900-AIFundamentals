@@ -64,7 +64,7 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
        ![Picture1](media/ai900mod2cimg7.png)
        
-   > **Note**:The compute cluster will take some time to be created. You can move onto the next step while you wait.
+        > **Note**:The compute cluster will take some time to be created. You can move onto the next step while you wait.
 
 ## Task 3: Create a dataset
 
@@ -106,9 +106,9 @@ In this exercise, you will use a dataset of historical bicycle rental details to
 
 1. After the dataset has been created, open it and view the **Explore** page to see a sample of the data. This data contains historical features and labels for bike rentals.
 
-> **Citation**: *This data is derived from [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) and is used in accordance with the published data [license agreement](https://www.capitalbikeshare.com/data-license-agreement)*.
+   > **Citation**: *This data is derived from [Capital Bikeshare](https://www.capitalbikeshare.com/system-data) and is used in accordance with the published data [license agreement](https://www.capitalbikeshare.com/data-license-agreement)*.
 
-## Run an automated machine learning job
+## Task 3.1: Run an automated machine learning job
 
 Follow the next steps to run a job that uses automated machine learning to train a regression model that predicts bicycle rentals.
 
@@ -222,7 +222,19 @@ Now you can test your deployed service.
 
     ![Screenshot of location of Endpoints on the left hand menu.](media/use-automated-machine-learning/endpoints-2.png)
 
-> **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 5.
+     > **Note**: The realtime endpoint may be in unhealthy state, wait for another 30 minutes for the endpoint state to change the deployment state to **Healthy**, or else perform the steps from Task 5.
+
+1. Let's review what you have done. You used a dataset of historical bicycle rental data to train a model. The model predicts the number of bicycle rentals expected on a given day, based on seasonal and meteorological *features*. In this case, the *labels* are number of bicycle rentals.
+
+1. You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
+
+   **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
+   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
+   > - Hit the Validate button for the corresponding task.  
+   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
+
+### You have successfully completed this lab.
 
 ### Learn more
 
@@ -262,14 +274,4 @@ Now you can test your deployed service.
 
     ![Screenshot of an example of testing the model with sample data in the test tab.](media/use-automated-machine-learning/workaround-test1.png)
 
-Let's review what you have done. You used a dataset of historical bicycle rental data to train a model. The model predicts the number of bicycle rentals expected on a given day, based on seasonal and meteorological *features*. In this case, the *labels* are number of bicycle rentals.
 
-You have just tested a service that is ready to be connected to a client application using the credentials in the **Consume** tab. We will end the lab here. You are welcome to continue to experiment with the service you just deployed.
-
-   > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
-   > - Click Lab Validation tab located at the upper right corner of the lab guide section and navigate to the Lab Validation Page.
-   > - Hit the Validate button for the corresponding task.  
-   > - If you receive a success message, you can proceed to the next task.If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at labs-support@spektrasystems.com. We are available 24/7 to help you out.
-
-### You have successfully completed this lab.
