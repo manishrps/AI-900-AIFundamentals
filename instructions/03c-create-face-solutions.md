@@ -19,7 +19,7 @@ If you haven't already done so, create a **Face API** resource in your Azure sub
     - **Resource group**: **AI-900-Module-03c-<inject key="DeploymentID" enableCopy="false" />**
     - **Region**: Select **<inject key="location" enableCopy="false"/>**
     - **Name**: Enter **ai900face-<inject key="DeploymentID" enableCopy="false"/>**
-    - **Pricing tier**: Free S0
+    - **Pricing tier**: **Standard S0**
 >**Note :** If the Free F0 pricing tier is not available, please select **S0** from the dropdown.
 
 1.  Click on **Review and create**.
