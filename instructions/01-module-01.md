@@ -36,7 +36,7 @@ Let us start by creating an **Anomaly Detector** resource in your Azure subscrip
     - **Pricing tier**: Standard S0 **(5)**
     - Click **Review + create (6)** 
 
-       ![Picture1](media/ai900mod1img4.png)
+       ![Picture1](media/ai900mod1img4-new.png)
       
 1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page.
    
