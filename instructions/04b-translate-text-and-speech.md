@@ -38,7 +38,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 
 1. Click on **Review + Create (7)**.
    
-     ![](media/ai900mod4img2.png)
+     ![](media/ai900mod4bimg.png)
    
 1. After successfully completing the validation process, click on the **Create** button located in the lower left corner of the page, and wait for deployment to complete. Then go to the deployed resource.
    
