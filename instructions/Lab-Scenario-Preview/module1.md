@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AI-900: Explore Computer Vision
+# Lab Scenario Preview: AI-900: Explore decision support
 
 ## Lab 01: Explore Cognitive Services
 
