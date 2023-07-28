@@ -7,7 +7,7 @@ Artificial Intelligence (AI) can help simplify communication by translating text
 
 To test the capabilities of the Translator service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply to real-world solutions, such as websites or phone apps.
 
-## Exercise 1:Create a *Cognitive Services* resource
+## Exercise 1: Create a *Cognitive Services* resource
 
 ### Task 1: Create a *Cognitive Services* resource
 
