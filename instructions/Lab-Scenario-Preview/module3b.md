@@ -14,3 +14,5 @@ After completing this lab, you will be able to:
 - Create a Custom Vision project
 
 ## Architecture Diagram
+
+  ![](media/Module3b.png)
