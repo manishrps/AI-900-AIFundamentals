@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AI-900: 
+# Lab Scenario Preview: AI-900: Explore knowledge mining
 
 ## Lab 5: Explore Knowledge Mining
 
