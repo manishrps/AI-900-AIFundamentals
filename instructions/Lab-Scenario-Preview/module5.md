@@ -14,3 +14,5 @@ After completing this lab, you will be able to:
 - Extract data from a data source
 
 ## Architecture Diagram
+
+   ![](media/Module5.png)
