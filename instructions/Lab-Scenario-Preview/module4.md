@@ -11,3 +11,5 @@ In this lab, you will test the capabilities of the Language service, we'll use a
 After completing this lab, you will be able to  create a Cognitive Services resource
 
 ## Architecture Diagram
+
+  ![](media/Module4.png)
