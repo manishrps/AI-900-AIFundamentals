@@ -14,3 +14,5 @@ After completing this lab, you will be able to:
 - Configure and run a client application.
 
 ## Architecture Diagram
+
+  ![](media/Module3d.png)
