@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AI-900: 
+# Lab Scenario Preview: AI-900: Explore visual tools for machine learning
 
 ## Lab 02a: Explore regression with Azure Machine Learning Designer
 
