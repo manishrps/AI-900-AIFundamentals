@@ -11,3 +11,5 @@ In this lab, you will train a regression model that predicts the price of an aut
 After completing this lab, you will be able to create an Azure Machine Learning workspace
 
 ## Architecture Diagram
+
+ ![](media/Module2a.png)
