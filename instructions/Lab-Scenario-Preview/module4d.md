@@ -11,3 +11,5 @@ In this lab, you will learn about Language service's custom question-answering f
 After completing this lab, you will be able to create a custom question-answering knowledge base.
 
 ## Architecture Diagram
+
+  ![](media/Module4d.png)
