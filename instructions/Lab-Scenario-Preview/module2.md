@@ -11,3 +11,5 @@ In this lab, you will use a dataset of historical bicycle rental details to trai
 After completing this lab, you will be able to create an Azure Machine Learning workspace
 
 ## Architecture Diagram
+
+  ![](media/Module2.png)
