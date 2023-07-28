@@ -1,6 +1,6 @@
 # Lab Scenario Preview: AI-900: 
 
-## Lab 03b:  Explore Face Recognition
+## Lab 03c:  Explore Face Recognition
 
 ### Lab overview
 
@@ -14,3 +14,5 @@ After completing this lab, you will be able to:
 - Configure and run a client application.
 
 ## Architecture Diagram
+
+  ![](media/Module3c.png)
