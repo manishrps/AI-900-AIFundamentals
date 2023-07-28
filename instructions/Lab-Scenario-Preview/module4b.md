@@ -1,4 +1,4 @@
-# Lab Scenario Preview: AI-900: 
+# Lab Scenario Preview: AI-900: Explore natural language processing
 
 ## Lab 04b: Explore Translation
 
