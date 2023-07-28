@@ -11,3 +11,5 @@ In this lab, you will learn how cognitive services are provisioned and used.
 After completing this lab, you will be able to create an Anomaly Detector resource
 
 ## Architecture Diagram
+
+  ![](media/Module1.1.png)
