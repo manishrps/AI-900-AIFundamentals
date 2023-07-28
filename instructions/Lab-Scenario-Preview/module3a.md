@@ -16,3 +16,5 @@ After completing this lab, you will be able to:
 - Prepare a client application and test it
 
 ## Architecture Diagram
+
+  ![](media/Module3a.png)
