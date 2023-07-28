@@ -1,6 +1,6 @@
 # Lab Scenario Preview: AI-900: 
 
-## Lab 04a: Explore Translation
+## Lab 04b: Explore Translation
 
 ### Lab overview
 
