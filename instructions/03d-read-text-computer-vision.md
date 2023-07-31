@@ -14,7 +14,7 @@ The **Computer Vision** cognitive service provides support for OCR tasks, includ
 
 - A **Read** API that is optimized for larger documents. This API is used asynchronously, and can be used for both printed and handwritten text.
 
-## Task-1: Create a *Cognitive Services* resource
+## Task 1: Create a *Cognitive Services* resource
 
 You can use the Computer Vision service by creating either a **Computer Vision** resource or a **Cognitive Services** resource.
 
@@ -52,7 +52,7 @@ You can use the Computer Vision service by creating either a **Computer Vision**
 
     ![Find the key and endpoint tab in your Cognitive Services resource's left hand pane.](media/read-text-computer-vision/ai900_mod03d_t3_s4.png)
 
-## Task-2: Run Cloud Shell
+## Task 2: Run Cloud Shell
 
 To test the capabilities of the Custom Vision service, we'll use a simple command-line application that runs in the Cloud Shell on Azure.
 
@@ -74,7 +74,7 @@ To test the capabilities of the Custom Vision service, we'll use a simple comman
 
     ![Wait for PowerShell to start.](media/analyze-images-computer-vision-service/powershell-prompt(1).png)
 
-## Task-3: Configure and run a client application
+## Task 3: Configure and run a client application
 
 Now that you have a custom model, you can run a simple client application that uses the OCR service.
 

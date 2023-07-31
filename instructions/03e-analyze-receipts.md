@@ -16,6 +16,8 @@ You can use the Form Recognizer service by creating either a **Form Recognizer**
 
 If you haven't already done so, create a **Cognitive Services** resource in your Azure subscription.
 
+## Task 1: Create a *Cognitive Services* resource
+
 1. Click the **&#65291;Create a resource** button, search for *Cognitive Services*, and create a **Cognitive Services** resource with the following settings:
     - **Subscription**: *Use existing Azure subscription*.
     - **Resource group**: *AI-900-Module-03e-<inject key="DeploymentID" enableCopy="false"/>*

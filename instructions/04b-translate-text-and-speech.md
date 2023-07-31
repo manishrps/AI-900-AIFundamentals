@@ -7,9 +7,9 @@ Artificial Intelligence (AI) can help simplify communication by translating text
 
 To test the capabilities of the Translator service, we'll use a simple command-line application that runs in the Cloud Shell. The same principles and functionality apply to real-world solutions, such as websites or phone apps.
 
-## Exercise 1:Create a *Cognitive Services* resource
+## Exercise 1: Create a *Cognitive Services* resource
 
-### Task-1: Create a *Cognitive Services* resource
+### Task 1: Create a *Cognitive Services* resource
 
 You can use the Computer Vision service by creating either a **Translator** resource or a **Cognitive Services** resource.
 
@@ -47,7 +47,7 @@ If you haven't already done so, create a **Cognitive Services** resource in your
 1. View the **Keys and Endpoint** page for your resource. You will need the **location/region** and **key** to connect from client applications.
 
 
-### Task-2: Run Cloud Shell
+### Task 2: Run Cloud Shell
 
 To test the capabilities of the Translation service, we'll use a simple command-line application that runs in the Cloud Shell on Azure. 
 
@@ -69,7 +69,7 @@ To test the capabilities of the Translation service, we'll use a simple command-
 
     ![Wait for PowerShell to start.](media/powershell-prompt.png)
 
-### Task-3: Configure and run a client application
+### Task 3: Configure and run a client application
 
 Now that you have a custom model, you can run a simple client application that uses the Translation service.
 
