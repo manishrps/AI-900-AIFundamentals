@@ -1,1 +1,12 @@
-
+[
+   {
+    "Name": "Lab Scenario Preview - AI-900: Explore computer vision",
+    "Language": "English",
+    "Files": [
+        {
+          "RawFilePath": "https://github.com/CloudLabs-MOC/AI-900-AIFundamentals/blob/stage/instructions/Lab-Scenario-Preview/module3a.md",
+          "Order": 1
+        }
+     ]  
+   } 
+]
